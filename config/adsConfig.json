@@ -1,1 +1,26 @@
-
+{
+  "ads1": {
+    "enabled": true,
+    "code": "<div class='ads-banner'>Ad Space 1 (728x90)</div>"
+  },
+  "ads2": {
+    "enabled": true,
+    "code": "<div class='ads-native'>Native Ad</div>"
+  },
+  "ads3": {
+    "enabled": true,
+    "code": "<div class='ads-square'>Square Ad (300x250)</div>"
+  },
+  "ads4": {
+    "enabled": false,
+    "code": ""
+  },
+  "ads5": {
+    "enabled": true,
+    "code": "<div class='ads-native'>Native Ad 2</div>"
+  },
+  "ads6": {
+    "enabled": true,
+    "code": "<div class='ads-banner'>Ad Space 6 (728x90)</div>"
+  }
+}
