@@ -1,34 +1,70 @@
-# Minimal .gitignore for Movie JSON Repository
 
-# Operating System files
-.DS_Store
-Thumbs.db
-desktop.ini
+## 📁 **.gitignore**
 
-# IDE/Editor files
+```gitignore
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Runtime data
+logs/
+*.log
+.npm
+.pnpm/
+.yarn/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
 .vscode/
 .idea/
 *.swp
+*.swo
 *~
 
-# Environment and config files
-.env
-.env.local
-config.local.json
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Temporary files
+# Temp files
+.temp/
 tmp/
 temp/
-*.tmp
 
 # Backup files
 *.bak
 *.backup
+*.old
 
-# Log files (if any)
-*.log
+# Data backups (keep in separate backup repo)
+backup/
+archives/
 
-# Visual Studio specific (if you use VS)
-.vs/
-*.user
-*.suo
+# Secrets
+secrets.json
+config.local.json
+credentials.json
+
+# Build artifacts
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Custom
+.last-update-cache
+update-lock.json
