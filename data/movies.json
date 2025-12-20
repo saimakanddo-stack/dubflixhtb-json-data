@@ -1,0 +1,150 @@
+[
+  {
+    "id": "movie001",
+    "title": "Example Movie Title 1",
+    "imageUrl": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=Movie+1",
+    "info1_custom": "NEW",
+    "info2_quality": "1080p WEB-DL",
+    "info3_language": "Hindi, Tamil",
+    "info4_type": "Movie, Action",
+    "info6_status": "Online",
+    "total_views": 1500,
+    "info5_views": 200,
+    "storyline": "This is an example movie storyline. A thrilling action movie with amazing visuals and story.",
+    "imdb": "7.5/10",
+    "genre": "Action, Adventure, Drama",
+    "resolution": "1920x1080",
+    "released": "2025",
+    "cast": "Actor One, Actor Two, Actress One",
+    "createdAt": "2025-01-15T10:30:00Z",
+    "lastUpdated": "2025-01-20T14:45:00Z",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "isNewPost": true,
+    "serverAddedDate": "2025-01-15T10:30:00Z",
+    "downloadOptions": [
+      {
+        "server": "Server 1",
+        "qualities": [
+          {
+            "quality_text": "1080p",
+            "path": "/movies/movie001-1080p.mp4",
+            "file_size": "1.5GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/movies/movie001-720p.mp4",
+            "file_size": "800MB"
+          },
+          {
+            "quality_text": "480p",
+            "path": "/movies/movie001-480p.mp4",
+            "file_size": "400MB"
+          }
+        ]
+      },
+      {
+        "server": "Server 2",
+        "qualities": [
+          {
+            "quality_text": "1080p",
+            "path": "/videos/movie001-hd.mp4",
+            "file_size": "1.8GB"
+          }
+        ]
+      }
+    ],
+    "screenshotLinks": [
+      "https://via.placeholder.com/800x450/ff0000/ffffff?text=Screenshot+1",
+      "https://via.placeholder.com/800x450/00ff00/ffffff?text=Screenshot+2",
+      "https://via.placeholder.com/800x450/0000ff/ffffff?text=Screenshot+3"
+    ]
+  },
+  {
+    "id": "movie002",
+    "title": "Example Series Season 1",
+    "imageUrl": "https://via.placeholder.com/300x450/16213e/ffffff?text=Series+1",
+    "info1_custom": "UPDATED",
+    "info2_quality": "720p HDTV",
+    "info3_language": "English, Bengali",
+    "info4_type": "Series, Drama",
+    "info6_status": "Online",
+    "total_views": 2300,
+    "info5_views": 150,
+    "storyline": "An exciting drama series with multiple seasons. Follow the journey of characters in this thrilling story.",
+    "imdb": "8.2/10",
+    "genre": "Drama, Mystery, Thriller",
+    "resolution": "1280x720",
+    "released": "2024",
+    "cast": "Actor A, Actor B, Actress C",
+    "createdAt": "2025-01-10T09:15:00Z",
+    "lastUpdated": "2025-01-25T16:20:00Z",
+    "enablePosterBlur": true,
+    "blurPercentage": 15,
+    "isNewPost": false,
+    "serverAddedDate": "2025-01-25T16:20:00Z",
+    "downloadOptions": [
+      {
+        "server": "Server 1",
+        "qualities": [
+          {
+            "quality_text": "Complete Season",
+            "path": "/series/series001-season1.zip",
+            "file_size": "4.2GB"
+          },
+          {
+            "quality_text": "Episode 1-5",
+            "path": "/series/series001-ep1-5.zip",
+            "file_size": "2.1GB"
+          }
+        ]
+      }
+    ],
+    "screenshotLinks": [
+      "https://via.placeholder.com/800x450/ff9900/ffffff?text=Series+SS1",
+      "https://via.placeholder.com/800x450/9900ff/ffffff?text=Series+SS2"
+    ]
+  },
+  {
+    "id": "movie003",
+    "title": "Another Great Movie",
+    "imageUrl": "https://via.placeholder.com/300x450/0f3460/ffffff?text=Movie+3",
+    "info1_custom": "POPULAR",
+    "info2_quality": "4K BluRay",
+    "info3_language": "Dual Audio",
+    "info4_type": "Movie, Sci-Fi",
+    "info6_status": "Online",
+    "total_views": 4500,
+    "info5_views": 300,
+    "storyline": "A science fiction masterpiece with stunning visual effects and compelling story.",
+    "imdb": "8.9/10",
+    "genre": "Sci-Fi, Adventure",
+    "resolution": "3840x2160",
+    "released": "2024",
+    "cast": "Famous Actor X, Famous Actress Y",
+    "createdAt": "2025-01-05T08:00:00Z",
+    "lastUpdated": "2025-01-18T11:30:00Z",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "isNewPost": false,
+    "serverAddedDate": "2025-01-05T08:00:00Z",
+    "downloadOptions": [
+      {
+        "server": "Server 2",
+        "qualities": [
+          {
+            "quality_text": "4K",
+            "path": "/movies/movie003-4k.mkv",
+            "file_size": "12GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/movies/movie003-1080p.mkv",
+            "file_size": "3.5GB"
+          }
+        ]
+      }
+    ],
+    "screenshotLinks": []
+  }
+]
