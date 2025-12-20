@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /logs/
-Disallow: /scripts/
-
-Sitemap: https://saimakanddo-stack.github.io/dubflixhtb-json-data/sitemap.xml
