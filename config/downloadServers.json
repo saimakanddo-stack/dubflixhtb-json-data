@@ -1,1 +1,21 @@
-
+{
+  "servers": [
+    {
+      "name": "Server 1",
+      "domains": [
+        "https://server1.example.com",
+        "https://mirror1.example.com"
+      ],
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "Server 2",
+      "domains": [
+        "https://server2.example.com"
+      ],
+      "priority": 2,
+      "enabled": true
+    }
+  ]
+}
