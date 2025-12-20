@@ -16,7 +16,7 @@
     "code": ""
   },
   "ads5": {
-    "enabled": true,
+    "enabled": false,
     "code": "<div class='ads-native'>Native Ad 2</div>"
   },
   "ads6": {
