@@ -1,0 +1,10 @@
+{
+  "generators": [
+    {
+      "name": "Default Generator",
+      "pattern": "{domain}/{path}",
+      "priority": 1,
+      "enabled": true
+    }
+  ]
+}
