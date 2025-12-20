@@ -1,1 +1,26 @@
-
+{
+  "ads1": {
+    "enabled": true,
+    "code": "<div class='ads-banner'>Saim</div>"
+  },
+  "ads2": {
+    "enabled": true,
+    "code": "<div class='ads-native'>Your Ad Code 2 Here</div>"
+  },
+  "ads3": {
+    "enabled": true,
+    "code": "<div class='ads-square'>Your Ad Code 3 Here</div>"
+  },
+  "ads4": {
+    "enabled": true,
+    "code": ""
+  },
+  "ads5": {
+    "enabled": true,
+    "code": "<div class='ads-native'>Your Ad Code 5 Here</div>"
+  },
+  "ads6": {
+    "enabled": true,
+    "code": "<div class='ads-banner'>Your Ad Code 6 Here</div>"
+  }
+}
