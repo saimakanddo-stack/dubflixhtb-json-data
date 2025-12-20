@@ -1,7 +1,19 @@
 {
   "ads1": {
     "enabled": true,
-    "code": "<div class='ads-banner'>Ad Space 1 (728x90)</div>"
+    "code": "<script type="text/javascript">
+  atOptions = {
+  	'key' : 'c12970d7033a92b20273f0a5b2e257cc',
+  	'format' : 'iframe',
+  	'height' : 90,
+  	'width' : 728,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src="https://behavepassword.com/c12970d7033a92b20273f0a5b2e257cc/invoke.js"
+></script>"
   },
   "ads2": {
     "enabled": true,
