@@ -1,1 +1,45 @@
-
+{
+  "movies": [
+    {
+      "id": "movie1",
+      "title": "Sample Movie 1",
+      "imageUrl": "https://via.placeholder.com/300x450",
+      "info1_custom": "NEW",
+      "info2_quality": "1080p WEB-DL",
+      "info3_language": "Hindi-Tamil Dual",
+      "info4_type": "Movie",
+      "info5_views": 1500,
+      "info6_status": "Online",
+      "total_views": 5000,
+      "createdAt": "2025-01-20T10:00:00Z",
+      "lastUpdated": "2025-01-25T12:00:00Z",
+      "downloadOptions": [
+        {
+          "server": "Server 1",
+          "qualities": [
+            {
+              "quality_text": "1080p",
+              "path": "/movies/movie1/1080p.mp4",
+              "file_size": "2.1GB"
+            },
+            {
+              "quality_text": "720p",
+              "path": "/movies/movie1/720p.mp4",
+              "file_size": "1.2GB"
+            }
+          ]
+        }
+      ],
+      "imdb": "8.5/10",
+      "genre": "Action, Thriller",
+      "resolution": "1920x1080",
+      "released": "2024",
+      "cast": "Actor 1, Actor 2",
+      "storyline": "This is a sample movie storyline.",
+      "screenshotLinks": [
+        "https://via.placeholder.com/800x450",
+        "https://via.placeholder.com/800x450"
+      ]
+    }
+  ]
+}
