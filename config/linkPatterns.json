@@ -1,0 +1,14 @@
+{
+  "patterns": [
+    {
+      "pattern": "/movies/{id}/{filename}",
+      "type": "direct",
+      "priority": 1
+    },
+    {
+      "pattern": "/download/{id}/{quality}",
+      "type": "direct",
+      "priority": 2
+    }
+  ]
+}
