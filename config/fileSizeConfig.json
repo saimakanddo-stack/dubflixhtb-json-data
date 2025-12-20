@@ -1,0 +1,17 @@
+{
+  "defaultSizes": {
+    "480p": "700MB",
+    "720p": "1.5GB",
+    "1080p": "3GB",
+    "4K": "10GB",
+    "WEB-DL": "2GB",
+    "BluRay": "4GB",
+    "HDTV": "1.2GB",
+    "HD": "1GB",
+    "SD": "500MB"
+  },
+  "sizeMapping": {
+    "sample-movie": "2.5GB",
+    "test-video": "1.8GB"
+  }
+}
