@@ -1,14 +1,27 @@
 # Dubflix HTB JSON Data Repository
 
-This repository contains JSON data for the Dub Fusion Hub movie streaming application.
+This repository contains JSON data files for the Dub Fusion Hub movie streaming application.
 
-## 📁 Repository Structure
+## Structure
+dubflixhtb-json-data/
+├── config/ # Configuration files
+├── data/ # Main data (movies, sliders)
+├── logs/ # Log files (read-only)
+├── scripts/ # Update scripts
+└── .github/ # GitHub Actions workflows
+
+## Usage
+
+### Accessing Data
+All JSON files are accessible via: https://saimakanddo-stack.github.io/dubflixhtb-json-data/[path/to/file.json]
 
 
+Example:
+- Movies: `https://saimakanddo-stack.github.io/dubflixhtb-json-data/data/movies.json`
+- Config: `https://saimakanddo-stack.github.io/dubflixhtb-json-data/config/settings.json`
 
-## 🚀 Getting Started
+### Updating Data
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/yourusername/dubflixhtb-json-data.git
-cd dubflixhtb-json-data
+1. **Manual Update**:
+   ```bash
+   node scripts/update-script.js
