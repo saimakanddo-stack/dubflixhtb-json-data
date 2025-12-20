@@ -1,0 +1,17 @@
+{
+  "servers": [
+    {
+      "name": "Server 1",
+      "domains": [
+        "https://server1.example.com",
+        "https://mirror1.example.com"
+      ]
+    },
+    {
+      "name": "Server 2",
+      "domains": [
+        "https://server2.example.com"
+      ]
+    }
+  ]
+}
