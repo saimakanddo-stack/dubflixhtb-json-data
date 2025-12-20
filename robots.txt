@@ -1,13 +1,6 @@
-# robots.txt for JSON Data Repository
 User-agent: *
+Allow: /
 Disallow: /logs/
 Disallow: /scripts/
-Disallow: /.github/
-Allow: /data/
-Allow: /config/
 
-# Crawl-delay for search engines
-Crawl-delay: 10
-
-# Sitemap (if you create one)
-# Sitemap: https://yourusername.github.io/dubflixhtb-json-data/sitemap.xml
+Sitemap: https://saimakanddo-stack.github.io/dubflixhtb-json-data/sitemap.xml
