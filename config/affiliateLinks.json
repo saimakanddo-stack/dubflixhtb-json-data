@@ -1,1 +1,20 @@
-
+{
+  "enabled": true,
+  "redirectDelay": 2000,
+  "openInNewTab": true,
+  "randomSelection": true,
+  "links": [
+    {
+      "name": "Monetag",
+      "url": "https://monetag.com/visit/?ref=moviehub",
+      "weight": 3,
+      "enabled": true
+    },
+    {
+      "name": "Adsterra",
+      "url": "https://adsterra.com/?ref=moviehub",
+      "weight": 2,
+      "enabled": true
+    }
+  ]
+}
