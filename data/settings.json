@@ -1,0 +1,18 @@
+{
+  "timerDuration": 10,
+  "requiredAds": 1,
+  "fileSizeConfig": {
+    "defaultSizes": {
+      "480p": "700MB",
+      "720p": "1.5GB",
+      "1080p": "3GB",
+      "4K": "10GB"
+    }
+  },
+  "linkGenerators": {
+    "generators": []
+  },
+  "linkPatterns": {
+    "patterns": []
+  }
+}
