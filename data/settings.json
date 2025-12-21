@@ -1,6 +1,6 @@
 {
   "timerDuration": 10,
-  "requiredAds": 1,
+  "requiredAds": 2,
   "fileSizeConfig": {
     "defaultSizes": {
       "480p": "700MB",
