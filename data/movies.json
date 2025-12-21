@@ -452,7 +452,7 @@
     "id": "unique_movie_id_here",
     "title": "Movie Title Here",
     "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+Title",
-    "info1_custom": "NEW", // বা "UPDATED", "POPULAR", "TRENDING", "HOT" ইত্যাদি
+    "info1_custom": "NEW", // বা 'UPDATED', 'POPULAR', 'TRENDING', 'HOT' ইত্যাদি
     "info2_quality": "1080p WEB-DL", // Quality: 480p, 720p, 1080p, 4K, BluRay, HDTV ইত্যাদি
     "info3_language": "Hindi, English, Bengali", // ভাষাগুলো কমা দিয়ে আলাদা করুন
     "info4_type": "Movie, Action", // Type: Movie বা Series, এবং Genre
