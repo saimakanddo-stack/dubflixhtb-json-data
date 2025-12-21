@@ -2,7 +2,7 @@
   {
     "id": "movie001",
     "title": "Example Movie Title 1",
-    "imageUrl": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=Movie+1",
+    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+1",
     "info1_custom": "NEW",
     "info2_quality": "1080p WEB-DL",
     "info3_language": "Hindi, Tamil",
@@ -55,15 +55,15 @@
       }
     ],
     "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff0000/ffffff?text=Screenshot+1",
-      "https://via.placeholder.com/800x450/00ff00/ffffff?text=Screenshot+2",
-      "https://via.placeholder.com/800x450/0000ff/ffffff?text=Screenshot+3"
+      "https://placehold.co/800x450/ff0000/ffffff?text=Screenshot+1",
+      "https://placehold.co/800x450/00ff00/ffffff?text=Screenshot+2",
+      "https://placehold.co/800x450/0000ff/ffffff?text=Screenshot+3"
     ]
   },
   {
     "id": "movie002",
     "title": "Example Series Season 1",
-    "imageUrl": "https://via.placeholder.com/300x450/16213e/ffffff?text=Series+1",
+    "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+1",
     "info1_custom": "UPDATED",
     "info2_quality": "720p HDTV",
     "info3_language": "English, Bengali",
@@ -101,14 +101,14 @@
       }
     ],
     "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff9900/ffffff?text=Series+SS1",
-      "https://via.placeholder.com/800x450/9900ff/ffffff?text=Series+SS2"
+      "https://placehold.co/800x450/ff9900/ffffff?text=Series+SS1",
+      "https://placehold.co/800x450/9900ff/ffffff?text=Series+SS2"
     ]
   },
   {
     "id": "movie003",
     "title": "Another Great Movie",
-    "imageUrl": "https://via.placeholder.com/300x450/0f3460/ffffff?text=Movie+3",
+    "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+3",
     "info1_custom": "POPULAR",
     "info2_quality": "4K BluRay",
     "info3_language": "Dual Audio",
@@ -147,195 +147,201 @@
     ],
     "screenshotLinks": []
   },
-    {
+  {
     "id": "movie004",
-    "title": "Example Movie Title 1",
-    "imageUrl": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=Movie+1",
+    "title": "Action Adventure 2025",
+    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+4",
     "info1_custom": "NEW",
     "info2_quality": "1080p WEB-DL",
     "info3_language": "Hindi, Tamil",
-    "info4_type": "Movie, Action",
+    "info4_type": "Movie, Adventure",
     "info6_status": "Online",
-    "total_views": 1500,
-    "info5_views": 200,
-    "storyline": "This is an example movie storyline. A thrilling action movie with amazing visuals and story.",
-    "imdb": "7.5/10",
-    "genre": "Action, Adventure, Drama",
+    "total_views": 1800,
+    "info5_views": 250,
+    "storyline": "An exciting adventure movie with breathtaking scenes and thrilling sequences.",
+    "imdb": "8.0/10",
+    "genre": "Adventure, Action",
     "resolution": "1920x1080",
     "released": "2025",
-    "cast": "Actor One, Actor Two, Actress One",
-    "createdAt": "2025-01-15T10:30:00Z",
-    "lastUpdated": "2025-01-20T14:45:00Z",
+    "cast": "Actor Three, Actress Two",
+    "createdAt": "2025-01-12T11:30:00Z",
+    "lastUpdated": "2025-01-22T15:45:00Z",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "isNewPost": true,
-    "serverAddedDate": "2025-01-15T10:30:00Z",
+    "serverAddedDate": "2025-01-12T11:30:00Z",
     "downloadOptions": [
       {
         "server": "Server 1",
         "qualities": [
           {
             "quality_text": "1080p",
-            "path": "/movies/movie001-1080p.mp4",
-            "file_size": "1.5GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/movies/movie001-720p.mp4",
-            "file_size": "800MB"
-          },
-          {
-            "quality_text": "480p",
-            "path": "/movies/movie001-480p.mp4",
-            "file_size": "400MB"
-          }
-        ]
-      },
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "1080p",
-            "path": "/videos/movie001-hd.mp4",
-            "file_size": "1.8GB"
+            "path": "/movies/movie004-1080p.mp4",
+            "file_size": "1.6GB"
           }
         ]
       }
     ],
     "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff0000/ffffff?text=Screenshot+1",
-      "https://via.placeholder.com/800x450/00ff00/ffffff?text=Screenshot+2",
-      "https://via.placeholder.com/800x450/0000ff/ffffff?text=Screenshot+3"
+      "https://placehold.co/800x450/ff5500/ffffff?text=Screenshot+1",
+      "https://placehold.co/800x450/5500ff/ffffff?text=Screenshot+2"
     ]
   },
   {
     "id": "movie005",
-    "title": "Example Series Season 1",
-    "imageUrl": "https://via.placeholder.com/300x450/16213e/ffffff?text=Series+1",
+    "title": "Drama Series Season 2",
+    "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+2",
     "info1_custom": "UPDATED",
-    "info2_quality": "720p HDTV",
-    "info3_language": "English, Bengali",
+    "info2_quality": "1080p HDTV",
+    "info3_language": "English",
     "info4_type": "Series, Drama",
     "info6_status": "Online",
-    "total_views": 2300,
-    "info5_views": 150,
-    "storyline": "An exciting drama series with multiple seasons. Follow the journey of characters in this thrilling story.",
-    "imdb": "8.2/10",
-    "genre": "Drama, Mystery, Thriller",
-    "resolution": "1280x720",
+    "total_views": 3100,
+    "info5_views": 180,
+    "storyline": "Second season of the popular drama series with new characters and plot twists.",
+    "imdb": "8.5/10",
+    "genre": "Drama, Romance",
+    "resolution": "1920x1080",
     "released": "2024",
-    "cast": "Actor A, Actor B, Actress C",
-    "createdAt": "2025-01-10T09:15:00Z",
-    "lastUpdated": "2025-01-25T16:20:00Z",
-    "enablePosterBlur": true,
-    "blurPercentage": 15,
+    "cast": "Actor D, Actress E",
+    "createdAt": "2025-01-08T08:45:00Z",
+    "lastUpdated": "2025-01-28T12:30:00Z",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
     "isNewPost": false,
-    "serverAddedDate": "2025-01-25T16:20:00Z",
+    "serverAddedDate": "2025-01-28T12:30:00Z",
     "downloadOptions": [
       {
         "server": "Server 1",
         "qualities": [
           {
             "quality_text": "Complete Season",
-            "path": "/series/series001-season1.zip",
-            "file_size": "4.2GB"
-          },
-          {
-            "quality_text": "Episode 1-5",
-            "path": "/series/series001-ep1-5.zip",
-            "file_size": "2.1GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff9900/ffffff?text=Series+SS1",
-      "https://via.placeholder.com/800x450/9900ff/ffffff?text=Series+SS2"
-    ]
-  },
-  {
-    "id": "movie006",
-    "title": "Another Great Movie",
-    "imageUrl": "https://via.placeholder.com/300x450/0f3460/ffffff?text=Movie+3",
-    "info1_custom": "POPULAR",
-    "info2_quality": "4K BluRay",
-    "info3_language": "Dual Audio",
-    "info4_type": "Movie, Sci-Fi",
-    "info6_status": "Online",
-    "total_views": 4500,
-    "info5_views": 300,
-    "storyline": "A science fiction masterpiece with stunning visual effects and compelling story.",
-    "imdb": "8.9/10",
-    "genre": "Sci-Fi, Adventure",
-    "resolution": "3840x2160",
-    "released": "2024",
-    "cast": "Famous Actor X, Famous Actress Y",
-    "createdAt": "2025-01-05T08:00:00Z",
-    "lastUpdated": "2025-01-18T11:30:00Z",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-05T08:00:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "4K",
-            "path": "/movies/movie003-4k.mkv",
-            "file_size": "12GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie003-1080p.mkv",
-            "file_size": "3.5GB"
+            "path": "/series/series002-season2.zip",
+            "file_size": "5.1GB"
           }
         ]
       }
     ],
     "screenshotLinks": []
   },
-    {
+  {
+    "id": "movie006",
+    "title": "Sci-Fi Thriller",
+    "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+6",
+    "info1_custom": "HOT",
+    "info2_quality": "720p BluRay",
+    "info3_language": "English, Hindi",
+    "info4_type": "Movie, Sci-Fi",
+    "info6_status": "Online",
+    "total_views": 5200,
+    "info5_views": 400,
+    "storyline": "A mind-bending sci-fi thriller that will keep you on the edge of your seat.",
+    "imdb": "8.7/10",
+    "genre": "Sci-Fi, Thriller",
+    "resolution": "1280x720",
+    "released": "2024",
+    "cast": "Actor Z, Actress W",
+    "createdAt": "2025-01-03T07:00:00Z",
+    "lastUpdated": "2025-01-16T10:15:00Z",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "isNewPost": false,
+    "serverAddedDate": "2025-01-03T07:00:00Z",
+    "downloadOptions": [
+      {
+        "server": "Server 2",
+        "qualities": [
+          {
+            "quality_text": "720p",
+            "path": "/movies/movie006-720p.mkv",
+            "file_size": "2.8GB"
+          },
+          {
+            "quality_text": "480p",
+            "path": "/movies/movie006-480p.mkv",
+            "file_size": "1.2GB"
+          }
+        ]
+      }
+    ],
+    "screenshotLinks": [
+      "https://placehold.co/800x450/00aaff/ffffff?text=Screenshot+1",
+      "https://placehold.co/800x450/ff00aa/ffffff?text=Screenshot+2"
+    ]
+  },
+  {
     "id": "movie007",
-    "title": "Example Movie Title 1",
-    "imageUrl": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=Movie+1",
+    "title": "Comedy Special",
+    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+7",
     "info1_custom": "NEW",
     "info2_quality": "1080p WEB-DL",
-    "info3_language": "Hindi, Tamil",
-    "info4_type": "Movie, Action",
+    "info3_language": "Bengali",
+    "info4_type": "Movie, Comedy",
     "info6_status": "Online",
-    "total_views": 1500,
-    "info5_views": 200,
-    "storyline": "This is an example movie storyline. A thrilling action movie with amazing visuals and story.",
-    "imdb": "7.5/10",
-    "genre": "Action, Adventure, Drama",
+    "total_views": 1200,
+    "info5_views": 100,
+    "storyline": "A hilarious comedy that will make you laugh from start to finish.",
+    "imdb": "7.8/10",
+    "genre": "Comedy",
     "resolution": "1920x1080",
     "released": "2025",
-    "cast": "Actor One, Actor Two, Actress One",
-    "createdAt": "2025-01-15T10:30:00Z",
-    "lastUpdated": "2025-01-20T14:45:00Z",
+    "cast": "Comedian A, Comedian B",
+    "createdAt": "2025-01-18T14:20:00Z",
+    "lastUpdated": "2025-01-23T09:10:00Z",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "isNewPost": true,
-    "serverAddedDate": "2025-01-15T10:30:00Z",
+    "serverAddedDate": "2025-01-18T14:20:00Z",
     "downloadOptions": [
       {
         "server": "Server 1",
         "qualities": [
           {
             "quality_text": "1080p",
-            "path": "/movies/movie001-1080p.mp4",
-            "file_size": "1.5GB"
+            "path": "/movies/movie007-1080p.mp4",
+            "file_size": "1.4GB"
           },
           {
             "quality_text": "720p",
-            "path": "/movies/movie001-720p.mp4",
-            "file_size": "800MB"
-          },
+            "path": "/movies/movie007-720p.mp4",
+            "file_size": "750MB"
+          }
+        ]
+      }
+    ],
+    "screenshotLinks": []
+  },
+  {
+    "id": "movie008",
+    "title": "Mystery Series",
+    "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+3",
+    "info1_custom": "UPDATED",
+    "info2_quality": "1080p WEB-DL",
+    "info3_language": "English, Tamil",
+    "info4_type": "Series, Mystery",
+    "info6_status": "Online",
+    "total_views": 2700,
+    "info5_views": 220,
+    "storyline": "A gripping mystery series that will keep you guessing until the very end.",
+    "imdb": "8.3/10",
+    "genre": "Mystery, Thriller",
+    "resolution": "1920x1080",
+    "released": "2024",
+    "cast": "Actor M, Actress N",
+    "createdAt": "2025-01-07T10:15:00Z",
+    "lastUpdated": "2025-01-26T17:40:00Z",
+    "enablePosterBlur": true,
+    "blurPercentage": 20,
+    "isNewPost": false,
+    "serverAddedDate": "2025-01-26T17:40:00Z",
+    "downloadOptions": [
+      {
+        "server": "Server 1",
+        "qualities": [
           {
-            "quality_text": "480p",
-            "path": "/movies/movie001-480p.mp4",
-            "file_size": "400MB"
+            "quality_text": "Complete Season",
+            "path": "/series/series003-season1.zip",
+            "file_size": "3.8GB"
           }
         ]
       },
@@ -343,254 +349,103 @@
         "server": "Server 2",
         "qualities": [
           {
-            "quality_text": "1080p",
-            "path": "/videos/movie001-hd.mp4",
-            "file_size": "1.8GB"
+            "quality_text": "720p",
+            "path": "/series/series003-720p.zip",
+            "file_size": "2.5GB"
           }
         ]
       }
     ],
     "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff0000/ffffff?text=Screenshot+1",
-      "https://via.placeholder.com/800x450/00ff00/ffffff?text=Screenshot+2",
-      "https://via.placeholder.com/800x450/0000ff/ffffff?text=Screenshot+3"
-    ]
-  },
-  {
-    "id": "movie008",
-    "title": "Example Series Season 1",
-    "imageUrl": "https://via.placeholder.com/300x450/16213e/ffffff?text=Series+1",
-    "info1_custom": "UPDATED",
-    "info2_quality": "720p HDTV",
-    "info3_language": "English, Bengali",
-    "info4_type": "Series, Drama",
-    "info6_status": "Online",
-    "total_views": 2300,
-    "info5_views": 150,
-    "storyline": "An exciting drama series with multiple seasons. Follow the journey of characters in this thrilling story.",
-    "imdb": "8.2/10",
-    "genre": "Drama, Mystery, Thriller",
-    "resolution": "1280x720",
-    "released": "2024",
-    "cast": "Actor A, Actor B, Actress C",
-    "createdAt": "2025-01-10T09:15:00Z",
-    "lastUpdated": "2025-01-25T16:20:00Z",
-    "enablePosterBlur": true,
-    "blurPercentage": 15,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-25T16:20:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "Complete Season",
-            "path": "/series/series001-season1.zip",
-            "file_size": "4.2GB"
-          },
-          {
-            "quality_text": "Episode 1-5",
-            "path": "/series/series001-ep1-5.zip",
-            "file_size": "2.1GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff9900/ffffff?text=Series+SS1",
-      "https://via.placeholder.com/800x450/9900ff/ffffff?text=Series+SS2"
+      "https://placehold.co/800x450/333333/ffffff?text=Screenshot+1"
     ]
   },
   {
     "id": "movie009",
-    "title": "Another Great Movie",
-    "imageUrl": "https://via.placeholder.com/300x450/0f3460/ffffff?text=Movie+3",
-    "info1_custom": "POPULAR",
-    "info2_quality": "4K BluRay",
-    "info3_language": "Dual Audio",
-    "info4_type": "Movie, Sci-Fi",
+    "title": "Romantic Drama",
+    "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+9",
+    "info1_custom": "TRENDING",
+    "info2_quality": "720p WEB-DL",
+    "info3_language": "Hindi, Bengali",
+    "info4_type": "Movie, Romance",
     "info6_status": "Online",
-    "total_views": 4500,
-    "info5_views": 300,
-    "storyline": "A science fiction masterpiece with stunning visual effects and compelling story.",
-    "imdb": "8.9/10",
-    "genre": "Sci-Fi, Adventure",
-    "resolution": "3840x2160",
+    "total_views": 3800,
+    "info5_views": 280,
+    "storyline": "A beautiful romantic drama about love, loss, and second chances.",
+    "imdb": "8.1/10",
+    "genre": "Romance, Drama",
+    "resolution": "1280x720",
     "released": "2024",
-    "cast": "Famous Actor X, Famous Actress Y",
-    "createdAt": "2025-01-05T08:00:00Z",
-    "lastUpdated": "2025-01-18T11:30:00Z",
+    "cast": "Actor R, Actress S",
+    "createdAt": "2025-01-02T06:30:00Z",
+    "lastUpdated": "2025-01-17T13:25:00Z",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "isNewPost": false,
-    "serverAddedDate": "2025-01-05T08:00:00Z",
+    "serverAddedDate": "2025-01-02T06:30:00Z",
     "downloadOptions": [
       {
         "server": "Server 2",
         "qualities": [
           {
-            "quality_text": "4K",
-            "path": "/movies/movie003-4k.mkv",
-            "file_size": "12GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie003-1080p.mkv",
-            "file_size": "3.5GB"
+            "quality_text": "720p",
+            "path": "/movies/movie009-720p.mkv",
+            "file_size": "1.9GB"
           }
         ]
       }
     ],
     "screenshotLinks": []
   },
-    {
-    "id": "movie0000",
-    "title": "Example Movie Title 1",
-    "imageUrl": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=Movie+1",
+  {
+    "id": "movie010",
+    "title": "Action Thriller 2025",
+    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
     "info1_custom": "NEW",
-    "info2_quality": "1080p WEB-DL",
-    "info3_language": "Hindi, Tamil",
+    "info2_quality": "4K HDR",
+    "info3_language": "English, Hindi",
     "info4_type": "Movie, Action",
     "info6_status": "Online",
-    "total_views": 1500,
-    "info5_views": 200,
-    "storyline": "This is an example movie storyline. A thrilling action movie with amazing visuals and story.",
-    "imdb": "7.5/10",
-    "genre": "Action, Adventure, Drama",
-    "resolution": "1920x1080",
+    "total_views": 2100,
+    "info5_views": 320,
+    "storyline": "High-octane action thriller with stunning visual effects and intense sequences.",
+    "imdb": "8.4/10",
+    "genre": "Action, Thriller",
+    "resolution": "3840x2160",
     "released": "2025",
-    "cast": "Actor One, Actor Two, Actress One",
-    "createdAt": "2025-01-15T10:30:00Z",
-    "lastUpdated": "2025-01-20T14:45:00Z",
+    "cast": "Actor T, Actress U",
+    "createdAt": "2025-01-14T12:45:00Z",
+    "lastUpdated": "2025-01-21T11:50:00Z",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "isNewPost": true,
-    "serverAddedDate": "2025-01-15T10:30:00Z",
+    "serverAddedDate": "2025-01-14T12:45:00Z",
     "downloadOptions": [
       {
         "server": "Server 1",
         "qualities": [
           {
-            "quality_text": "1080p",
-            "path": "/movies/movie001-1080p.mp4",
-            "file_size": "1.5GB"
+            "quality_text": "4K",
+            "path": "/movies/movie010-4k.mkv",
+            "file_size": "15GB"
           },
           {
-            "quality_text": "720p",
-            "path": "/movies/movie001-720p.mp4",
-            "file_size": "800MB"
-          },
-          {
-            "quality_text": "480p",
-            "path": "/movies/movie001-480p.mp4",
-            "file_size": "400MB"
-          }
-        ]
-      },
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
             "quality_text": "1080p",
-            "path": "/videos/movie001-hd.mp4",
-            "file_size": "1.8GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff0000/ffffff?text=Screenshot+1",
-      "https://via.placeholder.com/800x450/00ff00/ffffff?text=Screenshot+2",
-      "https://via.placeholder.com/800x450/0000ff/ffffff?text=Screenshot+3"
-    ]
-  },
-  {
-    "id": "movie0011",
-    "title": "Example Series Season 1",
-    "imageUrl": "https://via.placeholder.com/300x450/16213e/ffffff?text=Series+1",
-    "info1_custom": "UPDATED",
-    "info2_quality": "720p HDTV",
-    "info3_language": "English, Bengali",
-    "info4_type": "Series, Drama",
-    "info6_status": "Online",
-    "total_views": 2300,
-    "info5_views": 150,
-    "storyline": "An exciting drama series with multiple seasons. Follow the journey of characters in this thrilling story.",
-    "imdb": "8.2/10",
-    "genre": "Drama, Mystery, Thriller",
-    "resolution": "1280x720",
-    "released": "2024",
-    "cast": "Actor A, Actor B, Actress C",
-    "createdAt": "2025-01-10T09:15:00Z",
-    "lastUpdated": "2025-01-25T16:20:00Z",
-    "enablePosterBlur": true,
-    "blurPercentage": 15,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-25T16:20:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "Complete Season",
-            "path": "/series/series001-season1.zip",
+            "path": "/movies/movie010-1080p.mkv",
             "file_size": "4.2GB"
           },
           {
-            "quality_text": "Episode 1-5",
-            "path": "/series/series001-ep1-5.zip",
+            "quality_text": "720p",
+            "path": "/movies/movie010-720p.mkv",
             "file_size": "2.1GB"
           }
         ]
       }
     ],
     "screenshotLinks": [
-      "https://via.placeholder.com/800x450/ff9900/ffffff?text=Series+SS1",
-      "https://via.placeholder.com/800x450/9900ff/ffffff?text=Series+SS2"
+      "https://placehold.co/800x450/ff0000/ffffff?text=Action+Scene+1",
+      "https://placehold.co/800x450/00ff00/ffffff?text=Action+Scene+2",
+      "https://placehold.co/800x450/0000ff/ffffff?text=Action+Scene+3"
     ]
-  },
-  {
-    "id": "movie0031",
-    "title": "Another Great Movie",
-    "imageUrl": "https://via.placeholder.com/300x450/0f3460/ffffff?text=Movie+3",
-    "info1_custom": "POPULAR",
-    "info2_quality": "4K BluRay",
-    "info3_language": "Dual Audio",
-    "info4_type": "Movie, Sci-Fi",
-    "info6_status": "Online",
-    "total_views": 4500,
-    "info5_views": 300,
-    "storyline": "A science fiction masterpiece with stunning visual effects and compelling story.",
-    "imdb": "8.9/10",
-    "genre": "Sci-Fi, Adventure",
-    "resolution": "3840x2160",
-    "released": "2024",
-    "cast": "Famous Actor X, Famous Actress Y",
-    "createdAt": "2025-01-05T08:00:00Z",
-    "lastUpdated": "2025-01-18T11:30:00Z",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-05T08:00:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "4K",
-            "path": "/movies/movie003-4k.mkv",
-            "file_size": "12GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie003-1080p.mkv",
-            "file_size": "3.5GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": []
   }
-  
-
- ]
+]
