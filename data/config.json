@@ -7,9 +7,9 @@
   "blurPercentage": 10,
   "showInfo5Views": true,
   "globalDomains": ["https://cdn1.example.com", "https://cdn2.example.com"],
-  "ads1": {"enabled": true, "code": "<div>Ad 1 Code</div>"},
-  "ads2": {"enabled": true, "code": "<div>Ad 2 Code</div>"},
-  "ads3": {"enabled": true, "code": "<div>Ad 3 Code</div>"},
-  "ads5": {"enabled": true, "code": "<div>Ad 5 Code</div>"},
-  "ads6": {"enabled": true, "code": "<div>Ad 6 Code</div>"}
+  "ads1": {"enabled": false, "code": "<div>Ad 1 Code</div>"},
+  "ads2": {"enabled": false, "code": "<div>Ad 2 Code</div>"},
+  "ads3": {"enabled": false, "code": "<div>Ad 3 Code</div>"},
+  "ads5": {"enabled": false, "code": "<div>Ad 5 Code</div>"},
+  "ads6": {"enabled": false, "code": "<div>Ad 6 Code</div>"}
 }
