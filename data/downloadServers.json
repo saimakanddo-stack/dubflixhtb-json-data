@@ -1,0 +1,8 @@
+{
+  "servers": [
+    {
+      "name": "Server 1",
+      "domains": ["https://server3127.example.com"]
+    }
+  ]
+}
