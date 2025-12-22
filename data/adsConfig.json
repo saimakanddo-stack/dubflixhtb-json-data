@@ -11,6 +11,10 @@
     "enabled": true,
     "code": "<div class='ad-square'>Ad 3: Square Ad (300x250)</div>"
   },
+  "ads4": {
+    "enabled": false,
+    "code": ""
+  },
   "ads5": {
     "enabled": true,
     "code": "<div class='ad-native'>Ad 5: Native Ad above Load More</div>"
@@ -18,6 +22,18 @@
   "ads6": {
     "enabled": true,
     "code": "<div class='ad-banner'>Ad 6: Footer Banner (728x90)</div>"
+  },
+  "adSlot1": {
+    "enabled": false,
+    "code": ""
+  },
+  "adSlot2": {
+    "enabled": false,
+    "code": ""
+  },
+  "adSlot3": {
+    "enabled": false,
+    "code": ""
   },
   "timerDuration": 10,
   "requiredAds": 3
