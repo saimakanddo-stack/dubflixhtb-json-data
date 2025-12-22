@@ -1,54 +1,5 @@
 [
   {
-    "id": "movie008",
-    "title": "Mystery Series",
-    "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+3",
-    "info1_custom": "UPDATED",
-    "info2_quality": "1080p WEB-DL",
-    "info3_language": "English, Tamil",
-    "info4_type": "Series, Mystery",
-    "info6_status": "Online",
-    "total_views": 2700,
-    "info5_views": 220,
-    "storyline": "A gripping mystery series that will keep you guessing until the very end.",
-    "imdb": "8.3/10",
-    "genre": "Mystery, Thriller",
-    "resolution": "1920x1080",
-    "released": "2024",
-    "cast": "Actor M, Actress N",
-    "createdAt": "2025-01-07T10:15:00Z",
-    "lastUpdated": "2025-01-26T17:40:00Z",
-    "enablePosterBlur": true,
-    "blurPercentage": 20,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-26T17:40:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "Complete Season",
-            "path": "/series/series003-season1.zip",
-            "file_size": "3.8GB"
-          }
-        ]
-      },
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "720p",
-            "path": "/series/series003-720p.zip",
-            "file_size": "2.5GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": [
-      "https://placehold.co/800x450/333333/ffffff?text=Screenshot+1"
-    ]
-  },
-  {
     "id": "movie009",
     "title": "Romantic Drama",
     "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+9",
