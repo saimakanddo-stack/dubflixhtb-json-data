@@ -1,51 +1,5 @@
 [
   {
-    "id": "movie001",
-    "title": "Example Movie Title 1",
-    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+1",
-    "info1_custom": "NEW",
-    "info2_quality": "1080p WEB-DL",
-    "info3_language": "Hindi, Tamil",
-    "info4_type": "Movie, Action, hi, hellow",
-    "info5_views": 200,
-    "info6_status": "Online",
-    "total_views": 1500,
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie001-1080p.mp4",
-            "file_size": "1.5GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/movies/movie001-720p.mp4",
-            "file_size": "800MB"
-          },
-          {
-            "quality_text": "480p",
-            "path": "/movies/movie001-480p.mp4",
-            "file_size": "400MB"
-          }
-        ]
-      },
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "1080p",
-            "path": "/videos/movie001-hd.mp4",
-            "file_size": "1.8GB"
-          }
-        ]
-      }
-    ],
-    "createdAt": "2025-01-15T10:30:00Z",
-    "lastUpdated": "2025-12-22"
-  },
-  {
     "id": "movie003",
     "title": "Another Great Movie",
     "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+3",
