@@ -18,5 +18,7 @@
   "ads6": {
     "enabled": true,
     "code": "<div class='ad-banner'>Ad 6: Footer Banner (728x90)</div>"
-  }
+  },
+  "timerDuration": 10,
+  "requiredAds": 3
 }
