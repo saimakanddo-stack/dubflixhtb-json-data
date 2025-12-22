@@ -8,19 +8,19 @@
       "name": "Adsterra Adult",
       "url": "https://behavepassword.com/c72zcv4sx3?key=cd81b8cfcc067ffe3da46e5e7f4461b0",
       "weight": 1,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Adsterra",
       "url": "https://behavepassword.com/zz98ntzft7?key=93d2e04219c181d282876fca48224ef4",
       "weight": 1,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Monetag",
       "url": "https://otieu.com/4/10254507",
       "weight": 1,
-      "enabled": true
+      "enabled": false
     }
   ]
 }
