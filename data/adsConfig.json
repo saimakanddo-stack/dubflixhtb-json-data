@@ -1,6 +1,6 @@
 {
   "ads1": {
-    "enabled": false,
+    "enabled": true,
     "code": "<div class='ad-banner'>Saim (728x90)</div>"
   },
   "ads2": {
