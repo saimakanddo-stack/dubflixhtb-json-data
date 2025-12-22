@@ -1,0 +1,22 @@
+{
+  "ads1": {
+    "enabled": true,
+    "code": "<div class='ad-banner'>Ad 1: Header Banner (728x90)</div>"
+  },
+  "ads2": {
+    "enabled": true,
+    "code": "<div class='ad-native'>Ad 2: Native Ad in Modal</div>"
+  },
+  "ads3": {
+    "enabled": true,
+    "code": "<div class='ad-square'>Ad 3: Square Ad (300x250)</div>"
+  },
+  "ads5": {
+    "enabled": true,
+    "code": "<div class='ad-native'>Ad 5: Native Ad above Load More</div>"
+  },
+  "ads6": {
+    "enabled": true,
+    "code": "<div class='ad-banner'>Ad 6: Footer Banner (728x90)</div>"
+  }
+}
