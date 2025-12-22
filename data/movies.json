@@ -1,47 +1,5 @@
 [
   {
-    "id": "movie003",
-    "title": "Another Great Movie",
-    "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+3",
-    "info1_custom": "POPULAR",
-    "info2_quality": "4K BluRay",
-    "info3_language": "Dual Audio",
-    "info4_type": "Movie, Sci-Fi",
-    "info6_status": "Online",
-    "total_views": 4500,
-    "info5_views": 300,
-    "storyline": "A science fiction masterpiece with stunning visual effects and compelling story.",
-    "imdb": "8.9/10",
-    "genre": "Sci-Fi, Adventure",
-    "resolution": "3840x2160",
-    "released": "2024",
-    "cast": "Famous Actor X, Famous Actress Y",
-    "createdAt": "2025-01-05T08:00:00Z",
-    "lastUpdated": "2025-01-18T11:30:00Z",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-05T08:00:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 2",
-        "qualities": [
-          {
-            "quality_text": "4K",
-            "path": "/movies/movie003-4k.mkv",
-            "file_size": "12GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie003-1080p.mkv",
-            "file_size": "3.5GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": []
-  },
-  {
     "id": "movie006",
     "title": "Sci-Fi Thriller",
     "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+6",
