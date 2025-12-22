@@ -1,15 +1,8 @@
 {
   "siteName": "Dub Fusion Hub",
   "siteLogoUrl": "",
-  "showLogo": false,
-  "placeholderImage": "https://via.placeholder.com/300x450/1a1a2e/ffffff?text=No+Image",
+  "placeholderImage": "https://placeholder.co/300x450/1a1a2e/ffffff?text=No+Image",
   "enablePosterBlur": false,
   "blurPercentage": 10,
-  "showInfo5Views": true,
-  "globalDomains": ["https://cdn1.example.com", "https://cdn2.example.com"],
-  "ads1": {"enabled": false, "code": "<div>Ad 1 Code</div>"},
-  "ads2": {"enabled": false, "code": "<div>Ad 2 Code</div>"},
-  "ads3": {"enabled": false, "code": "<div>Ad 3 Code</div>"},
-  "ads5": {"enabled": false, "code": "<div>Ad 5 Code</div>"},
-  "ads6": {"enabled": false, "code": "<div>Ad 6 Code</div>"}
+  "showInfo5Views": false
 }
