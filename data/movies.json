@@ -46,51 +46,6 @@
     "lastUpdated": "2025-12-22"
   },
   {
-    "id": "movie002",
-    "title": "Example Series Season 1",
-    "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+1",
-    "info1_custom": "UPDATED",
-    "info2_quality": "720p HDTV",
-    "info3_language": "English, Bengali",
-    "info4_type": "Series, Drama",
-    "info6_status": "Online",
-    "total_views": 2300,
-    "info5_views": 150,
-    "storyline": "An exciting drama series with multiple seasons. Follow the journey of characters in this thrilling story.",
-    "imdb": "8.2/10",
-    "genre": "Drama, Mystery, Thriller",
-    "resolution": "1280x720",
-    "released": "2024",
-    "cast": "Actor A, Actor B, Actress C",
-    "createdAt": "2025-01-10T09:15:00Z",
-    "lastUpdated": "2025-01-25T16:20:00Z",
-    "enablePosterBlur": true,
-    "blurPercentage": 15,
-    "isNewPost": false,
-    "serverAddedDate": "2025-01-25T16:20:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "Complete Season",
-            "path": "/series/series001-season1.zip",
-            "file_size": "4.2GB"
-          },
-          {
-            "quality_text": "Episode 1-5",
-            "path": "/series/series001-ep1-5.zip",
-            "file_size": "2.1GB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": [
-      "https://placehold.co/800x450/ff9900/ffffff?text=Series+SS1",
-      "https://placehold.co/800x450/9900ff/ffffff?text=Series+SS2"
-    ]
-  },
-  {
     "id": "movie003",
     "title": "Another Great Movie",
     "imageUrl": "https://placehold.co/300x450/0f3460/ffffff?text=Movie+3",
