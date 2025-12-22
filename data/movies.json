@@ -45,48 +45,6 @@
     ]
   },
   {
-    "id": "movie007",
-    "title": "Comedy Special",
-    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+7",
-    "info1_custom": "NEW",
-    "info2_quality": "1080p WEB-DL",
-    "info3_language": "Bengali",
-    "info4_type": "Movie, Comedy",
-    "info6_status": "Online",
-    "total_views": 1200,
-    "info5_views": 100,
-    "storyline": "A hilarious comedy that will make you laugh from start to finish.",
-    "imdb": "7.8/10",
-    "genre": "Comedy",
-    "resolution": "1920x1080",
-    "released": "2025",
-    "cast": "Comedian A, Comedian B",
-    "createdAt": "2025-01-18T14:20:00Z",
-    "lastUpdated": "2025-01-23T09:10:00Z",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "isNewPost": true,
-    "serverAddedDate": "2025-01-18T14:20:00Z",
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie007-1080p.mp4",
-            "file_size": "1.4GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/movies/movie007-720p.mp4",
-            "file_size": "750MB"
-          }
-        ]
-      }
-    ],
-    "screenshotLinks": []
-  },
-  {
     "id": "movie008",
     "title": "Mystery Series",
     "imageUrl": "https://placehold.co/300x450/16213e/ffffff?text=Series+3",
