@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "redirectDelay": 2000,
   "openInNewTab": true,
   "randomSelection": true,
