@@ -1,0 +1,46 @@
+name: Movie Database Management
+
+on:
+  schedule:
+    # প্রতি 4 ঘন্টায় (UTC সময়)
+    - cron: '0 */4 * * *'
+  
+  workflow_dispatch:  # ম্যানুয়াল ট্রিগার
+  
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/movies.json'
+
+jobs:
+  process-movies:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Process movies.json
+        run: node .github/scripts/process-movies.js
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/movies.json
+          
+          # শুধু যদি পরিবর্তন থাকে
+          if [[ -n $(git status --porcelain) ]]; then
+            git commit -m "Auto-update: Process movies.json [$(date +'%Y-%m-%d %H:%M:%S')]"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
