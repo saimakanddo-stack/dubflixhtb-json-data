@@ -3,7 +3,7 @@
     "id": "movie010",
     "title": "Action Thriller 2025",
     "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
-    "info1_custom": "update",
+    "info1_custom": "UPDATED",
     "info2_quality": "4K HDR",
     "info3_language": "English, Hindi",
     "info4_type": "Movie, Action",
@@ -47,7 +47,7 @@
     ],
     "total_views": 2100,
     "createdAt": "2025-01-14T12:45:00Z",
-    "lastUpdated": "2025-12-22"
+    "lastUpdated": "2025-12-23"
   },
   {
     "id": "movie1",
