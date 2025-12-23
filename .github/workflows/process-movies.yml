@@ -1,0 +1,156 @@
+name: Process Movies JSON
+
+on:
+  push:
+    paths:
+      - 'data/movies.json'
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'  # প্রতি ৩০ মিনিটে
+
+jobs:
+  process-movies:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Process JSON data
+      run: |
+        echo "JSON ডেটা প্রসেসিং শুরু হচ্ছে..."
+        
+        # প্রাথমিক কনফিগারেশন
+        current_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        cache_timestamp=$(date +%s)
+        
+        # movies.json ফাইল পড়ুন
+        if [ -f "data/movies.json" ]; then
+          echo "movies.json ফাইল পাওয়া গেছে"
+          
+          # JSON প্রসেস করার জন্য Node.js স্ক্রিপ্ট তৈরি করুন
+          cat > process.js << 'EOF'
+        const fs = require('fs');
+        const path = require('path');
+
+        // ফাইল পাথ
+        const inputFile = path.join(__dirname, 'data/movies.json');
+        const outputFile = path.join(__dirname, 'data/movies_processed.json');
+
+        try {
+          // JSON ফাইল পড়ুন
+          const rawData = fs.readFileSync(inputFile, 'utf8');
+          let movies = JSON.parse(rawData);
+          
+          console.log(`মোট ${movies.length} টি মুভি পাওয়া গেছে`);
+          
+          // বর্তমান সময়
+          const now = new Date();
+          const sevenDaysAgo = new Date(now);
+          sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+          
+          // প্রতিটি মুভি প্রসেস করুন
+          movies.forEach((movie, index) => {
+            // 1. info1_custom ফিল্ড ডাইনামিকভাবে আপডেট করুন
+            const createdAt = movie.createdAt ? new Date(movie.createdAt) : null;
+            const lastUpdated = movie.lastUpdated ? new Date(movie.lastUpdated) : null;
+            
+            let status = '';
+            
+            if (createdAt && createdAt >= sevenDaysAgo) {
+              // ৭ দিনের মধ্যে তৈরি
+              status = "NEW";
+            } else if (lastUpdated && lastUpdated >= sevenDaysAgo) {
+              // ৭ দিনের মধ্যে আপডেট হয়েছে
+              status = "UPDATED";
+            } else if (lastUpdated && lastUpdated < sevenDaysAgo) {
+              // ৭ দিনের বেশি আগে আপডেট হয়েছে কিন্তু এখনো আপডেট করা যায়
+              status = "UPDATED";
+            }
+            // অন্যথায় খালি থাকবে
+            
+            movie.info1_custom = status;
+            
+            // 2. সময়স্ট্যাম্প নিশ্চিত করুন
+            if (!movie.createdAt) {
+              movie.createdAt = new Date().toISOString();
+            }
+            
+            if (!movie.lastUpdated) {
+              movie.lastUpdated = new Date().toISOString();
+            }
+            
+            // 3. _cacheKey যুক্ত করুন (প্রতি প্রসেসে অনন্য)
+            movie._cacheKey = Date.now() + "_" + Math.random().toString(36).substr(2, 9);
+            
+            // প্রোগ্রেস লগ
+            if ((index + 1) % 10 === 0 || index === movies.length - 1) {
+              console.log(`প্রসেস করা হয়েছে: ${index + 1}/${movies.length} - ${movie.title || 'Unnamed Movie'}: ${status}`);
+            }
+          });
+          
+          // 4. সাজানো: প্রথমে lastUpdated, তারপর createdAt (নতুন/আপডেট প্রথমে)
+          movies.sort((a, b) => {
+            const dateA = new Date(a.lastUpdated || a.createdAt || 0);
+            const dateB = new Date(b.lastUpdated || b.createdAt || 0);
+            return dateB - dateA; // অবরোহী ক্রম
+          });
+          
+          // 5. চূড়ান্ত ডেটা সেভ করুন
+          const processedData = {
+            _metadata: {
+              processedAt: new Date().toISOString(),
+              totalMovies: movies.length,
+              cacheTimestamp: Date.now(),
+              source: "GitHub Actions Processor"
+            },
+            movies: movies
+          };
+          
+          fs.writeFileSync(outputFile, JSON.stringify(processedData, null, 2), 'utf8');
+          console.log(`✅ প্রসেস করা JSON সেভ করা হয়েছে: ${outputFile}`);
+          console.log(`📊 মেটাডাটা: ${processedData._metadata.totalMovies} movies, processed at ${processedData._metadata.processedAt}`);
+          
+        } catch (error) {
+          console.error("❌ JSON প্রসেসিংয়ে ত্রুটি:", error.message);
+          process.exit(1);
+        }
+        EOF
+        
+          # Node.js স্ক্রিপ্ট রান করুন
+          node process.js
+          
+          # ওরিজিনাল এবং প্রসেসড ফাইলের সাইজ চেক করুন
+          echo "ওরিজিনাল ফাইলের সাইজ: $(stat -c%s data/movies.json) bytes"
+          echo "প্রসেসড ফাইলের সাইজ: $(stat -c%s data/movies_processed.json) bytes"
+          
+        else
+          echo "❌ movies.json ফাইল পাওয়া যায়নি!"
+          exit 1
+        fi
+        
+    - name: Commit processed files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # পরিবর্তন কমিট করুন
+        git add data/movies_processed.json
+        git commit -m "Auto-process movies JSON with dynamic status updates [skip ci]" || echo "No changes to commit"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        
+    - name: Success Notification
+      run: |
+        echo "✅ JSON প্রসেসিং সফলভাবে সম্পন্ন হয়েছে!"
+        echo "🔄 আপডেট করা ফাইল: data/movies_processed.json"
+        echo "📅 পরবর্তী রান: ৩০ মিনিট পরে অথবা নতুন কমিট হলে"
