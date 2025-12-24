@@ -1,0 +1,42 @@
+name: Sort Movies by Date
+
+on:
+  push:
+    paths:
+      - 'data/movies.json'  # শুধু যখন movies.json পরিবর্তন হবে
+  workflow_dispatch:  # ম্যানুয়াল ট্রিগার
+
+jobs:
+  sort-movies:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Sort movies by recent date
+      run: python scripts/sort_movies.py
+    
+    - name: Commit and push sorted movies
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        if git diff --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+        
+        git add data/movies.json
+        git commit -m 'Auto-sort: Movies sorted by recent date'
+        git push
