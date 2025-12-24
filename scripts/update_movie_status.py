@@ -5,10 +5,16 @@ import os
 import sys
 from datetime import datetime
 
+def parse_date(date_str):
+    """Parse date from ISO format or simple date format"""
+    # Remove time part if exists (format: YYYY-MM-DD or YYYY-MM-DDTHH:MM:SSZ)
+    date_only = date_str.split('T')[0] if 'T' in date_str else date_str
+    # Remove timezone info if exists
+    date_only = date_only.split('+')[0] if '+' in date_str else date_only
+    return datetime.strptime(date_only, '%Y-%m-%d')
+
 def update_movie_status():
     current_date = datetime.now()
-    
-    # আপনার প্রকৃত পাথ
     json_path = 'data/movies.json'
     
     if not os.path.exists(json_path):
@@ -20,25 +26,21 @@ def update_movie_status():
     with open(json_path, 'r', encoding='utf-8') as file:
         movies = json.load(file)
     
-    changes_made = False
+    changes_made = 0
+    
     for movie in movies:
         try:
-            # ISO format তারিখ+সময় পার্স করা (উদাহরণ: "2024-01-15T12:45:00Z")
-            # শুধু তারিখের অংশ নেওয়ার জন্য split ব্যবহার
-            created_at_str = movie['createdAt'].split('T')[0]  # "2024-01-15"
-            last_updated_str = movie['lastUpdated'].split('T')[0]  # "2024-01-15"
-            
-            created_at = datetime.strptime(created_at_str, '%Y-%m-%d')
-            last_updated = datetime.strptime(last_updated_str, '%Y-%m-%d')
+            movie_id = movie.get('id', 'unknown')
+            created_at = parse_date(movie['createdAt'])
+            last_updated = parse_date(movie['lastUpdated'])
             
             days_since_created = (current_date - created_at).days
             days_since_updated = (current_date - last_updated).days
             
             old_value = movie.get('info1_custom', '')
-            new_value = ''
             
-            # লজিক: createdAt এবং lastUpdated একই হলে
-            if created_at == last_updated:
+            # Apply your business rules
+            if created_at.date() == last_updated.date():
                 new_value = 'NEW' if days_since_created <= 7 else ''
             else:
                 if days_since_created <= 7:
@@ -48,24 +50,25 @@ def update_movie_status():
                 else:
                     new_value = ''
             
-            movie['info1_custom'] = new_value
-            
+            # Update if value changed
             if old_value != new_value:
-                changes_made = True
-                print(f"Updated movie {movie['id']}: {old_value} -> {new_value}")
+                movie['info1_custom'] = new_value
+                changes_made += 1
+                print(f"Updated {movie_id}: {old_value} → {new_value} "
+                      f"(created: {days_since_created}d ago, updated: {days_since_updated}d ago)")
                 
         except Exception as e:
-            print(f"Error processing movie {movie.get('id', 'unknown')}: {e}")
+            print(f"Error with movie {movie.get('id', 'unknown')}: {e}")
             continue
     
-    if changes_made:
+    if changes_made > 0:
         with open(json_path, 'w', encoding='utf-8') as file:
             json.dump(movies, file, indent=2, ensure_ascii=False)
-        print('Changes saved to file.')
+        print(f"\n✅ Successfully updated {changes_made} movie(s)")
     else:
-        print('No changes needed.')
+        print("\n✅ No updates needed")
     
-    return changes_made
+    return changes_made > 0
 
 if __name__ == "__main__":
     update_movie_status()
