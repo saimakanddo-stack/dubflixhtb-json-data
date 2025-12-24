@@ -1,5 +1,5 @@
 {
-  "enabled": false,
+  "enabled": true,
   "redirectDelay": 2000,
   "openInNewTab": true,
   "randomSelection": true,
@@ -8,7 +8,7 @@
       "name": "Adsterra Adult",
       "url": "https://behavepassword.com/c72zcv4sx3?key=cd81b8cfcc067ffe3da46e5e7f4461b0",
       "weight": 1,
-      "enabled": false
+      "enabled": true
     },
     {
       "name": "Adsterra",
@@ -20,7 +20,7 @@
       "name": "Monetag",
       "url": "https://otieu.com/4/10254507",
       "weight": 1,
-      "enabled": false
+      "enabled": true
     }
   ]
 }
