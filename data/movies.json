@@ -207,7 +207,7 @@
     "info4_type": "Movie",
     "info_subtitle": "[ORG Hindi]",
     "info5_views": 0,
-    "info6_status": "Online",
+    "info6_status": "ORG Hindi",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "imdb": "",
@@ -228,17 +228,17 @@
         "qualities": [
           {
             "quality_text": "480p",
-            "path": "/h",
+            "path": "/14a0fbdc8d6c381a4ecfaba73c4a2f9f/Five.Nights.at.Freddy%27s.2023.%5BMovieLinkBD.Com%5D.480p.BluRay.Hindi.English.Esubs.mkv",
             "file_size": "376 MB"
           },
           {
             "quality_text": "720p",
-            "path": "/h",
+            "path": "/aa5f59e6bb24d4fc5e4ca67193ba4ec0/%5BMovieLinkBD.Com%5D%20Five%20Nights%20at%20Freddys%202023%20BluRay%20720p%20Hindi%20English%20AAC%205.1%20x264%20ESub.mkv",
             "file_size": "1.2 GB"
           },
           {
             "quality_text": "1080p",
-            "path": "/h",
+            "path": "/e704f6a03140fb8b2f16c524fbe03174/Five.Nights.at.Freddy%27s.2023.%5BMovieLinkBD.Com%5D.%201080p.10bit.BluRay.Hindi.English.Esubs.mkv",
             "file_size": "1.9 GB"
           }
         ]
@@ -246,6 +246,6 @@
     ],
     "total_views": 0,
     "createdAt": "2025-12-24T17:46:55.360Z",
-    "lastUpdated": "2025-12-24T17:46:55.360Z"
+    "lastUpdated": "2025-12-24T17:50:19.016Z"
   }
 ]
