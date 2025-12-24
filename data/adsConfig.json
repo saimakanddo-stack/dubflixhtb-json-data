@@ -1,7 +1,7 @@
 {
   "ads1": {
     "enabled": true,
-    "code": "<script>\n  atOptions = {\n    'key' : '3f29a9abdf0b56c5183917c2483d8b60',\n    'format' : 'iframe',\n    'height' : 90,\n    'width' : 728,\n    'params' : {}\n  };\n</script>\n<script src=\"https://behavepassword.com/3f29a9abdf0b56c5183917c2483d8b60/invoke.js\"></script>"
+    "code": "<![CDATA[<script>\n  atOptions = {\n    'key' : '3f29a9abdf0b56c5183917c2483d8b60',\n    'format' : 'iframe',\n    'height' : 90,\n    'width' : 728,\n    'params' : {}\n  };\n</script>\n<script src=\"https://behavepassword.com/3f29a9abdf0b56c5183917c2483d8b60/invoke.js\"></script>]]"
   },
   "ads2": {
     "enabled": true,
