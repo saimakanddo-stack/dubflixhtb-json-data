@@ -1,22 +1,22 @@
 name: Update Movie Status on Main
+
 on:
   schedule:
-    - cron: '0 0 * * *'  # প্রতিদিন মধ্যরাতে রান হবে
-  workflow_dispatch:  # ম্যানুয়াল ট্রিগার করার অপশন
+    - cron: '0 0 * * *'  # Daily at midnight
+  workflow_dispatch:      # Manual trigger option
 
 jobs:
   update-movie-status:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write  # main branch-এ commit করার অনুমতি
+      contents: write
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: main  # main branch চেকআউট করবে
-        fetch-depth: 0  # সম্পূর্ণ হিস্টোরি fetch করবে
+        ref: main
         
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -25,18 +25,16 @@ jobs:
         
     - name: Update movie status
       run: |
-        python -c "
+        python << 'EOF'
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 
-# বর্তমান তারিখ
 current_date = datetime.now()
 
-# JSON ফাইল লোড করুন
 json_path = 'root/data/movies.json'
 if not os.path.exists(json_path):
-    json_path = 'data/movies.json'  # বিকল্প পাথ
+    json_path = 'data/movies.json'
 
 with open(json_path, 'r', encoding='utf-8') as file:
     movies = json.load(file)
@@ -46,38 +44,28 @@ for movie in movies:
     created_at = datetime.strptime(movie['createdAt'], '%Y-%m-%d')
     last_updated = datetime.strptime(movie['lastUpdated'], '%Y-%m-%d')
     
-    # দিনের পার্থক্য গণনা
     days_since_created = (current_date - created_at).days
     days_since_updated = (current_date - last_updated).days
     
-    # আগের value সংরক্ষণ
     old_value = movie.get('info1_custom', '')
+    new_value = ''
     
-    # যদি createdAt এবং lastUpdated একই হয়
     if created_at == last_updated:
-        if days_since_created > 7:
-            movie['info1_custom'] = ''
-        else:
-            movie['info1_custom'] = 'NEW'
+        new_value = 'NEW' if days_since_created <= 7 else ''
     else:
-        # createdAt 7 দিনের বেশি হলে
-        if days_since_created > 7:
-            # lastUpdated 10 দিনের বেশি হলে
-            if days_since_updated > 10:
-                movie['info1_custom'] = ''
-            # lastUpdated 10 দিনের কম হলে
-            else:
-                movie['info1_custom'] = 'UPDATED'
-        # createdAt 7 দিনের কম হলে
+        if days_since_created <= 7:
+            new_value = 'NEW'
+        elif days_since_updated <= 10:
+            new_value = 'UPDATED'
         else:
-            movie['info1_custom'] = 'NEW'
+            new_value = ''
     
-    # যদি value পরিবর্তন হয়
-    if old_value != movie['info1_custom']:
+    movie['info1_custom'] = new_value
+    
+    if old_value != new_value:
         changes_made = True
-        print(f'Updated movie {movie[\"id\"]}: {old_value} -> {movie[\"info1_custom\"]}')
+        print(f"Updated movie {movie['id']}: {old_value} -> {new_value}")
 
-# আপডেট করা JSON সেভ করুন
 if changes_made:
     with open(json_path, 'w', encoding='utf-8') as file:
         json.dump(movies, file, indent=2, ensure_ascii=False)
@@ -86,20 +74,20 @@ else:
     print('No changes needed.')
 
 print('Movie status update completed!')
-"
+EOF
         
-    - name: Commit and push changes to main
+    - name: Commit and push changes
       if: success()
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # পরিবর্তন আছে কিনা চেক
+        # Check if there are changes
         if git diff --quiet; then
           echo "No changes to commit"
           exit 0
         fi
         
-        git add -A
+        git add .
         git commit -m 'Auto-update: Movie status based on date rules [skip ci]'
         git push origin main
