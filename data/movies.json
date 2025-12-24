@@ -1,40 +1,5 @@
 [
   {
-    "id": "movie1",
-    "title": "Example Movie Title 1",
-    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
-    "info1_custom": "NEW",
-    "info2_quality": "1080p WEB-DL",
-    "info3_language": "English, Hindi",
-    "info4_type": "Movie, Action",
-    "info_subtitle": "",
-    "info5_views": 0,
-    "info6_status": "Online",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "8.4/10",
-    "genre": "Action, Thriller",
-    "resolution": "3840x2160",
-    "released": "2025",
-    "cast": "Actor T, Actress U",
-    "storyline": "gf",
-    "screenshotLinks": [],
-    "downloadOptions": [
-      {
-        "server": "gdf",
-        "qualities": [
-          {
-            "quality_text": "7202p",
-            "path": "/sdjkjsdk"
-          }
-        ]
-      }
-    ],
-    "total_views": 0,
-    "createdAt": "2025-12-22T00:00:00Z",
-    "lastUpdated": "2025-12-24T08:25:54.374Z"
-  },
-  {
     "id": "movie010",
     "title": "Action Thriller 2026",
     "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
