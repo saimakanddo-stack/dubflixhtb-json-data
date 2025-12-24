@@ -5,7 +5,7 @@
     "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPueTCvTwg5KPefwrEyGsKKNPX6IB6m1Lri8vS2d3EZC0V8NpWov_k7jbpdFPaN3GxGMDe1kv3QcZM3zUj9rHnkulCYVJupEZzTRZSpXhJs-H3xgN8PFUTQCjogGy6uQ6usfjPrNrhgk4RL_9DdvYO0o3kfZ88kN95zuWPFeoFR5I2CgPF08FAwCc0G7zy/s450/easy%20a%202010.jpg",
     "info1_custom": "NEW",
     "info2_quality": "",
-    "info3_language": "Dual [Hindi–English]",
+    "info3_language": "Dual [HindiâEnglish]",
     "info4_type": "Movie",
     "info_subtitle": "",
     "info5_views": 0,
@@ -44,5 +44,56 @@
     "total_views": 0,
     "createdAt": "2025-12-24T09:48:32.091Z",
     "lastUpdated": "2025-12-24T09:48:32.091Z"
+  },
+  {
+    "id": "movie2",
+    "title": "Avatar: Fire and Ash (2025)",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZy6HZ9rlPWdACyWMwiPCjLyKjA3WW-hmDkmVj3QL21AAJhLQQ2yPUNF35Cxegoum6NyjCL2JFZ1dBuw7BwOp1y2UhMBm-CzS6SRwoTQE1ABPpsE88xuyVPppLlYNnvcNFppMsJo2_0q5Wg-OF7g1zket0Imujp89jF8XIKDSMwtjJt0sIEGnh6DLiWEU/s450/1000300022.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "HDTC",
+    "info3_language": "Hindi",
+    "info4_type": "Movie",
+    "info_subtitle": "[Hindi ORG] HDTC [Best Quality Print] Part 3",
+    "info5_views": 0,
+    "info6_status": "Part 3",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "7.6/10",
+    "genre": "Action, Adventure, Fantasy",
+    "resolution": "1080p | 720p | 480p",
+    "released": "19 Dec 2025 (United States)",
+    "cast": "Winslet, Zoe Saldaña, Edie Falco",
+    "storyline": "Sequel of Avatar 2 (2022). The plot is unknown.",
+    "screenshotLinks": [
+      "https://i.imgbd.org/poster_9mcm1766145688.jpg",
+      "https://i.imgbd.org/poster_609y1766055300.jpg",
+      "https://i.imgbd.org/poster_a2av1766055329.jpg",
+      "https://i.imgbd.org/poster_sx0l1766145753.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/y",
+            "file_size": "670 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/jj",
+            "file_size": "1.6 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/iie",
+            "file_size": "2.9 GB"
+          }
+        ]
+      }
+    ],
+    "total_views": 0,
+    "createdAt": "2025-12-24T11:08:12.327Z",
+    "lastUpdated": "2025-12-24T11:08:12.327Z"
   }
 ]
