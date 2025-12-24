@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "redirectDelay": 2000,
+  "redirectDelay": 1000,
   "openInNewTab": true,
   "randomSelection": true,
   "links": [
