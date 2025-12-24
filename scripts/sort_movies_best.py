@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# scripts/sort_movies_best.py - Optimal solution for sorting by recent activity
+# scripts/sort_movies_best.py - Fixed version
 
 import json
 import os
@@ -15,7 +15,7 @@ class MovieSorter:
             'total_movies': 0,
             'dates_normalized': 0,
             'order_changed': False,
-            'recent_source_counts': {'createdAt': 0, 'lastUpdated': 0}
+            'recent_source_counts': {'createdAt': 0, 'lastUpdated': 0, 'unknown': 0}
         }
     
     def load_movies(self) -> bool:
@@ -50,7 +50,16 @@ class MovieSorter:
         
         # If has 'T' but no timezone
         if 'T' in date_str and not date_str.endswith('Z'):
-            return f"{date_str}Z"
+            # Check if it already has seconds
+            time_part = date_str.split('T')[1]
+            if ':' in time_part:
+                time_parts = time_part.split(':')
+                if len(time_parts) == 2:
+                    # Has only hours and minutes, add seconds
+                    return f"{date_str}:00Z"
+                elif len(time_parts) == 3:
+                    # Has hours, minutes, seconds
+                    return f"{date_str}Z"
         
         # If simple date format (YYYY-MM-DD)
         try:
@@ -79,37 +88,76 @@ class MovieSorter:
                         
                         # Show first few changes
                         if self.stats['dates_normalized'] <= 3:
-                            print(f"  • {movie_id}: {field} → ISO format")
+                            print(f"  • {movie_id}: {field} '{original}' → '{normalized}'")
         
         if self.stats['dates_normalized'] > 0:
+            if self.stats['dates_normalized'] > 3:
+                print(f"  ... and {self.stats['dates_normalized'] - 3} more")
             print(f"✅ Normalized {self.stats['dates_normalized']} date(s)")
         else:
             print("✅ All dates already in proper ISO format")
+    
+    def safe_parse_date(self, date_str: str) -> Optional[datetime]:
+        """Safely parse date string with multiple format attempts"""
+        if not date_str:
+            return None
+        
+        # Try multiple date formats
+        formats_to_try = [
+            '%Y-%m-%dT%H:%M:%SZ',      # 2024-01-15T12:45:00Z
+            '%Y-%m-%dT%H:%M:%S',       # 2024-01-15T12:45:00
+            '%Y-%m-%dT%H:%MZ',         # 2024-01-15T12:45Z
+            '%Y-%m-%dT%H:%M',          # 2024-01-15T12:45
+            '%Y-%m-%d %H:%M:%S',       # 2024-01-15 12:45:00
+            '%Y-%m-%d',                # 2024-01-15
+        ]
+        
+        for fmt in formats_to_try:
+            try:
+                return datetime.strptime(date_str, fmt)
+            except ValueError:
+                continue
+        
+        # If all formats fail, try to extract just the date part
+        try:
+            # Extract date part (before 'T' or space)
+            if 'T' in date_str:
+                date_part = date_str.split('T')[0]
+            elif ' ' in date_str:
+                date_part = date_str.split(' ')[0]
+            else:
+                date_part = date_str
+            
+            return datetime.strptime(date_part, '%Y-%m-%d')
+        except:
+            return None
     
     def get_recent_activity_date(self, movie: Dict) -> Tuple[datetime, str]:
         """
         Get the most recent activity date and its source
         Returns: (datetime_object, 'createdAt' or 'lastUpdated')
         """
-        def parse_iso_date(iso_str: str) -> datetime:
-            """Parse ISO date string to datetime object"""
-            # Remove timezone and microseconds if present
-            clean_str = iso_str.split('+')[0].split('.')[0]
-            
-            if 'T' in clean_str:
-                # ISO format with time
-                try:
-                    return datetime.strptime(clean_str, '%Y-%m-%dT%H:%M:%S')
-                except ValueError:
-                    # Try without seconds
-                    return datetime.strptime(clean_str, '%Y-%m-%dT%H:%M')
-            else:
-                # Date only (should not happen after normalization)
-                return datetime.strptime(clean_str, '%Y-%m-%d')
+        movie_id = movie.get('id', 'unknown')
         
         try:
-            created = parse_iso_date(movie['createdAt'])
-            updated = parse_iso_date(movie['lastUpdated'])
+            created_str = movie.get('createdAt', '')
+            updated_str = movie.get('lastUpdated', '')
+            
+            # Parse dates safely
+            created = self.safe_parse_date(created_str)
+            updated = self.safe_parse_date(updated_str)
+            
+            if not created and not updated:
+                print(f"⚠️  Could not parse any date for movie {movie_id}")
+                return datetime.now(), 'unknown'
+            
+            if not created:
+                print(f"⚠️  Could not parse createdAt for movie {movie_id}: {created_str}")
+                return updated, 'lastUpdated'
+            
+            if not updated:
+                print(f"⚠️  Could not parse lastUpdated for movie {movie_id}: {updated_str}")
+                return created, 'createdAt'
             
             # Determine which is more recent
             if updated >= created:
@@ -118,7 +166,7 @@ class MovieSorter:
                 return created, 'createdAt'
                 
         except Exception as e:
-            print(f"⚠️  Error parsing dates for movie {movie.get('id', 'unknown')}: {e}")
+            print(f"⚠️  Error getting recent date for movie {movie_id}: {e}")
             # Fallback to current time
             return datetime.now(), 'unknown'
     
@@ -132,8 +180,11 @@ class MovieSorter:
             movie['_sort_date'] = recent_date
             movie['_sort_source'] = source
             
-            # Track which date was used
-            self.stats['recent_source_counts'][source] += 1
+            # Track which date was used (ensure key exists)
+            if source in self.stats['recent_source_counts']:
+                self.stats['recent_source_counts'][source] += 1
+            else:
+                self.stats['recent_source_counts'][source] = 1
         
         # Sort by recent date (newest first)
         self.movies.sort(key=lambda x: x['_sort_date'], reverse=True)
@@ -156,6 +207,7 @@ class MovieSorter:
             if os.path.exists(self.json_path):
                 import shutil
                 shutil.copy2(self.json_path, backup_path)
+                print(f"📁 Backup created: {backup_path}")
             
             # Save sorted movies
             with open(self.json_path, 'w', encoding='utf-8') as file:
@@ -180,20 +232,25 @@ class MovieSorter:
         print(f"   • Order changed: {'Yes' if self.stats['order_changed'] else 'No'}")
         
         print(f"\n📅 Recent activity source:")
-        print(f"   • Sorted by lastUpdated: {self.stats['recent_source_counts']['lastUpdated']}")
-        print(f"   • Sorted by createdAt: {self.stats['recent_source_counts']['createdAt']}")
+        for source, count in self.stats['recent_source_counts'].items():
+            if count > 0:
+                print(f"   • Sorted by {source}: {count}")
         
         print(f"\n🏆 Top 5 Most Recent Movies:")
         for i, movie in enumerate(self.movies[:5], 1):
             recent_date, source = self.get_recent_activity_date(movie)
             days_ago = (datetime.now() - recent_date).days
             
+            # Safely extract date part for display
+            created_display = movie.get('createdAt', 'N/A').split('T')[0] if 'T' in movie.get('createdAt', '') else movie.get('createdAt', 'N/A')
+            updated_display = movie.get('lastUpdated', 'N/A').split('T')[0] if 'T' in movie.get('lastUpdated', '') else movie.get('lastUpdated', 'N/A')
+            
             print(f"\n   {i}. {movie.get('title', 'Untitled')[:40]}...")
             print(f"      ID: {movie['id']}")
             print(f"      Recent activity: {recent_date.strftime('%Y-%m-%d %H:%M')}")
             print(f"      ({days_ago} days ago, based on {source})")
-            print(f"      Created: {movie['createdAt'].split('T')[0]}")
-            print(f"      Updated: {movie['lastUpdated'].split('T')[0]}")
+            print(f"      Created: {created_display}")
+            print(f"      Updated: {updated_display}")
         
         if self.stats['total_movies'] > 5:
             print(f"\n   ... and {self.stats['total_movies'] - 5} more movies")
