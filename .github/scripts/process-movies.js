@@ -1,43 +1,69 @@
 const fs = require('fs');
 const path = require('path');
-// ফাইল পাথ
-const filePath = path.join(__dirname, '../data/movies.json');
+// আপনার প্রোজেক্ট স্ট্রাকচার অনুযায়ী পাথ ঠিক করা হয়েছে
+const dataDir = path.join(__dirname, '../data');
+const filePath = path.join(dataDir, 'movies.json');
 function processMovies() {
 try {
-if (!fs.existsSync(filePath)) {
-console.error('movies.json ফাইলটি পাওয়া যায়নি!');
-return;
+console.log('Checking for data directory...');
+if (!fs.existsSync(dataDir)) {
+console.log('Data directory not found. Creating it...');
+fs.mkdirSync(dataDir, { recursive: true });
 }
+    console.log('Checking for movies.json at:', filePath);
+    if (!fs.existsSync(filePath)) {
+        console.log('movies.json not found. Creating an empty one...');
+        fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+        return;
+    }
+
     const rawData = fs.readFileSync(filePath, 'utf8');
-    let movies = JSON.parse(rawData);
+    let movies;
+    
+    try {
+        movies = JSON.parse(rawData);
+    } catch (e) {
+        console.error('JSON Parse Error: movies.json is corrupted.');
+        process.exit(1);
+    }
+
+    if (!Array.isArray(movies)) {
+        console.error('Data inside movies.json is not an array.');
+        process.exit(1);
+    }
+
     const now = new Date();
 
-    // তারিখ পার্স করার ফাংশন (বিভিন্ন ফরম্যাট হ্যান্ডেল করার জন্য)
     function parseDate(dateStr) {
         if (!dateStr) return null;
+        
+        // বিভিন্ন কমন ফরম্যাট হ্যান্ডেল করার চেষ্টা (যেমন: 22-12-2024)
+        if (typeof dateStr === 'string' && dateStr.includes('-')) {
+            const parts = dateStr.split('-');
+            if (parts[0].length === 2 && parts[2].length === 4) {
+                // converts DD-MM-YYYY to YYYY-MM-DD for standard parsing
+                dateStr = `${parts[2]}-${parts[1]}-${parts[0]}`;
+            }
+        }
+        
         const d = new Date(dateStr);
         return isNaN(d.getTime()) ? null : d;
     }
 
     movies = movies.map(movie => {
-        // ১. তারিখ রূপান্তর (ISO 8601)
         let createdDate = parseDate(movie.createdAt);
         let updatedDate = parseDate(movie.lastUpdated);
 
         if (createdDate) movie.createdAt = createdDate.toISOString();
         if (updatedDate) movie.lastUpdated = updatedDate.toISOString();
 
-        // ২. স্ট্যাটাস আপডেট লজিক
-        let status = ""; // ডিফল্ট ব্ল্যাঙ্ক
+        let status = "";
         const sevenDaysAgo = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
         const tenDaysAgo = new Date(now.getTime() - (10 * 24 * 60 * 60 * 1000));
 
-        // গত ৭ দিনের মধ্যে যোগ হলে NEW
         if (createdDate && createdDate >= sevenDaysAgo) {
             status = "NEW";
-        } 
-        // গত ১০ দিনের মধ্যে আপডেট হলে UPDATED (যদি অলরেডি NEW না থাকে)
-        else if (updatedDate && updatedDate >= tenDaysAgo) {
+        } else if (updatedDate && updatedDate >= tenDaysAgo) {
             status = "UPDATED";
         }
 
@@ -45,19 +71,18 @@ return;
         return movie;
     });
 
-    // ৩. সর্টিং লজিক (সর্বশেষ তারিখ অনুযায়ী)
+    // সর্টিং: সর্বশেষ আপডেট বা ক্রিয়েশন ডেট অনুযায়ী
     movies.sort((a, b) => {
         const dateA = new Date(a.lastUpdated || a.createdAt || 0);
         const dateB = new Date(b.lastUpdated || b.createdAt || 0);
         return dateB - dateA;
     });
 
-    // ফাইল সেভ করা
     fs.writeFileSync(filePath, JSON.stringify(movies, null, 2), 'utf8');
-    console.log('Movie database successfully updated and sorted!');
+    console.log('Success: Processed ' + movies.length + ' movies.');
 
 } catch (error) {
-    console.error('Error processing movies:', error);
+    console.error('Fatal Error:', error.message);
     process.exit(1);
 }
 
