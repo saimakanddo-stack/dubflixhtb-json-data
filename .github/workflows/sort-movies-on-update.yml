@@ -1,0 +1,39 @@
+name: Auto-Sort Movies on Update
+
+on:
+  push:
+    paths:
+      - 'data/movies.json'
+  pull_request:
+    paths:
+      - 'data/movies.json'
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  sort-movies:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'  # Using newer Python for better performance
+    
+    - name: Run optimized movie sorter
+      run: python scripts/sort_movies_best.py
+    
+    - name: Auto-commit sorted movies
+      if: success()
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "🎬 Auto-sort: Movies sorted by most recent activity"
+        commit_options: '--no-verify'
+        file_pattern: 'data/movies.json'
+        branch: ${{ github.head_ref || github.ref_name }}
