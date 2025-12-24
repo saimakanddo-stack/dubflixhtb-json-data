@@ -1,6 +1,6 @@
 {
   "ads1": {
-    "enabled": true,
+    "enabled": false,
     "code": "<script>
   atOptions = {
     'key' : '3f29a9abdf0b56c5183917c2483d8b60',
@@ -13,7 +13,7 @@
 <script src="https://behavepassword.com/3f29a9abdf0b56c5183917c2483d8b60/invoke.js"></script>"
   },
   "ads2": {
-    "enabled": true,
+    "enabled": false,
     "code": "<script async=\"async\" data-cfasync=\"false\" src=\"https://behavepassword.com/4c42ceb1db3d08f676dbd914b58b806d/invoke.js\"></script>\n<div id=\"container-4c42ceb1db3d08f676dbd914b58b806d\"></div>"
   },
   "ads3": {
