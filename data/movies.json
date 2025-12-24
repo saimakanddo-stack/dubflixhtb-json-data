@@ -62,7 +62,7 @@
     "genre": "Action, Adventure, Fantasy",
     "resolution": "1080p | 720p | 480p",
     "released": "19 Dec 2025 (United States)",
-    "cast": "Kate Winslet, Zoe SaldaÃ±a, Edie Falco",
+    "cast": "Kate Winslet, Zoe SaldaÃÂ±a, Edie Falco",
     "storyline": "Sequel of Avatar 2 (2022). The plot is unknown.",
     "screenshotLinks": [
       "https://i.imgbd.org/poster_9mcm1766145688.jpg",
@@ -196,5 +196,56 @@
     "total_views": 0,
     "createdAt": "2025-12-24T16:15:34.936Z",
     "lastUpdated": "2025-12-24T16:15:34.936Z"
+  },
+  {
+    "id": "movie5",
+    "title": "Five Nights at Freddy's (2023)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uiWMy1h0Xlto9aE3DbKhXf8lPzK.jpg",
+    "info1_custom": "",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "info_subtitle": "[ORG Hindi]",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Hollywood, Drama, Horror, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "",
+    "cast": "",
+    "storyline": "A troubled security guard begins working at Freddy Fazbear's Pizzeria. While spending his first night on the job, he realizes the late shift at Freddy's won't be so easy to make it through.",
+    "screenshotLinks": [
+      "https://m.media-amazon.com/images/M/MV5BNjUxZDQ3NTktZTZlZC00M2ZhLWJmM2ItZDcyNGY5YzY2MTEyXkEyXkFqcGc@._V1_QL75_UX437_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNmFmY2ViNTAtNTNlOS00MThmLTg3MjUtNmIzMGE5YWUxMTE0XkEyXkFqcGc@._V1_QL75_UX409_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNWY5ZDk4MDItM2U1My00MWU1LWFhMGUtZjBmYmQ4YjRhYzI5XkEyXkFqcGc@._V1_QL75_UX437_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYWRjOTI1MTgtMWU3Ni00YWVjLWEzODMtYzQ0OTQ3ODYzY2QwXkEyXkFqcGc@._V1_QL75_UX328_.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/h",
+            "file_size": "376 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/h",
+            "file_size": "1.2 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/h",
+            "file_size": "1.9 GB"
+          }
+        ]
+      }
+    ],
+    "total_views": 0,
+    "createdAt": "2025-12-24T17:46:55.360Z",
+    "lastUpdated": "2025-12-24T17:46:55.360Z"
   }
 ]
