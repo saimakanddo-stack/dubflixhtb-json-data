@@ -1,55 +1,5 @@
 [
   {
-    "id": "movie010",
-    "title": "Action Thriller 2026",
-    "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
-    "info1_custom": "UPDATED",
-    "info2_quality": "4K HDR",
-    "info3_language": "English, Hindi",
-    "info4_type": "Movie, Action",
-    "info_subtitle": "",
-    "info5_views": 320,
-    "info6_status": "Online",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "8.4/10",
-    "genre": "Action, Thriller",
-    "resolution": "3840x2160",
-    "released": "2025",
-    "cast": "Actor T, Actress U",
-    "storyline": "High-octane action thriller with stunning visual effects and intense sequences.",
-    "screenshotLinks": [
-      "https://placehold.co/800x450/ff0000/ffffff?text=Action+Scene+1",
-      "https://placehold.co/800x450/00ff00/ffffff?text=Action+Scene+2",
-      "https://placehold.co/800x450/0000ff/ffffff?text=Action+Scene+3"
-    ],
-    "downloadOptions": [
-      {
-        "server": "Server 1",
-        "qualities": [
-          {
-            "quality_text": "4K",
-            "path": "/35f2a763b7da24e07ce74a58cac975fd/MovieLinkBD.com%20-%20Noor.2025.480p.Bangla.AAC.WEB-DL.h264.ESub.mkv",
-            "file_size": "15GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/movies/movie010-10840p.mkv",
-            "file_size": "4.2GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/movies/movie010-720p.mkv",
-            "file_size": "2.1GB"
-          }
-        ]
-      }
-    ],
-    "total_views": 2100,
-    "createdAt": "2025-01-14T12:45:00Z",
-    "lastUpdated": "2025-12-23T00:00:00Z"
-  },
-  {
     "id": "movie1766478190743",
     "title": "rr2",
     "imageUrl": "https://placehold.co/300x450/1a1a2e/ffffff?text=Movie+10",
