@@ -8,21 +8,11 @@ from datetime import datetime
 def update_movie_status():
     current_date = datetime.now()
     
-    # JSON ফাইলের পাথ - আপনার স্ট্রাকচার অনুযায়ী পরিবর্তন করুন
-    json_paths = [
-        'root/data/movies.json',
-        'data/movies.json',
-        'movies.json'
-    ]
+    # শুধু আপনার প্রকৃত পাথ দিন
+    json_path = 'data/movies.json'
     
-    json_path = None
-    for path in json_paths:
-        if os.path.exists(path):
-            json_path = path
-            break
-    
-    if not json_path:
-        print("Error: movies.json file not found!")
+    if not os.path.exists(json_path):
+        print(f"Error: {json_path} file not found!")
         sys.exit(1)
     
     print(f"Processing file: {json_path}")
@@ -41,6 +31,7 @@ def update_movie_status():
         old_value = movie.get('info1_custom', '')
         new_value = ''
         
+        # লজিক: createdAt এবং lastUpdated একই হলে
         if created_at == last_updated:
             new_value = 'NEW' if days_since_created <= 7 else ''
         else:
