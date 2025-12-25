@@ -62,7 +62,7 @@
     "genre": "Action, Adventure, Fantasy",
     "resolution": "1080p | 720p | 480p",
     "released": "19 Dec 2025 (United States)",
-    "cast": "Kate Winslet, Zoe SaldaÃÂÃÂ±a, Edie Falco",
+    "cast": "Kate Winslet, Zoe SaldaÃÂÃÂÃÂÃÂ±a, Edie Falco",
     "storyline": "Sequel of Avatar 2 (2022). The plot is unknown.",
     "screenshotLinks": [
       "https://i.imgbd.org/poster_9mcm1766145688.jpg",
@@ -247,5 +247,45 @@
     "total_views": 0,
     "createdAt": "2025-12-24T17:46:55.360Z",
     "lastUpdated": "2025-12-24T17:50:19.016Z"
+  },
+  {
+    "id": "movie6",
+    "title": "Tu Meri Main Tera Main Tera Tu Meri",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Tu_Meri_Main_Tera_Main_Tera_Tu_Meri.jpg",
+    "info1_custom": "",
+    "info2_quality": "HDTC",
+    "info3_language": "Hindi",
+    "info4_type": "Movie",
+    "info_subtitle": "- HDTC [The Best Quality]",
+    "info5_views": 0,
+    "info6_status": "Watch Now",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Adventure, Comedy, Romance",
+    "resolution": "1080p | 720p | 480p",
+    "released": "25 Dec 2025 (India)",
+    "cast": "Kartik Aaryan, Ananya Panday, Neena Gupta",
+    "storyline": "Two people fall in love while finding themselves, but family pressures challenge their relationship. They part, hoping to meet again.",
+    "screenshotLinks": [
+      "https://i.ibb.co/qMBYLYfH/Snapshot-10.jpg",
+      "https://i.ibb.co/Y4XsqX50/Snapshot-16.jpg",
+      "https://i.ibb.co/TqHCYZCQ/Snapshot-20.jpg",
+      "https://i.ibb.co/gbJqSn7N/Snapshot-21.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/yh"
+          }
+        ]
+      }
+    ],
+    "total_views": 0,
+    "createdAt": "2025-12-25T12:58:09.703Z",
+    "lastUpdated": "2025-12-25T12:58:09.703Z"
   }
 ]
