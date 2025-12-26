@@ -106,6 +106,7 @@
     "info2_quality": "HDTC",
     "info3_language": "Hindi",
     "info4_type": "Movie",
+    "language_info": "",
     "info_subtitle": "[Hindi ORG] HDTC [Best Quality Print] Part 3",
     "info5_views": 0,
     "info6_status": "Part 3",
@@ -115,7 +116,7 @@
     "genre": "Action, Adventure, Fantasy",
     "resolution": "1080p | 720p | 480p",
     "released": "19 Dec 2025 (United States)",
-    "cast": "Kate Winslet, Zoe SaldaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a, Edie Falco",
+    "cast": "Kate Winslet, Zoe Saldaña, Edie Falco",
     "storyline": "Sequel of Avatar 2 (2022). The plot is unknown.",
     "screenshotLinks": [
       "https://i.imgbd.org/poster_9mcm1766145688.jpg",
@@ -126,20 +127,21 @@
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
+        "server_info": "",
         "qualities": [
           {
             "quality_text": "480p",
-            "path": "/9b74f62275877058170c0a8bd5ae8db5/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.480p.Hindi.AAC.HDTS.h264.mkv",
+            "path": "9b74f62275877058170c0a8bd5ae8db5/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.480p.Hindi.AAC.HDTS.h264.mkv",
             "file_size": "670 MB"
           },
           {
             "quality_text": "720p",
-            "path": "/9445ec9b72186a8bf51b6dc12a570976/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.720p.Hindi.AAC.HDTS.h264.mkv",
+            "path": "9445ec9b72186a8bf51b6dc12a570976/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.720p.Hindi.AAC.HDTS.h264.mkv",
             "file_size": "1.6 GB"
           },
           {
             "quality_text": "1080p",
-            "path": "/c0a11e98cf718af3188a8ecae3743fec/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.1080p.Hindi.AAC.HDTS.h264.mkv",
+            "path": "c0a11e98cf718af3188a8ecae3743fec/MovieLinkBD.com%20-%20Avatar.Fire.and.Ash.2025.1080p.Hindi.AAC.HDTS.h264.mkv",
             "file_size": "2.9 GB"
           }
         ]
@@ -147,7 +149,7 @@
     ],
     "total_views": 0,
     "createdAt": "2025-12-24T11:08:12.327Z",
-    "lastUpdated": "2025-12-24T12:09:19.356Z"
+    "lastUpdated": "2025-12-26T12:05:18.293Z"
   },
   {
     "id": "movie3",
