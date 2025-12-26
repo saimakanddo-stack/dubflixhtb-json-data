@@ -7,6 +7,7 @@
     "info2_quality": "HD",
     "info3_language": "Dual, Hindi, English",
     "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
     "info_subtitle": "",
     "info5_views": 0,
     "info6_status": "Full Movie",
@@ -27,6 +28,7 @@
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
+        "server_info": "",
         "qualities": [
           {
             "quality_text": "480p",
@@ -35,7 +37,7 @@
           },
           {
             "quality_text": "720p",
-            "path": "/13f947d06f243d164cf66fef643999d4/MovieLinkBD.com%20-%20Easy.A.2010.720p.Dual%5BHindi-English%5D.AAC.BluRay.h264.ESub.mkv",
+            "path": "13f947d06f243d164cf66fef643999d4/MovieLinkBD.com%20-%20Easy.A.2010.720p.Dual%5BHindi-English%5D.AAC.BluRay.h264.ESub.mkv",
             "file_size": "833.26 MB"
           }
         ]
@@ -43,7 +45,7 @@
     ],
     "total_views": 0,
     "createdAt": "2025-12-24T09:48:32.091Z",
-    "lastUpdated": "2025-12-25T18:25:27.256Z"
+    "lastUpdated": "2025-12-26T06:27:52.562Z"
   },
   {
     "id": "movie6",
@@ -113,7 +115,7 @@
     "genre": "Action, Adventure, Fantasy",
     "resolution": "1080p | 720p | 480p",
     "released": "19 Dec 2025 (United States)",
-    "cast": "Kate Winslet, Zoe SaldaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a, Edie Falco",
+    "cast": "Kate Winslet, Zoe SaldaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a, Edie Falco",
     "storyline": "Sequel of Avatar 2 (2022). The plot is unknown.",
     "screenshotLinks": [
       "https://i.imgbd.org/poster_9mcm1766145688.jpg",
