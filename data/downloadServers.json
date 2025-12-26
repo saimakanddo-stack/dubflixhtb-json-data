@@ -3,15 +3,13 @@
     {
       "name": "MovieLinkBD",
       "domains": [
-        "https://pub-f70b93eb152c43e8a3d557615ee594af.r2.dev",
-        "https://demo.com"
+        "https://pub-f70b93eb152c43e8a3d557615ee594af.r2.dev"
       ]
     },
     {
       "name": "YouTube",
       "domains": [
-        "https://dmon2.com",
-        "https:// demo3.com"
+        ""
       ]
     }
   ]
