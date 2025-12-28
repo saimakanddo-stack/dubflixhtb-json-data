@@ -190,6 +190,7 @@
     "info2_quality": "HDTC",
     "info3_language": "Hindi",
     "info4_type": "Movie",
+    "language_info": "Hindi",
     "info_subtitle": "- HDTC [The Best Quality]",
     "info5_views": 0,
     "info6_status": "Watch Now",
@@ -210,6 +211,7 @@
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
+        "server_info": "Fast Server",
         "qualities": [
           {
             "quality_text": "480p",
@@ -231,7 +233,7 @@
     ],
     "total_views": 0,
     "createdAt": "2025-12-25T12:58:09.703Z",
-    "lastUpdated": "2025-12-25T13:10:41.892Z"
+    "lastUpdated": "2025-12-28T10:05:45.885Z"
   },
   {
     "id": "movie3",
