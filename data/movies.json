@@ -243,6 +243,7 @@
     "info2_quality": "WEB-DL",
     "info3_language": "Dual, Hindi, English",
     "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
     "info_subtitle": "Part 1",
     "info5_views": 0,
     "info6_status": "Part 1",
@@ -262,6 +263,7 @@
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
+        "server_info": "",
         "qualities": [
           {
             "quality_text": "480p",
@@ -283,7 +285,7 @@
     ],
     "total_views": 0,
     "createdAt": "2025-12-24T13:03:05.038Z",
-    "lastUpdated": "2025-12-24T13:04:22.573Z"
+    "lastUpdated": "2025-12-28T13:52:47.411Z"
   },
   {
     "id": "movie4",
