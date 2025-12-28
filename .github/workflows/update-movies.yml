@@ -1,0 +1,42 @@
+name: Update Movie Status
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # প্রতিদিন রাত ১২টায় (UTC)
+  workflow_dispatch:      # ম্যানুয়ালি রান করার অপশন
+
+jobs:
+  update-movies:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # main branch-এ লিখার অনুমতি
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Update movie statuses
+      run: python scripts/update_movie_status.py
+    
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # পরিবর্তন আছে কিনা চেক
+        if git diff --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+        
+        git add data/movies.json
+        git commit -m 'Auto-update: Movie status based on date rules'
+        git push
