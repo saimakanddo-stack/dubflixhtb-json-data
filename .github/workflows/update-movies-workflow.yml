@@ -1,0 +1,96 @@
+# .github/workflows/update-movies-workflow.yml
+name: Daily Update Movie Status
+
+on:
+  schedule:
+    # প্রতিদিন রাত ১২টা ৫ মিনিটে (UTC)
+    - cron: '5 0 * * *'
+  workflow_dispatch:  # ম্যানুয়াল ট্রিগার
+
+jobs:
+  update-movies:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: রিপোজিটরি চেকআউট
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Python সেট আপ করুন
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: এনকোডিং এনভায়রনমেন্ট সেট করুন
+      run: |
+        # UTF-8 এনকোডিং নিশ্চিত করুন
+        echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+        echo "LANG=C.UTF-8" >> $GITHUB_ENV
+        echo "LC_ALL=C.UTF-8" >> $GITHUB_ENV
+    
+    - name: মুভি স্ট্যাটাস আপডেট করুন
+      id: updater
+      env:
+        PYTHONUTF8: 1
+      run: |
+        # ফিক্সড ভার্সন রান করুন
+        python scripts/update_movie_status_fixed.py
+    
+    - name: পরিবর্তন চেক করুন
+      id: check_changes
+      run: |
+        # কোনো পরিবর্তন হয়েছে কিনা চেক করুন
+        if git diff --quiet; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "ℹ️ কোনো পরিবর্তন নেই"
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "✅ পরিবর্তন সনাক্ত করা হয়েছে"
+          echo "পরিবর্তনের বিস্তারিত:"
+          git diff --stat
+        fi
+    
+    - name: পরিবর্তন কমিট এবং পুশ করুন
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        # Git কনফিগারেশন
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # UTF-8 সাপোর্ট সক্ষম করুন
+        git config --global core.quotepath false
+        
+        # পরিবর্তন যোগ করুন
+        git add data/movies.json
+        
+        # কমিট করুন
+        git commit -m '🔄 Daily Update: Movie status based on date rules'
+        
+        echo "কমিট লগ:"
+        git log --oneline -3
+        
+        # পুশ করুন (রিট্রি লজিক সহ)
+        for attempt in 1 2 3; do
+          echo "পুশ করার চেষ্টা #${attempt}..."
+          if git push; then
+            echo "✅ পুশ সফল!"
+            break
+          else
+            echo "❌ পুশ ব্যর্থ, ৫ সেকেন্ড পর পুনরায় চেষ্টা করা হচ্ছে..."
+            sleep 5
+            git pull --rebase
+          fi
+        done
+    
+    - name: কাজ শেষ রিপোর্ট
+      run: |
+        echo "========================================="
+        echo "      Daily Update সম্পূর্ণ হয়েছে       "
+        echo "========================================="
+        echo "সময়: $(date)"
+        echo "পরিবর্তন: ${{ steps.check_changes.outputs.changes }}"
+        echo "========================================="
