@@ -1,0 +1,110 @@
+# .github/workflows/sort-movies-workflow.yml
+name: Auto-Sort Movies on Update
+
+on:
+  push:
+    paths:
+      - 'data/movies.json'
+  pull_request:
+    paths:
+      - 'data/movies.json'
+  workflow_dispatch:  # ম্যানুয়াল ট্রিগার
+
+jobs:
+  sort-movies:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # কমিট এবং পুশ করার অনুমতি
+    
+    steps:
+    - name: রিপোজিটরি চেকআউট
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Python সেট আপ করুন
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: এনকোডিং এনভায়রনমেন্ট সেট করুন
+      run: |
+        # UTF-8 এনকোডিং নিশ্চিত করুন
+        echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+        echo "LANG=C.UTF-8" >> $GITHUB_ENV
+        echo "LC_ALL=C.UTF-8" >> $GITHUB_ENV
+    
+    - name: ডিরেক্টরি স্ট্রাকচার দেখুন
+      run: |
+        echo "বর্তমান ডিরেক্টরি:"
+        pwd
+        echo "ফাইলসমূহ:"
+        ls -la
+        echo "ডেটা ডিরেক্টরি:"
+        ls -la data/ || echo "ডেটা ডিরেক্টরি নেই"
+    
+    - name: মুভি সর্টার রান করুন
+      id: sorter
+      env:
+        PYTHONUTF8: 1  # Python 3.7+ এর জন্য UTF-8 মোড সক্ষম করুন
+      run: |
+        # ফিক্সড ভার্সন রান করুন
+        python scripts/sort_movies_fixed.py
+    
+    - name: পরিবর্তন চেক করুন
+      id: changes
+      run: |
+        # movies.json ফাইলে পরিবর্তন হয়েছে কিনা চেক করুন
+        if git diff --name-only | grep -q "data/movies.json"; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "✅ movies.json ফাইলে পরিবর্তন সনাক্ত করা হয়েছে"
+          echo "পরিবর্তনের বিস্তারিত:"
+          git diff --stat data/movies.json
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "ℹ️ movies.json ফাইলে কোনো পরিবর্তন নেই"
+        fi
+    
+    - name: পরিবর্তন কমিট এবং পুশ করুন
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        # Git কনফিগারেশন
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # UTF-8 সাপোর্ট সক্ষম করুন
+        git config --global core.quotepath false
+        
+        # পরিবর্তন যোগ করুন
+        git add data/movies.json
+        
+        # কমিট করুন
+        git commit -m "🎬 Auto-sort: Movies sorted by most recent activity"
+        
+        echo "কমিট লগ:"
+        git log --oneline -5
+        
+        # পুশ করুন (রিট্রি লজিক সহ)
+        for attempt in 1 2 3; do
+          echo "পুশ করার চেষ্টা #${attempt}..."
+          if git push; then
+            echo "✅ পুশ সফল!"
+            break
+          else
+            echo "❌ পুশ ব্যর্থ, ৫ সেকেন্ড পর পুনরায় চেষ্টা করা হচ্ছে..."
+            sleep 5
+            # সর্বশেষ পরিবর্তনগুলো ফেচ করুন
+            git pull --rebase
+          fi
+        done
+    
+    - name: সম্পূর্ণ রিপোর্ট
+      run: |
+        echo "========================================="
+        echo "         GitHub Action রিপোর্ট         "
+        echo "========================================="
+        echo "জব: sort-movies"
+        echo "স্ট্যাটাস: ${{ job.status }}"
+        echo "পরিবর্তন: ${{ steps.changes.outputs.changes }}"
+        echo "========================================="
