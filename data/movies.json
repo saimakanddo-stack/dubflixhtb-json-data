@@ -550,5 +550,54 @@
     "total_views": 0,
     "createdAt": "2025-12-29T17:42:31.499Z",
     "lastUpdated": "2025-12-29T17:42:31.499Z"
+  },
+  {
+    "id": "series3",
+    "title": "Stranger Things : Season 3 (2016)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
+    "info1_custom": "",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Season",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Drama, Fantasy, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "ZIP Files",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/381d986181eaf988af398870bc757508/Stranger.Things.S03.480p.NF.WEB-DL.AAC2.0.x264-MovieLinkBD.zip",
+            "file_size": "2.2 GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/7b30fe356bf338d147e4b36f28f18248/Stranger.Things.S03.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "2.8 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/2fc0557e802835c3f0770c6ab6b9105c/Stranger.Things.S03.1080p.10Bit.Hindi.English.Msubs.MovieLinkBD.com.zip",
+            "file_size": "7.4 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2025-12-29T17:50:18.266Z",
+    "lastUpdated": "2025-12-29T17:50:18.266Z"
   }
 ]
