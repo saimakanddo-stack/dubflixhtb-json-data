@@ -1,57 +1,150 @@
 [
   {
-    "id": "movie6",
-    "title": "Tu Meri Main Tera Main Tera Tu Meri",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Tu_Meri_Main_Tera_Main_Tera_Tu_Meri.jpg",
+    "id": "series3",
+    "title": "Stranger Things : Season 3 (2016)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
     "info1_custom": "NEW",
-    "info2_quality": "HDTC",
-    "info3_language": "Hindi",
-    "info4_type": "Movie",
-    "language_info": "Hindi",
-    "info_subtitle": "- HDTC [The Best Quality]",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
     "info5_views": 0,
-    "info6_status": "Watch Now",
+    "info6_status": "Full Season",
     "enablePosterBlur": false,
     "blurPercentage": 10,
     "imdb": "",
-    "genre": "Adventure, Comedy, Romance",
+    "genre": "Drama, Fantasy, Mystery",
     "resolution": "1080p | 720p | 480p",
-    "released": "25 Dec 2025 (India)",
-    "cast": "Kartik Aaryan, Ananya Panday, Neena Gupta",
-    "storyline": "Two people fall in love while finding themselves, but family pressures challenge their relationship. They part, hoping to meet again.",
-    "screenshotLinks": [
-      "https://i.ibb.co/qMBYLYfH/Snapshot-10.jpg",
-      "https://i.ibb.co/Y4XsqX50/Snapshot-16.jpg",
-      "https://i.ibb.co/TqHCYZCQ/Snapshot-20.jpg",
-      "https://i.ibb.co/gbJqSn7N/Snapshot-21.jpg"
-    ],
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
-        "server_info": "Fast Server",
+        "server_info": "ZIP Files",
         "qualities": [
           {
             "quality_text": "480p",
-            "path": "/bdd654f09b26bbe213c651b282e729b6/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.480p.Hindi.AAC.HDTC.h264.mkv",
-            "file_size": "479.56 MB"
+            "path": "/381d986181eaf988af398870bc757508/Stranger.Things.S03.480p.NF.WEB-DL.AAC2.0.x264-MovieLinkBD.zip",
+            "file_size": "2.2 GB"
           },
           {
             "quality_text": "720p",
-            "path": "/13ea2ba6abdf9a0d0c75580d3d04b5e3/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.720p.Hindi.AAC.HDTC.h264.mkv",
-            "file_size": "1.1 GB"
+            "path": "/7b30fe356bf338d147e4b36f28f18248/Stranger.Things.S03.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "2.8 GB"
           },
           {
             "quality_text": "1080p",
-            "path": "/4e1d13097673bb1ef4cab2abadda11d8/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
-            "file_size": "2.34 GB"
+            "path": "/2fc0557e802835c3f0770c6ab6b9105c/Stranger.Things.S03.1080p.10Bit.Hindi.English.Msubs.MovieLinkBD.com.zip",
+            "file_size": "7.4 GB"
           }
         ]
       }
     ],
     "visibility": "published",
     "total_views": 0,
-    "createdAt": "2025-12-25T12:58:09.703Z",
-    "lastUpdated": "2025-12-29T07:05:58.707Z"
+    "createdAt": "2025-12-29T17:50:18.266Z",
+    "lastUpdated": "2025-12-29T17:50:18.266Z"
+  },
+  {
+    "id": "series2",
+    "title": "Stranger Things : Season 2 (2016)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Season",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Drama, Fantasy, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/8c62b873bc1574b20bff1cf34fdb8f25/Stranger.Things.S02.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
+            "file_size": "1.4 GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/10790eed34dacdce7ea91a8b51400ab9/Stranger.Things.S02.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "3.6 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/7ab92a612a44d18947a78b4342162f45/Stranger.Things.S02.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "6.5 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2025-12-29T17:42:31.499Z",
+    "lastUpdated": "2025-12-29T17:42:31.499Z"
+  },
+  {
+    "id": "series1",
+    "title": "Stranger Things : Season 1 (2016)",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767029164801_xqtkx8bvhg.webp",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Season",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Drama, Fantasy, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/2dc5bf033e90599707ef24938aa1bfca/Stranger.Things.S01.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
+            "file_size": "1.31 GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/6c824bc9bcdc62afeda34d6d71a9b34a/Stranger.Things.S01.720p.Hindi.Eng.MovieLinkBD.com.zip",
+            "file_size": "3.3 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/3b2bb73938fed74838db3a627cf68aa1/Stranger.Things.S01.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "5.72 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2025-12-29T17:34:09.732Z",
+    "lastUpdated": "2025-12-29T17:34:09.732Z"
   },
   {
     "id": "movie7",
@@ -95,6 +188,58 @@
     "total_views": 0,
     "createdAt": "2025-12-27T16:30:32.129Z",
     "lastUpdated": "2025-12-29T09:47:21.435Z"
+  },
+  {
+    "id": "movie8",
+    "title": "Predator: Badlands (2025)",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993269861_stkp3rx4j6g.webp",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "Full HD",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "7.5/10",
+    "genre": "Action, Adventure, Sci-Fi",
+    "resolution": "1080p | 720p | 480p",
+    "released": "07 Nov 2025 (United States)",
+    "cast": "Elle Fanning, Dimitrius Schuster-Koloamatangi",
+    "storyline": "A young Predator outcast from his clan finds an unlikely ally on his journey in search of the ultimate adversary.",
+    "screenshotLinks": [
+      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993584560_zvwhv85h1cn.jpg",
+      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993589606_kv08hy3n28.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/b6282c5fcd14c9ab67edd927d7001eef/MovieLinkBD.com%20-%20Predator.Badlands.2025.480p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "358.6 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/51254debed32ee996b7ca39e7134ac68/MovieLinkBD.com%20-%20Predator.Badlands.2025.720p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "992 MB"
+          },
+          {
+            "quality_text": "1080P",
+            "path": "/be894706e87d0cee942873ce77568e00/MovieLinkBD.com%20-%20Predator.Badlands.2025.1080p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "2.2 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2025-12-29T07:41:01.264Z",
+    "lastUpdated": "2025-12-29T07:42:47.494Z"
   },
   {
     "id": "movie3",
@@ -402,202 +547,57 @@
     "visibility": "published"
   },
   {
-    "id": "movie8",
-    "title": "Predator: Badlands (2025)",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993269861_stkp3rx4j6g.webp",
+    "id": "movie6",
+    "title": "Tu Meri Main Tera Main Tera Tu Meri",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Tu_Meri_Main_Tera_Main_Tera_Tu_Meri.jpg",
     "info1_custom": "NEW",
-    "info2_quality": "WEB-DL",
-    "info3_language": "Dual, Hindi, English",
+    "info2_quality": "HDTC",
+    "info3_language": "Hindi",
     "info4_type": "Movie",
-    "language_info": "Dual [Hindi-English]",
-    "info_subtitle": "Full HD",
+    "language_info": "Hindi",
+    "info_subtitle": "- HDTC [The Best Quality]",
     "info5_views": 0,
-    "info6_status": "Online",
+    "info6_status": "Watch Now",
     "enablePosterBlur": false,
     "blurPercentage": 10,
-    "imdb": "7.5/10",
-    "genre": "Action, Adventure, Sci-Fi",
+    "imdb": "",
+    "genre": "Adventure, Comedy, Romance",
     "resolution": "1080p | 720p | 480p",
-    "released": "07 Nov 2025 (United States)",
-    "cast": "Elle Fanning, Dimitrius Schuster-Koloamatangi",
-    "storyline": "A young Predator outcast from his clan finds an unlikely ally on his journey in search of the ultimate adversary.",
+    "released": "25 Dec 2025 (India)",
+    "cast": "Kartik Aaryan, Ananya Panday, Neena Gupta",
+    "storyline": "Two people fall in love while finding themselves, but family pressures challenge their relationship. They part, hoping to meet again.",
     "screenshotLinks": [
-      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993584560_zvwhv85h1cn.jpg",
-      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993589606_kv08hy3n28.jpg"
+      "https://i.ibb.co/qMBYLYfH/Snapshot-10.jpg",
+      "https://i.ibb.co/Y4XsqX50/Snapshot-16.jpg",
+      "https://i.ibb.co/TqHCYZCQ/Snapshot-20.jpg",
+      "https://i.ibb.co/gbJqSn7N/Snapshot-21.jpg"
     ],
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
-        "server_info": "",
+        "server_info": "Fast Server",
         "qualities": [
           {
             "quality_text": "480p",
-            "path": "/b6282c5fcd14c9ab67edd927d7001eef/MovieLinkBD.com%20-%20Predator.Badlands.2025.480p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
-            "file_size": "358.6 MB"
+            "path": "/bdd654f09b26bbe213c651b282e729b6/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.480p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "479.56 MB"
           },
           {
             "quality_text": "720p",
-            "path": "/51254debed32ee996b7ca39e7134ac68/MovieLinkBD.com%20-%20Predator.Badlands.2025.720p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
-            "file_size": "992 MB"
-          },
-          {
-            "quality_text": "1080P",
-            "path": "/be894706e87d0cee942873ce77568e00/MovieLinkBD.com%20-%20Predator.Badlands.2025.1080p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
-            "file_size": "2.2 GB"
-          }
-        ]
-      }
-    ],
-    "visibility": "published",
-    "total_views": 0,
-    "createdAt": "2025-12-29T07:41:01.264Z",
-    "lastUpdated": "2025-12-29T07:42:47.494Z"
-  },
-  {
-    "id": "series1",
-    "title": "Stranger Things : Season 1 (2016)",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767029164801_xqtkx8bvhg.webp",
-    "info1_custom": "NEW",
-    "info2_quality": "WEB-DL",
-    "info3_language": "Dual Audio",
-    "info4_type": "Series",
-    "language_info": "Dual Audio",
-    "info_subtitle": "",
-    "info5_views": 0,
-    "info6_status": "Full Season",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "",
-    "genre": "Drama, Fantasy, Mystery",
-    "resolution": "1080p | 720p | 480p",
-    "released": "2016",
-    "cast": "",
-    "storyline": "",
-    "screenshotLinks": [],
-    "downloadOptions": [
-      {
-        "server": "MovieLinkBD",
-        "server_info": "",
-        "qualities": [
-          {
-            "quality_text": "480p",
-            "path": "/2dc5bf033e90599707ef24938aa1bfca/Stranger.Things.S01.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
-            "file_size": "1.31 GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/6c824bc9bcdc62afeda34d6d71a9b34a/Stranger.Things.S01.720p.Hindi.Eng.MovieLinkBD.com.zip",
-            "file_size": "3.3 GB"
+            "path": "/13ea2ba6abdf9a0d0c75580d3d04b5e3/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.720p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "1.1 GB"
           },
           {
             "quality_text": "1080p",
-            "path": "/3b2bb73938fed74838db3a627cf68aa1/Stranger.Things.S01.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
-            "file_size": "5.72 GB"
+            "path": "/4e1d13097673bb1ef4cab2abadda11d8/MovieLinkBD.com%20-%20Tu.Meri.Main.Tera.Main.Tera.Tu.Meri.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "2.34 GB"
           }
         ]
       }
     ],
     "visibility": "published",
     "total_views": 0,
-    "createdAt": "2025-12-29T17:34:09.732Z",
-    "lastUpdated": "2025-12-29T17:34:09.732Z"
-  },
-  {
-    "id": "series2",
-    "title": "Stranger Things : Season 2 (2016)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
-    "info1_custom": "NEW",
-    "info2_quality": "WEB-DL",
-    "info3_language": "Dual Audio",
-    "info4_type": "Series",
-    "language_info": "Dual Audio",
-    "info_subtitle": "",
-    "info5_views": 0,
-    "info6_status": "Full Season",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "",
-    "genre": "Drama, Fantasy, Mystery",
-    "resolution": "1080p | 720p | 480p",
-    "released": "2016",
-    "cast": "",
-    "storyline": "",
-    "screenshotLinks": [],
-    "downloadOptions": [
-      {
-        "server": "MovieLinkBD",
-        "server_info": "",
-        "qualities": [
-          {
-            "quality_text": "480p",
-            "path": "/8c62b873bc1574b20bff1cf34fdb8f25/Stranger.Things.S02.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
-            "file_size": "1.4 GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/10790eed34dacdce7ea91a8b51400ab9/Stranger.Things.S02.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
-            "file_size": "3.6 GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/7ab92a612a44d18947a78b4342162f45/Stranger.Things.S02.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
-            "file_size": "6.5 GB"
-          }
-        ]
-      }
-    ],
-    "visibility": "published",
-    "total_views": 0,
-    "createdAt": "2025-12-29T17:42:31.499Z",
-    "lastUpdated": "2025-12-29T17:42:31.499Z"
-  },
-  {
-    "id": "series3",
-    "title": "Stranger Things : Season 3 (2016)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
-    "info1_custom": "NEW",
-    "info2_quality": "WEB-DL",
-    "info3_language": "Dual Audio",
-    "info4_type": "Series",
-    "language_info": "Dual Audio",
-    "info_subtitle": "",
-    "info5_views": 0,
-    "info6_status": "Full Season",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "",
-    "genre": "Drama, Fantasy, Mystery",
-    "resolution": "1080p | 720p | 480p",
-    "released": "2016",
-    "cast": "",
-    "storyline": "",
-    "screenshotLinks": [],
-    "downloadOptions": [
-      {
-        "server": "MovieLinkBD",
-        "server_info": "ZIP Files",
-        "qualities": [
-          {
-            "quality_text": "480p",
-            "path": "/381d986181eaf988af398870bc757508/Stranger.Things.S03.480p.NF.WEB-DL.AAC2.0.x264-MovieLinkBD.zip",
-            "file_size": "2.2 GB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/7b30fe356bf338d147e4b36f28f18248/Stranger.Things.S03.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
-            "file_size": "2.8 GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/2fc0557e802835c3f0770c6ab6b9105c/Stranger.Things.S03.1080p.10Bit.Hindi.English.Msubs.MovieLinkBD.com.zip",
-            "file_size": "7.4 GB"
-          }
-        ]
-      }
-    ],
-    "visibility": "published",
-    "total_views": 0,
-    "createdAt": "2025-12-29T17:50:18.266Z",
-    "lastUpdated": "2025-12-29T17:50:18.266Z"
+    "createdAt": "2025-12-25T12:58:09.703Z",
+    "lastUpdated": "2025-12-29T07:05:58.707Z"
   }
 ]
