@@ -1,46 +1,5 @@
 [
   {
-    "id": "natok2",
-    "title": "Shesh Porjonto | শেষ পর্যন্ত | Apurba | Mamo | Bangla Natok (Copy)",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766910307748_tccggv52rnh.jpg",
-    "info1_custom": "NEW",
-    "info2_quality": "",
-    "info3_language": "Bangla, বাংলা",
-    "info4_type": "Natok",
-    "language_info": "Bangla",
-    "info_subtitle": "Watch On YouTube",
-    "info5_views": 0,
-    "info6_status": "YouTube Play",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "",
-    "genre": "",
-    "resolution": "",
-    "released": "",
-    "cast": "",
-    "storyline": "ভার্সিটিতে খুব বিখ্যাত ছিল আবির মিলির প্রেম। সব সময় ওদের একসাথে দেখা যেত। আবির মিলির চাইতে তিন ইয়ার সিনিয়র। তাই মিলির আগে পাশ করে বেরিয়ে আসে সে। আবিরের ক্যাম্পাস ছাড়ার দিনেও হয় এক দৃশ্য। আবিররা পাঁচ ভাই বোন। দুই ভাই তিন বোন। বোনদের সবার বিয়ে হয়ে গেছে, বাকি শুধু আবিরের বড় ভাই সাবির। আট বাবা মারা যাবার পর থেকে সাবির পরিবারের সব দ্বায়িত্ব পালন করেছে। তাই নিজের বিয়েটাও আর করা হয়নি। আবির এবার ভাইয়ের বিয়ের ব্যাপারে সিরিয়াস। পাশের জেলার এক মেয়ের সাথে দেখা করাতে নিয়ে যায় সাবিরকে। মেয়েকে ভালো লেগে গেলে সেই দিনই তারা রওনা দেয় মেয়ের বাড়ীর উদ্দেশ্যে। মেয়ের বাড়ীতে পৌছায় আবিররা। সেখানে মিলিকে দেখে চমকে ওঠে আবির। মিলির বড় বোনই হচ্ছে জলি!",
-    "screenshotLinks": [
-      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766910307748_tccggv52rnh.jpg"
-    ],
-    "downloadOptions": [
-      {
-        "server": "YouTube",
-        "server_info": "Watch On YouTube",
-        "qualities": [
-          {
-            "quality_text": "Auto",
-            "path": "https://youtu.be/V8_Jo_v3Lu8?si=k7KmR7iev9xw-IHs",
-            "file_size": "Unknown"
-          }
-        ]
-      }
-    ],
-    "visibility": "published",
-    "total_views": 0,
-    "createdAt": "2025-12-31T18:57:11.993Z",
-    "lastUpdated": "2025-12-31T18:57:11.993Z"
-  },
-  {
     "id": "series3",
     "title": "Stranger Things : Season 3 (2016)",
     "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
