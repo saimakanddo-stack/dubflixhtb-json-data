@@ -792,5 +792,54 @@
     "total_views": 0,
     "createdAt": "2025-12-25T12:58:09.703Z",
     "lastUpdated": "2025-12-29T07:05:58.707Z"
+  },
+  {
+    "id": "movie10",
+    "title": "Easy A (2010)",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPueTCvTwg5KPefwrEyGsKKNPX6IB6m1Lri8vS2d3EZC0V8NpWov_k7jbpdFPaN3GxGMDe1kv3QcZM3zUj9rHnkulCYVJupEZzTRZSpXhJs-H3xgN8PFUTQCjogGy6uQ6usfjPrNrhgk4RL_9DdvYO0o3kfZ88kN95zuWPFeoFR5I2CgPF08FAwCc0G7zy/s450/easy%20a%202010.jpg",
+    "info1_custom": "UPDATED",
+    "info2_quality": "HD",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Movie",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "7/10",
+    "genre": "Comedy, Drama, Romance",
+    "resolution": "720p | 480p",
+    "released": "2010",
+    "cast": "Emma Stone, Amanda Bynes, Penn Badgley",
+    "storyline": "After a little white lie about losing her virginity gets out, a clean cut high school girl sees her life paralleling Hester Prynne's in \"The Scarlet Letter,\" which she is currently studying in school - until she decides to use the rumor mill to advance her social and financial standing.",
+    "screenshotLinks": [
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1Dwp8etyY4aQ0xocCJYkOCd4t3UhvgLacSaiRiZPH3anRIXgdl3J7_4ld56AzOdql9CLA8wUmgDOu17jGKWQE__BRB_jRSFHMU9eCvFAbiXX-a_N4FU6u1Hk9r3zl7ETntY1NQT7ir22BZMQtHpGPPHau7Z7C5hkZM75qBTbyTAXISud8AuYE8h4bxWvU/s1278/1.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpM-wZFISwPZKOxQTwdacWdfi1suVtF1o3AHqQCp1acrK3xKU8WXXRCuVU-_vnqzd1y8IpaaPxberVzIj_lGkxtk6qgtxBaNX7QfM1WhSqWKAnN_Bw35UfYYkFqsCWO_Vh_z4QmBdAqY3qbOvzDJC7_ep3cyYCZDB_1Gg-ilTwiyrMGYOSNWsE5D8yoYNE/s1280/2.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilIPBuVWqBsL581Rq79rmazfaNpcOsja5bpPS-zdeqAI8JOtyqoPoKAXv7BwUEuTHu6gSnCBWQZbi3ostliJ5Q4rctXPovggOldPIOIjYTzTZqUrio7nK9OdyNMkW3-EIPUS50tRgfbqDxuxoBHYOq8vBXmolENAQpIUCRBnLyh2-LLXHXKp7jtY9qiWFJ/s1280/3.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8ol93dDd8H12GpBb4V21XYaOqhcPkAQFHOXoCyfaSQjNLNvUjp5KQ83q30zx4vEL1ovlwennpmoKDYmJ5q7xlbEyt8ePZfQI54v3-Yuq1eDpoq8qwPtkYSSz_-uFUUu5Y7HFuF3ltPV2aWFQf1UVdSOJq_bZa7HyQwqAyxSIvRBfEzaDOBxtiRoos831s/s1280/easy%20a%202010%20th.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "4c92e7f5a2ab5e7bd27b28764fc127b2/MovieLinkBD.com%20-%20Easy.A.2010.480p.Dual%5BHindi-English%5D.AAC.BluRay.h264.ESub.mkv",
+            "file_size": "303.65 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "13f947d06f243d164cf66fef643999d4/MovieLinkBD.com%20-%20Easy.A.2010.720p.Dual%5BHindi-English%5D.AAC.BluRay.h264.ESub.mkv",
+            "file_size": "833.26 MB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-01T18:23:00.888Z",
+    "lastUpdated": "2026-01-01T18:23:00.888Z"
   }
 ]
