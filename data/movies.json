@@ -653,5 +653,57 @@
     "total_views": 0,
     "createdAt": "2025-12-25T12:58:09.703Z",
     "lastUpdated": "2025-12-29T07:05:58.707Z"
+  },
+  {
+    "id": "movie10",
+    "title": "Predator: Badlands (2025) (Copy)",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993269861_stkp3rx4j6g.webp",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "Full HD",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "7.5/10",
+    "genre": "Action, Adventure, Sci-Fi",
+    "resolution": "1080p | 720p | 480p",
+    "released": "07 Nov 2025 (United States)",
+    "cast": "Elle Fanning, Dimitrius Schuster-Koloamatangi",
+    "storyline": "A young Predator outcast from his clan finds an unlikely ally on his journey in search of the ultimate adversary.",
+    "screenshotLinks": [
+      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993584560_zvwhv85h1cn.jpg",
+      "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993589606_kv08hy3n28.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/b6282c5fcd14c9ab67edd927d7001eef/MovieLinkBD.com%20-%20Predator.Badlands.2025.480p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "358.6 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/51254debed32ee996b7ca39e7134ac68/MovieLinkBD.com%20-%20Predator.Badlands.2025.720p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "992 MB"
+          },
+          {
+            "quality_text": "1080P",
+            "path": "/be894706e87d0cee942873ce77568e00/MovieLinkBD.com%20-%20Predator.Badlands.2025.1080p.Dual%5BHindi-English%5D.AAC.WEBRip.h264.ESub.mkv",
+            "file_size": "2.2 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-01T11:31:34.655Z",
+    "lastUpdated": "2026-01-01T11:31:34.655Z"
   }
 ]
