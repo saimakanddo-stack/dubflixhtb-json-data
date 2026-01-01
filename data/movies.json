@@ -599,5 +599,59 @@
     "total_views": 0,
     "createdAt": "2025-12-25T12:58:09.703Z",
     "lastUpdated": "2025-12-29T07:05:58.707Z"
+  },
+  {
+    "id": "movie9",
+    "title": "Five Nights at Freddy's (2023) (Copy)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uiWMy1h0Xlto9aE3DbKhXf8lPzK.jpg",
+    "info1_custom": "UPDATED",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "[ORG Hindi]",
+    "info5_views": 0,
+    "info6_status": "ORG Hindi",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Hollywood, Drama, Horror, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "",
+    "cast": "",
+    "storyline": "A troubled security guard begins working at Freddy Fazbear's Pizzeria. While spending his first night on the job, he realizes the late shift at Freddy's won't be so easy to make it through.",
+    "screenshotLinks": [
+      "https://m.media-amazon.com/images/M/MV5BNjUxZDQ3NTktZTZlZC00M2ZhLWJmM2ItZDcyNGY5YzY2MTEyXkEyXkFqcGc@._V1_QL75_UX437_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNmFmY2ViNTAtNTNlOS00MThmLTg3MjUtNmIzMGE5YWUxMTE0XkEyXkFqcGc@._V1_QL75_UX409_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNWY5ZDk4MDItM2U1My00MWU1LWFhMGUtZjBmYmQ4YjRhYzI5XkEyXkFqcGc@._V1_QL75_UX437_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYWRjOTI1MTgtMWU3Ni00YWVjLWEzODMtYzQ0OTQ3ODYzY2QwXkEyXkFqcGc@._V1_QL75_UX328_.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/14a0fbdc8d6c381a4ecfaba73c4a2f9f/Five.Nights.at.Freddy%27s.2023.%5BMovieLinkBD.Com%5D.480p.BluRay.Hindi.English.Esubs.mkv",
+            "file_size": "376 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/aa5f59e6bb24d4fc5e4ca67193ba4ec0/%5BMovieLinkBD.Com%5D%20Five%20Nights%20at%20Freddys%202023%20BluRay%20720p%20Hindi%20English%20AAC%205.1%20x264%20ESub.mkv",
+            "file_size": "1.2 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/e704f6a03140fb8b2f16c524fbe03174/Five.Nights.at.Freddy%27s.2023.%5BMovieLinkBD.Com%5D.%201080p.10bit.BluRay.Hindi.English.Esubs.mkv",
+            "file_size": "1.9 GB"
+          }
+        ]
+      }
+    ],
+    "total_views": 0,
+    "createdAt": "2026-01-01T17:35:59.537Z",
+    "lastUpdated": "2026-01-01T17:35:59.537Z",
+    "visibility": "published"
   }
 ]
