@@ -507,5 +507,58 @@
     "total_views": 0,
     "createdAt": "2025-12-25T12:58:09.703Z",
     "lastUpdated": "2025-12-29T07:05:58.707Z"
+  },
+  {
+    "id": "movie8",
+    "title": "Eye for an Eye 2 (2024)",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767369906361_2l91lnft2xv.jpg",
+    "info1_custom": "",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio, Hindi, Chinese",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi–Chinese]",
+    "info_subtitle": "Full HD Hindi ORG",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "6.6/10",
+    "genre": "Action, Drama, Western",
+    "resolution": "1080p | 720p | 480p",
+    "released": "13 Dec 2024 (China)",
+    "cast": "Miao Xie, Enyou Yang, Tao Huang",
+    "storyline": "A blind swordsman reluctantly mentors an orphan seeking vengeance for his destroyed family, teaching him martial arts skills. The orphan waits for an opportunity to avenge his kin.",
+    "screenshotLinks": [
+      "https://i.imgbd.org/poster_zb0v1767349652.jpg",
+      "https://i.imgbd.org/poster_0y8y1767349683.jpg",
+      "https://i.imgbd.org/poster_t2ez1767349714.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "eee56e0ea40de346972b674bc7911c8c/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.480p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
+            "file_size": "433 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "3fa0ddf35e2488dc2a1690bd26e4837d/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.720p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
+            "file_size": "864"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "752d008aadefba96f7e5e23e4bb8498e/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.1080p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.HEVC.h265.ESub.mkv",
+            "file_size": "1.7 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-02T17:22:14.924Z",
+    "lastUpdated": "2026-01-02T17:22:14.924Z"
   }
 ]
