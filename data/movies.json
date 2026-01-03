@@ -1,5 +1,59 @@
 [
   {
+    "id": "movie4",
+    "title": "Avatar: The Way of Water (2022)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "info1_custom": "UPDATED",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "Part 2",
+    "info5_views": 0,
+    "info6_status": "Part 2",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Action, Adventure, Fantasy, Sci-Fi,",
+    "resolution": "1080p | 720p | 480p",
+    "released": "",
+    "cast": "",
+    "storyline": "Avatar: The Way of Water follows Jake Sully, Neytiri, and their growing family (sons Neteyam, Lo'ak, daughter Tuk, adopted Kiri) as they flee their forest home after the human RDA returns, forcing them to seek refuge with the aquatic Metkayina clan, confronting new dangers and the resurrected Colonel Quaritch in a desperate fight to protect their family and Pandora.",
+    "screenshotLinks": [
+      "https://m.media-amazon.com/images/M/MV5BMTQxZTVlN2EtNmVkYS00NjhiLWI2MjYtYjgyNTEwOWNmZTk4XkEyXkFqcGc@._V1_QL75_UX414_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BOGI0ZGE0YWItNTExMC00NzYzLTlkMDUtMWNiNzNiZTM3NDkzXkEyXkFqcGc@._V1_QL75_UX414_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNDhiZTc0YmYtMzBiZi00ODVjLWFlNWItM2RmZDMyNTJlNmRmXkEyXkFqcGc@._V1_QL75_UX414_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYTUyODRmYzktNTg2MS00MmEzLTlhNzgtZGMxMjVjYjgyOGI2XkEyXkFqcGc@._V1_QL75_UX414_.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkeBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/38e1b2e959f12b74670e67da575553f7/Avatar%20The%20Way%20of%20Water%202022%20Hindi%20English%20480p%20%5BMovieLinkBD.com%5D%20ESub.mkv",
+            "file_size": "584 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/322ab087473ce94588325a4796140ded/Avatar%20The%20Way%20of%20Water%202022%20720p%20%5BMovieLinkBD.com%5D%20Hindi%20English%20AAC%205.1%20x264%20ESub.mkv",
+            "file_size": "2.0 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/edf4c81bc20b24297ff4273c1bbdc0ed/Avatar%20The%20Way%20of%20Water%202022%201080p%20%5BMovieLinkBD.com%5D%20Hindi%20English%20DD%205.1%20x264%20ESub.mkv",
+            "file_size": "4.5 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-03T01:30:49.759Z",
+    "lastUpdated": "2026-01-03T01:30:49.759Z"
+  },
+  {
     "id": "movie1",
     "title": "Tu Meri Main Tera Main Tera Tu Meri",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Tu_Meri_Main_Tera_Main_Tera_Tu_Meri.jpg",
@@ -201,59 +255,5 @@
     "total_views": 0,
     "createdAt": "2026-01-02T20:00:06.784Z",
     "lastUpdated": "2026-01-02T20:00:06.784Z"
-  },
-  {
-    "id": "movie4",
-    "title": "Avatar: The Way of Water (2022)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
-    "info1_custom": "UPDATED",
-    "info2_quality": "WEB-DL",
-    "info3_language": "Dual, Hindi, English",
-    "info4_type": "Movie",
-    "language_info": "Dual [Hindi-English]",
-    "info_subtitle": "Part 2",
-    "info5_views": 0,
-    "info6_status": "Part 2",
-    "enablePosterBlur": false,
-    "blurPercentage": 10,
-    "imdb": "",
-    "genre": "Action, Adventure, Fantasy, Sci-Fi,",
-    "resolution": "1080p | 720p | 480p",
-    "released": "",
-    "cast": "",
-    "storyline": "Avatar: The Way of Water follows Jake Sully, Neytiri, and their growing family (sons Neteyam, Lo'ak, daughter Tuk, adopted Kiri) as they flee their forest home after the human RDA returns, forcing them to seek refuge with the aquatic Metkayina clan, confronting new dangers and the resurrected Colonel Quaritch in a desperate fight to protect their family and Pandora.",
-    "screenshotLinks": [
-      "https://m.media-amazon.com/images/M/MV5BMTQxZTVlN2EtNmVkYS00NjhiLWI2MjYtYjgyNTEwOWNmZTk4XkEyXkFqcGc@._V1_QL75_UX414_.jpg",
-      "https://m.media-amazon.com/images/M/MV5BOGI0ZGE0YWItNTExMC00NzYzLTlkMDUtMWNiNzNiZTM3NDkzXkEyXkFqcGc@._V1_QL75_UX414_.jpg",
-      "https://m.media-amazon.com/images/M/MV5BNDhiZTc0YmYtMzBiZi00ODVjLWFlNWItM2RmZDMyNTJlNmRmXkEyXkFqcGc@._V1_QL75_UX414_.jpg",
-      "https://m.media-amazon.com/images/M/MV5BYTUyODRmYzktNTg2MS00MmEzLTlhNzgtZGMxMjVjYjgyOGI2XkEyXkFqcGc@._V1_QL75_UX414_.jpg"
-    ],
-    "downloadOptions": [
-      {
-        "server": "MovieLinkeBD",
-        "server_info": "",
-        "qualities": [
-          {
-            "quality_text": "480p",
-            "path": "/38e1b2e959f12b74670e67da575553f7/Avatar%20The%20Way%20of%20Water%202022%20Hindi%20English%20480p%20%5BMovieLinkBD.com%5D%20ESub.mkv",
-            "file_size": "584 MB"
-          },
-          {
-            "quality_text": "720p",
-            "path": "/322ab087473ce94588325a4796140ded/Avatar%20The%20Way%20of%20Water%202022%20720p%20%5BMovieLinkBD.com%5D%20Hindi%20English%20AAC%205.1%20x264%20ESub.mkv",
-            "file_size": "2.0 GB"
-          },
-          {
-            "quality_text": "1080p",
-            "path": "/edf4c81bc20b24297ff4273c1bbdc0ed/Avatar%20The%20Way%20of%20Water%202022%201080p%20%5BMovieLinkBD.com%5D%20Hindi%20English%20DD%205.1%20x264%20ESub.mkv",
-            "file_size": "4.5 GB"
-          }
-        ]
-      }
-    ],
-    "visibility": "published",
-    "total_views": 0,
-    "createdAt": "2026-01-03T01:30:49.759Z",
-    "lastUpdated": "2026-01-03T01:30:49.759Z"
   }
 ]
