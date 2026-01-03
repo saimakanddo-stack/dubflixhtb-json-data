@@ -409,5 +409,54 @@
     "total_views": 0,
     "createdAt": "2026-01-02T20:00:06.784Z",
     "lastUpdated": "2026-01-02T20:00:06.784Z"
+  },
+  {
+    "id": "series2",
+    "title": "Stranger Things : Season 2 (2016)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Season",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Drama, Fantasy, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/8c62b873bc1574b20bff1cf34fdb8f25/Stranger.Things.S02.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
+            "file_size": "1.4 GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/10790eed34dacdce7ea91a8b51400ab9/Stranger.Things.S02.720p.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "3.6 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/7ab92a612a44d18947a78b4342162f45/Stranger.Things.S02.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "6.5 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-03T17:05:53.485Z",
+    "lastUpdated": "2026-01-03T17:05:53.485Z"
   }
 ]
