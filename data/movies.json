@@ -255,5 +255,58 @@
     "total_views": 0,
     "createdAt": "2026-01-02T20:00:06.784Z",
     "lastUpdated": "2026-01-02T20:00:06.784Z"
+  },
+  {
+    "id": "movie5",
+    "title": "Avatar (2009)",
+    "imageUrl": "https://www.themoviedb.org/t/p/original/unbrtK8zEjPANvNkbwhjpSxYWzN.jpg",
+    "info1_custom": "UPDATED",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, English",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi-English]",
+    "info_subtitle": "Part 1",
+    "info5_views": 0,
+    "info6_status": "Part 1",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Action, Adventure, Fantasy",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2009",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [
+      "https://m.media-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNzM2MDk3MTcyMV5BMl5BanBnXkFtZTcwNjg0MTUzNA@@._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BODIyMDU3NDUzMF5BMl5BanBnXkFtZTcwNzg0MTUzNA@@._V1_.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/1d1e32dba7b5975947202c9653c1a795/Avatar%202009%20BluRay%20EXTENDED%20Hindi%20English%20480p%20ESub%20-%20MovieLinkBD.com.mkv",
+            "file_size": "540 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/2e01eb8438ea2ced3dea532f2b0944b5/Avatar%202009%20BluRay%20EXTENDED%20720p%20Hindi%20English%20AAC%205.1%20x264%20ESub%20-%20MovieLinkBD.com.mkv",
+            "file_size": "1.8 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/2ba36c0e8a7dc4a157fdc9440f1756de/Avatar%202009%20%5BMovieLinkBD%20l.com%5DBluRay%20EXTENDED%201080p%20x265%2010bit%20Hindi%20English%20BD%205.1%20ESub.mkv",
+            "file_size": "1.9 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-03T02:47:24.635Z",
+    "lastUpdated": "2026-01-03T02:47:24.635Z"
   }
 ]
