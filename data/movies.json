@@ -462,5 +462,54 @@
     "total_views": 0,
     "createdAt": "2026-01-02T20:00:06.784Z",
     "lastUpdated": "2026-01-02T20:00:06.784Z"
+  },
+  {
+    "id": "series2",
+    "title": "Stranger Things : Season 1 (2016)",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767029164801_xqtkx8bvhg.webp",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual Audio",
+    "info4_type": "Series",
+    "language_info": "Dual Audio",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Full Season",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Drama, Fantasy, Mystery",
+    "resolution": "1080p | 720p | 480p",
+    "released": "2016",
+    "cast": "",
+    "storyline": "",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/2dc5bf033e90599707ef24938aa1bfca/Stranger.Things.S01.480p.NF.WEB-DL.HIN-ENG.x264-MovieLinkBD.org.zip",
+            "file_size": "1.31 GB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/6c824bc9bcdc62afeda34d6d71a9b34a/Stranger.Things.S01.720p.Hindi.Eng.MovieLinkBD.com.zip",
+            "file_size": "3.3 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "/3b2bb73938fed74838db3a627cf68aa1/Stranger.Things.S01.1080p.10Bit.BluRay.Hindi.English.Esubs.MovieLinkBD.com.zip",
+            "file_size": "5.72 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-03T07:59:54.793Z",
+    "lastUpdated": "2026-01-03T07:59:54.793Z"
   }
 ]
