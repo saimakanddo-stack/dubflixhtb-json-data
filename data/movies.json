@@ -1,5 +1,46 @@
 [
   {
+  "id": "natok2",
+  "title": "Baba Tumi Pocha | বাবা তুমি পঁচা | Eid Natok | Arosh Khan | Tasnuva Tisha | Bangla Natok 2024",
+  "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767542998359_qp1b6476ub.jpg",
+  "info1_custom": "",
+  "info2_quality": "Auto",
+  "info3_language": "Bangla, বাংলা",
+  "info4_type": "Natok",
+  "language_info": "Bangla",
+  "info_subtitle": "",
+  "info5_views": 0,
+  "info6_status": "YouTube",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "",
+  "genre": "",
+  "resolution": "",
+  "released": "",
+  "cast": "",
+  "storyline": "",
+  "screenshotLinks": [
+    "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767542998359_qp1b6476ub.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "YouTube Video",
+      "qualities": [
+        {
+          "quality_text": "YouTube",
+          "path": "https://youtu.be/h9LaTtkZ7rI?si=zTEwaxEGPJfIYNT6",
+          "file_size": "Unknown"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-04T16:12:51.089Z",
+  "lastUpdated": "2026-01-04T16:12:51.089Z"
+},
+  {
     "id": "movie7",
     "title": "Drive (2025)",
     "imageUrl": "https://i.imgbd.org/poster_9ulw1767346037.jpg",
