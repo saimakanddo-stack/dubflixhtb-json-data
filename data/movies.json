@@ -1,198 +1,198 @@
 [
   {
-  "id": "movie11",
-  "title": "Eye for an Eye 2 (2024)",
-  "imageUrl": "https://i.imgbd.org/poster_7cpu1767349338.jpg",
-  "info1_custom": "",
-  "info2_quality": "WEB-DL",
-  "info3_language": "Dual, Hindi, Chinese",
-  "info4_type": "Movie",
-  "language_info": "Dual [Hindi–Chinese]",
-  "info_subtitle": "Full HD Hindi ORG",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "6.6/10",
-  "genre": "Action, Drama, Western",
-  "resolution": "1080p | 720p | 480p",
-  "released": "13 Dec 2024 (China)",
-  "cast": "Miao Xie, Enyou Yang, Tao Huang",
-  "storyline": "A blind swordsman reluctantly mentors an orphan seeking vengeance for his destroyed family, teaching him martial arts skills. The orphan waits for an opportunity to avenge his kin.",
-  "screenshotLinks": [
-    "https://i.imgbd.org/poster_zb0v1767349652.jpg",
-    "https://i.imgbd.org/poster_0y8y1767349683.jpg",
-    "https://i.imgbd.org/poster_t2ez1767349714.jpg"
-  ],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "480p",
-          "path": "eee56e0ea40de346972b674bc7911c8c/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.480p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
-          "file_size": "433 MB"
-        },
-        {
-          "quality_text": "720p",
-          "path": "3fa0ddf35e2488dc2a1690bd26e4837d/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.720p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
-          "file_size": "864 MB"
-        },
-        {
-          "quality_text": "1080p",
-          "path": "752d008aadefba96f7e5e23e4bb8498e/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.1080p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.HEVC.h265.ESub.mkv",
-          "file_size": "1.7 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-05T06:41:49.636Z",
-  "lastUpdated": "2026-01-05T06:41:49.636Z"
-},
+    "id": "movie11",
+    "title": "Eye for an Eye 2 (2024)",
+    "imageUrl": "https://i.imgbd.org/poster_7cpu1767349338.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dual, Hindi, Chinese",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi–Chinese]",
+    "info_subtitle": "Full HD Hindi ORG",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "6.6/10",
+    "genre": "Action, Drama, Western",
+    "resolution": "1080p | 720p | 480p",
+    "released": "13 Dec 2024 (China)",
+    "cast": "Miao Xie, Enyou Yang, Tao Huang",
+    "storyline": "A blind swordsman reluctantly mentors an orphan seeking vengeance for his destroyed family, teaching him martial arts skills. The orphan waits for an opportunity to avenge his kin.",
+    "screenshotLinks": [
+      "https://i.imgbd.org/poster_zb0v1767349652.jpg",
+      "https://i.imgbd.org/poster_0y8y1767349683.jpg",
+      "https://i.imgbd.org/poster_t2ez1767349714.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "eee56e0ea40de346972b674bc7911c8c/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.480p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
+            "file_size": "433 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "3fa0ddf35e2488dc2a1690bd26e4837d/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.720p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.h264.ESub.mkv",
+            "file_size": "864 MB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "752d008aadefba96f7e5e23e4bb8498e/MovieLinkBD.com%20-%20Eye.for.an.Eye.2.2024.1080p.Dual%5BHindi-Chinese%5D.AAC.WEB-DL.HEVC.h265.ESub.mkv",
+            "file_size": "1.7 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-05T06:41:49.636Z",
+    "lastUpdated": "2026-01-05T06:41:49.636Z"
+  },
   {
-  "id": "movie10",
-  "title": "Eye for an Eye (2022)",
-  "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg",
-  "info1_custom": "",
-  "info2_quality": "WEB-DL",
-  "info3_language": "Chinese",
-  "info4_type": "Movie",
-  "language_info": "Chinese",
-  "info_subtitle": "Defiant -Full HD With English Subtitle-Low File Size",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "8.2/10",
-  "genre": "Action, Martial Arts, Drama",
-  "resolution": "1080p | 720p",
-  "released": "June 3, 2022",
-  "cast": "",
-  "storyline": "The blind swordsman, skilled in martial arts, named Cheng Xia Zi, accidentally saves Zhang Xiao Yu, who has suffered from the destruction of his family. Under the persuasion of the orphan Xiao Yu, Cheng Xia Zi reluctantly keeps him by his side and teaches him skills. Xiao Yu also waits for the opportunity to seek revenge.",
-  "screenshotLinks": [],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "720p",
-          "path": "df76bc0c8d43bbfa7e53fa80052f1f28/Eye%20for%20an%20Eye%20The%20Blind%20Swordsman%202022%20720p%20BluRay%20x264%20700MB-Moviesmod.mkv",
-          "file_size": "700 MB"
-        },
-        {
-          "quality_text": "1080p",
-          "path": "36dfc9e14b54e5a08e492d342c7d480d/Eye%20for%20an%20Eye%20The%20Blind%20Swordsman%202022%201080p%20BluRay%20x264%20DD%2B5.1-Moviesmod.mkv",
-          "file_size": "1.8 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-05T06:11:50.615Z",
-  "lastUpdated": "2026-01-05T06:11:50.615Z"
-},
+    "id": "movie10",
+    "title": "Eye for an Eye (2022)",
+    "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Chinese",
+    "info4_type": "Movie",
+    "language_info": "Chinese",
+    "info_subtitle": "Defiant -Full HD With English Subtitle-Low File Size",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "8.2/10",
+    "genre": "Action, Martial Arts, Drama",
+    "resolution": "1080p | 720p",
+    "released": "June 3, 2022",
+    "cast": "",
+    "storyline": "The blind swordsman, skilled in martial arts, named Cheng Xia Zi, accidentally saves Zhang Xiao Yu, who has suffered from the destruction of his family. Under the persuasion of the orphan Xiao Yu, Cheng Xia Zi reluctantly keeps him by his side and teaches him skills. Xiao Yu also waits for the opportunity to seek revenge.",
+    "screenshotLinks": [],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "720p",
+            "path": "df76bc0c8d43bbfa7e53fa80052f1f28/Eye%20for%20an%20Eye%20The%20Blind%20Swordsman%202022%20720p%20BluRay%20x264%20700MB-Moviesmod.mkv",
+            "file_size": "700 MB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "36dfc9e14b54e5a08e492d342c7d480d/Eye%20for%20an%20Eye%20The%20Blind%20Swordsman%202022%201080p%20BluRay%20x264%20DD%2B5.1-Moviesmod.mkv",
+            "file_size": "1.8 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-05T06:11:50.615Z",
+    "lastUpdated": "2026-01-05T06:11:50.615Z"
+  },
   {
-  "id": "movie9",
-  "title": "Mass Jathara (2025)",
-  "imageUrl": "https://image.tmdb.org/t/p/original/4CLEj84elDBh5AO6qwGoWvAUp0M.jpg",
-  "info1_custom": "",
-  "info2_quality": "WEB-DL",
-  "info3_language": "Hindi",
-  "info4_type": "Movie",
-  "language_info": "Hindi Dubbed",
-  "info_subtitle": "[Hindi ORG Dubbed ]",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "",
-  "genre": "Action",
-  "resolution": "1080p | 720p | 480p",
-  "released": "October 31, 2025",
-  "cast": "Ravi Teja, Sreeleela, Ritu P Sood",
-  "storyline": "An honest policeman takes a stand against injustice no matter what. However, he faces his biggest challenge when he is transferred to a village where crime prevails due to a ruthless drug lord.",
-  "screenshotLinks": [
-    "https://i.imgbd.org/ss_1767143759765.jpg"
-  ],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "480p",
-          "path": "/413576b29f51ef36cacaa5ac0d425b61/MovieLinkBD.com%20-%20Mass.Jathara.2025.480p.Hindi.AAC.WEB-DL.h264.ESub.mkv",
-          "file_size": "574 MB"
-        },
-        {
-          "quality_text": "720p",
-          "path": "/22a41cae8c68d445b0b246238fee5d79/MovieLinkBD.com%20-%20Mass.Jathara.2025.720p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
-          "file_size": "1.4 GB"
-        },
-        {
-          "quality_text": "1080p",
-          "path": "bd9ca9d36fd4765a57354aada94d52a6/MovieLinkBD.com%20-%20Mass.Jathara.2025.1080p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
-          "file_size": "3.2 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-05T05:39:47.764Z",
-  "lastUpdated": "2026-01-05T05:39:47.764Z"
-},
+    "id": "movie9",
+    "title": "Mass Jathara (2025)",
+    "imageUrl": "https://image.tmdb.org/t/p/original/4CLEj84elDBh5AO6qwGoWvAUp0M.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Hindi",
+    "info4_type": "Movie",
+    "language_info": "Hindi Dubbed",
+    "info_subtitle": "[Hindi ORG Dubbed ]",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Action",
+    "resolution": "1080p | 720p | 480p",
+    "released": "October 31, 2025",
+    "cast": "Ravi Teja, Sreeleela, Ritu P Sood",
+    "storyline": "An honest policeman takes a stand against injustice no matter what. However, he faces his biggest challenge when he is transferred to a village where crime prevails due to a ruthless drug lord.",
+    "screenshotLinks": [
+      "https://i.imgbd.org/ss_1767143759765.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "/413576b29f51ef36cacaa5ac0d425b61/MovieLinkBD.com%20-%20Mass.Jathara.2025.480p.Hindi.AAC.WEB-DL.h264.ESub.mkv",
+            "file_size": "574 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "/22a41cae8c68d445b0b246238fee5d79/MovieLinkBD.com%20-%20Mass.Jathara.2025.720p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
+            "file_size": "1.4 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "bd9ca9d36fd4765a57354aada94d52a6/MovieLinkBD.com%20-%20Mass.Jathara.2025.1080p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
+            "file_size": "3.2 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-05T05:39:47.764Z",
+    "lastUpdated": "2026-01-05T05:39:47.764Z"
+  },
   {
-  "id": "movie8",
-  "title": "Kombuseevi (2025)",
-  "imageUrl": "https://image.tmdb.org/t/p/original/bh1jfGnZNPPyL3RH5GBQMgXUTei.jpg",
-  "info1_custom": "",
-  "info2_quality": "HALLPRINT",
-  "info3_language": "Hindi",
-  "info4_type": "Movie",
-  "language_info": "Hindi (HQ Dubbed)",
-  "info_subtitle": "",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "",
-  "genre": "Action, Crime, Drama",
-  "resolution": "720p | 480p",
-  "released": "25 Dec 2025 (India)",
-  "cast": "Kalki Raja, R. Sarathkumar, Shanmugapandian",
-  "storyline": "Two men with explosive expertise and dangerous histories dedicate themselves to protecting their village.",
-  "screenshotLinks": [
-    "https://m.media-amazon.com/images/M/MV5BN2ZhNThmYmYtNDM0Zi00MjViLWJkMTctMjdjNjU1YzNhOGM1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-  ],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "480p",
-          "path": "b5fcb3b0a25f63c481c673456e929e14/MovieLinkBD.com%20-%20Kombuseevi.2025.480p.Hindi.AAC.HALLPRINT.h264.mkv",
-          "file_size": "514 MB"
-        },
-        {
-          "quality_text": "720p",
-          "path": "ee03d1e59bb4682c62442df9a8f1ec6f/MovieLinkBD.com%20-%20Kombuseevi.2025.720p.Hindi.AAC.HALLPRINT.h264.mkv",
-          "file_size": "1.5 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-05T05:18:00.074Z",
-  "lastUpdated": "2026-01-05T05:18:00.074Z"
-},
+    "id": "movie8",
+    "title": "Kombuseevi (2025)",
+    "imageUrl": "https://image.tmdb.org/t/p/original/bh1jfGnZNPPyL3RH5GBQMgXUTei.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "HALLPRINT",
+    "info3_language": "Hindi",
+    "info4_type": "Movie",
+    "language_info": "Hindi (HQ Dubbed)",
+    "info_subtitle": "",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "",
+    "genre": "Action, Crime, Drama",
+    "resolution": "720p | 480p",
+    "released": "25 Dec 2025 (India)",
+    "cast": "Kalki Raja, R. Sarathkumar, Shanmugapandian",
+    "storyline": "Two men with explosive expertise and dangerous histories dedicate themselves to protecting their village.",
+    "screenshotLinks": [
+      "https://m.media-amazon.com/images/M/MV5BN2ZhNThmYmYtNDM0Zi00MjViLWJkMTctMjdjNjU1YzNhOGM1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "b5fcb3b0a25f63c481c673456e929e14/MovieLinkBD.com%20-%20Kombuseevi.2025.480p.Hindi.AAC.HALLPRINT.h264.mkv",
+            "file_size": "514 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "ee03d1e59bb4682c62442df9a8f1ec6f/MovieLinkBD.com%20-%20Kombuseevi.2025.720p.Hindi.AAC.HALLPRINT.h264.mkv",
+            "file_size": "1.5 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-05T05:18:00.074Z",
+    "lastUpdated": "2026-01-05T05:18:00.074Z"
+  },
   {
     "id": "natok2",
     "title": "Baba Tumi Pocha | বাবা তুমি পঁচা | Eid Natok | Arosh Khan | Tasnuva Tisha | Bangla Natok 2024",
