@@ -1,5 +1,51 @@
 [
   {
+  "id": "movie8",
+  "title": "Kombuseevi (2025)",
+  "imageUrl": "https://image.tmdb.org/t/p/original/bh1jfGnZNPPyL3RH5GBQMgXUTei.jpg",
+  "info1_custom": "",
+  "info2_quality": "HALLPRINT",
+  "info3_language": "Hindi",
+  "info4_type": "Movie",
+  "language_info": "Hindi (HQ Dubbed)",
+  "info_subtitle": "",
+  "info5_views": 0,
+  "info6_status": "Online",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "",
+  "genre": "Action, Crime, Drama",
+  "resolution": "720p | 480p",
+  "released": "25 Dec 2025 (India)",
+  "cast": "Kalki Raja, R. Sarathkumar, Shanmugapandian",
+  "storyline": "Two men with explosive expertise and dangerous histories dedicate themselves to protecting their village.",
+  "screenshotLinks": [
+    "https://m.media-amazon.com/images/M/MV5BN2ZhNThmYmYtNDM0Zi00MjViLWJkMTctMjdjNjU1YzNhOGM1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "b5fcb3b0a25f63c481c673456e929e14/MovieLinkBD.com%20-%20Kombuseevi.2025.480p.Hindi.AAC.HALLPRINT.h264.mkv",
+          "file_size": "514 MB"
+        },
+        {
+          "quality_text": "720p",
+          "path": "ee03d1e59bb4682c62442df9a8f1ec6f/MovieLinkBD.com%20-%20Kombuseevi.2025.720p.Hindi.AAC.HALLPRINT.h264.mkv",
+          "file_size": "1.5 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-05T05:18:00.074Z",
+  "lastUpdated": "2026-01-05T05:18:00.074Z"
+},
+  {
     "id": "natok2",
     "title": "Baba Tumi Pocha | বাবা তুমি পঁচা | Eid Natok | Arosh Khan | Tasnuva Tisha | Bangla Natok 2024",
     "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767542998359_qp1b6476ub.jpg",
