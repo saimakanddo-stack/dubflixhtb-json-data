@@ -1,5 +1,56 @@
 [
   {
+  "id": "movie9",
+  "title": "Mass Jathara (2025)",
+  "imageUrl": "https://image.tmdb.org/t/p/original/4CLEj84elDBh5AO6qwGoWvAUp0M.jpg",
+  "info1_custom": "",
+  "info2_quality": "WEB-DL",
+  "info3_language": "Hindi",
+  "info4_type": "Movie",
+  "language_info": "Hindi Dubbed",
+  "info_subtitle": "[Hindi ORG Dubbed ]",
+  "info5_views": 0,
+  "info6_status": "Online",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "",
+  "genre": "Action",
+  "resolution": "1080p | 720p | 480p",
+  "released": "October 31, 2025",
+  "cast": "Ravi Teja, Sreeleela, Ritu P Sood",
+  "storyline": "An honest policeman takes a stand against injustice no matter what. However, he faces his biggest challenge when he is transferred to a village where crime prevails due to a ruthless drug lord.",
+  "screenshotLinks": [
+    "https://i.imgbd.org/ss_1767143759765.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "/413576b29f51ef36cacaa5ac0d425b61/MovieLinkBD.com%20-%20Mass.Jathara.2025.480p.Hindi.AAC.WEB-DL.h264.ESub.mkv",
+          "file_size": "574 MB"
+        },
+        {
+          "quality_text": "720p",
+          "path": "/22a41cae8c68d445b0b246238fee5d79/MovieLinkBD.com%20-%20Mass.Jathara.2025.720p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
+          "file_size": "1.4 GB"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "bd9ca9d36fd4765a57354aada94d52a6/MovieLinkBD.com%20-%20Mass.Jathara.2025.1080p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
+          "file_size": "3.2 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-05T05:39:47.764Z",
+  "lastUpdated": "2026-01-05T05:39:47.764Z"
+},
+  {
   "id": "movie8",
   "title": "Kombuseevi (2025)",
   "imageUrl": "https://image.tmdb.org/t/p/original/bh1jfGnZNPPyL3RH5GBQMgXUTei.jpg",
