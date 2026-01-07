@@ -1,5 +1,63 @@
 [
   {
+  "id": "movie12",
+  "title": "Tron: Ares (2025)",
+  "imageUrl": "https://image.tmdb.org/t/p/original/vV8BRsa5h88RsmP6fpqKDzGElt7.jpg",
+  "info1_custom": "NEW",
+  "info2_quality": "Blu-Ray",
+  "info3_language": "Dual Audio, Hindi, English",
+  "info4_type": "Movie",
+  "language_info": "Dual [Hindi–English]",
+  "info_subtitle": "[ORG Hindi]",
+  "info5_views": 0,
+  "info6_status": "",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "6.3/10",
+  "genre": "Action, Adventure, Sci-Fi",
+  "resolution": "1080p | 720p | 480p | 720p HEVC",
+  "released": "10 Oct 2025 (United States, Canada, New Zealand)",
+  "cast": "Jared Leto, Greta Lee, Jeff Bridges",
+  "storyline": "A highly sophisticated program, Ares, is sent from the digital world into the real world on a dangerous mission.",
+  "screenshotLinks": [
+    "https://i.imgbd.org/ss_1767776930262.jpg",
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHC16QY4bBNm3h2qvWGsDLsakHTjuZ10mDVueDFHPNI1bsI5bX249j-FlAY1L8qyheUwFf2N79snnOSde-DyxBg9bWYJGJ1A1-dzV1CHqLlavo1KCnLEqLXJvacSDdRDffb6khMiHq9Prfq0aLB4TWado7T3ll_UErXP3V5w8G8timmyiJkiaIuFQ0j7SE/s1600/vlcsnap-2025-12-02-12h28m11s692.jpg",
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqBYzV46XxW35W5hP-900E2-pzZNz5b99GHNAiZzg7iZfgQeAxxxVx7Ltpty1I5l0QlbgzsIlMdEmea7uxOXYvwnp332RoqkRAjgfC7NUWLSBNs_jBfgR4MgqaQOw6Zg5QQS6myv_dtLtpr0HtDvmX_AhKFlUHrWPlqTwR2c_pgoeqCbrnTHeZXN1cAwG6/s1600/vlcsnap-2025-12-02-12h28m21s957.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "b48bf77623e3203d45ce956fd238d0e6/MovieLinkBD.com%20-%20Tron.Ares.2025.480p.Dual%5BHindi-English%5D.AAC.BluRay.h264.ESub.mkv",
+          "file_size": "562 MB"
+        },
+        {
+          "quality_text": "720p HEVC",
+          "path": "382f2a332de4849609719be9ec18f42b/MovieLinkBD.com%20-%20Tron.Ares.2025.720p.Dual%5BHindi-English%5D.AAC.BluRay.HEVC.h265.ESub.mkv",
+          "file_size": "849"
+        },
+        {
+          "quality_text": "720p",
+          "path": "aa732a68a059d38a407ab653d398b68f/MovieLinkBD.com%20-%20Tron.Ares.2025.720p.Dual%5BHindi-English%5D.AC3.BluRay.h264.ESub.mkv",
+          "file_size": "1.2"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "d9d0549f363f82d625ddac7f236eac05/MovieLinkBD.com%20-%20Tron.Ares.2025.1080p.Dual%5BHindi-English%5D.EAC3.BluRay.h264.ESub.mkv",
+          "file_size": "2.3 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-07T18:26:26.288Z",
+  "lastUpdated": "2026-01-07T18:26:26.289Z"
+},
+  {
     "id": "movie11",
     "title": "Eye for an Eye 2 (2024)",
     "imageUrl": "https://i.imgbd.org/poster_7cpu1767349338.jpg",
