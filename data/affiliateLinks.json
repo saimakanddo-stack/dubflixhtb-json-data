@@ -11,14 +11,20 @@
       "enabled": true
     },
     {
-      "name": "Adsterra",
-      "url": "https://behavepassword.com/zz98ntzft7?key=93d2e04219c181d282876fca48224ef4",
+      "name": "Monetag",
+      "url": "https://otieu.com/4/10254507",
       "weight": 1,
-      "enabled": false
+      "enabled": true
     },
     {
       "name": "Monetag",
-      "url": "https://otieu.com/4/10254507",
+      "url": "https://otieu.com/4/10431766",
+      "weight": 1,
+      "enabled": true
+    },
+    {
+      "name": "Adsterra",
+      "url": "https://behavepassword.com/zz98ntzft7?key=93d2e04219c181d282876fca48224ef4",
       "weight": 1,
       "enabled": true
     }
