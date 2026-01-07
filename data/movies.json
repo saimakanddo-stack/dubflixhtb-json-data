@@ -27,7 +27,7 @@
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
-        "server_info": "",
+        "server_info": "Test",
         "qualities": [
           {
             "quality_text": "480p",
