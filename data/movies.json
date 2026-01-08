@@ -1,5 +1,61 @@
 [
   {
+  "id": "movie13",
+  "title": "KA (2024)",
+  "imageUrl": "https://images2.imgbox.com/dc/99/6xsBClLj_o.jpg",
+  "info1_custom": "NEW",
+  "info2_quality": "WEB-DL",
+  "info3_language": "Dual Audio, Hindi, Telugu",
+  "info4_type": "Movie",
+  "language_info": "Dual [Hindi–Telugu]",
+  "info_subtitle": "Full HD Hindi ORG",
+  "info5_views": 0,
+  "info6_status": "Online",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "7.6/10",
+  "genre": "Action, Thriller",
+  "resolution": "1080p | 720p | 480p | 720p HEVC",
+  "released": "31 Oct 2024 (India)",
+  "cast": "Kiran Abbavaram, Ajay, Redin Kingsley",
+  "storyline": "In a village where the sun sinks below the horizon by 3 PM, darkness creeps in early, bringing with it a chilling wave of inexplicable horrors.",
+  "screenshotLinks": [
+    "https://i.imgbd.org/ss_1767811292054.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "5a35aa15ef79e50f0f8af30552312147/MovieLinkBD.com%20-%20KA.2024.480p.Dual%5BHindi-Telugu%5D.AAC.WEB-DL.h264.ESub.mkv",
+          "file_size": "440 MB"
+        },
+        {
+          "quality_text": "720p HEVC",
+          "path": "5cfe0ec48ec731a22099b6279cf81d3e/MovieLinkBD.com%20-%20KA.2024.720p.Dual%5BHindi-Telugu%5D.AAC.WEB-DL.HEVC.h265.ESub.mkv",
+          "file_size": "774 MB"
+        },
+        {
+          "quality_text": "720p",
+          "path": "eee3ca4b1338b664571135004233da9c/MovieLinkBD.com%20-%20KA.2024.720p.Dual%5BHindi-Telugu%5D.EAC3.WEB-DL.h264.ESub.mkv",
+          "file_size": "1.3 GB"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "beb48e04494b33c59261e0882608f080/MovieLinkBD.com%20-%20KA.2024.1080p.Dual%5BHindi-Telugu%5D.EAC3.WEB-DL.h264.ESub.mkv",
+          "file_size": "2.8 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-08T04:44:32.416Z",
+  "lastUpdated": "2026-01-08T04:44:32.437Z"
+},
+  {
   "id": "movie12",
   "title": "Tron: Ares (2025)",
   "imageUrl": "https://image.tmdb.org/t/p/original/vV8BRsa5h88RsmP6fpqKDzGElt7.jpg",
@@ -37,12 +93,12 @@
         {
           "quality_text": "720p HEVC",
           "path": "382f2a332de4849609719be9ec18f42b/MovieLinkBD.com%20-%20Tron.Ares.2025.720p.Dual%5BHindi-English%5D.AAC.BluRay.HEVC.h265.ESub.mkv",
-          "file_size": "849"
+          "file_size": "849 MB"
         },
         {
           "quality_text": "720p",
           "path": "aa732a68a059d38a407ab653d398b68f/MovieLinkBD.com%20-%20Tron.Ares.2025.720p.Dual%5BHindi-English%5D.AC3.BluRay.h264.ESub.mkv",
-          "file_size": "1.2"
+          "file_size": "1.2 GB"
         },
         {
           "quality_text": "1080p",
