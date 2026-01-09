@@ -1,5 +1,56 @@
 [
   {
+  "id": "movie14",
+  "title": "Ek Deewane Ki Deewaniyat",
+  "imageUrl": "https://image.tmdb.org/t/p/w300/y3TEsi9egFJxYgBYZKPJTCGLFu5.jpg",
+  "info1_custom": "NEW",
+  "info2_quality": "WEB-DL",
+  "info3_language": "Hindi",
+  "info4_type": "Movie",
+  "language_info": "Hindi",
+  "info_subtitle": "(2025) Full HD",
+  "info5_views": 0,
+  "info6_status": "Popular Movie in 2k26",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "",
+  "genre": "Romance",
+  "resolution": "1080p | 720p | 480p",
+  "released": "October 21, 2025 (India)",
+  "cast": "Harshvardhan Rane, Sonam Bajwa",
+  "storyline": "When a powerful politician falls for a strong-willed superstar, their passionate romance quickly spirals into a dangerous game of obsession, pride, and heartbreak.",
+  "screenshotLinks": [
+    "https://i.imgbd.org/ss_1766688720676.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "05b781aec6299e9b7931af9a6e160bc9/MovieLinkBD.com%20-%20Ek.Deewane.Ki.Deewaniyat.2025.480p.Hindi.AAC.WEB-DL.h264.ESub.mkv",
+          "file_size": "467 MB"
+        },
+        {
+          "quality_text": "720p",
+          "path": "6b112a161c51a9beb6d412197d786ba9/MovieLinkBD.com%20-%20Ek.Deewane.Ki.Deewaniyat.2025.720p.Hindi.EAC3.WEB-DL.h264.ESub.mkv",
+          "file_size": "976 MB"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "5bccede2af2ce10b5dc6fe2e16a82153/MovieLinkBD.com%20-%20Ek.Deewane.Ki.Deewaniyat.2025.2160p.Hindi.EAC3.WEB-DL.HEVC.h265.ESub.mkv",
+          "file_size": "2.0 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-09T11:46:51.890Z",
+  "lastUpdated": "2026-01-09T11:46:51.891Z"
+},
+  {
   "id": "movie13",
   "title": "KA (2024)",
   "imageUrl": "https://images2.imgbox.com/dc/99/6xsBClLj_o.jpg",
