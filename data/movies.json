@@ -1,5 +1,58 @@
 [
   {
+  "id": "movie15",
+  "title": "Lucky bhaskar (2024)",
+  "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjEzN2ZjYjUtZTI3NC00MzMyLWJiNDAtMDBiZGEzNTBiY2RkXkEyXkFqcGc@._V1_.jpg",
+  "info1_custom": "",
+  "info2_quality": "WEB-DL",
+  "info3_language": "Dua Audio, [Hindi, Telugu",
+  "info4_type": "Movie",
+  "language_info": "Dual [Hindi–Telugu]",
+  "info_subtitle": "Full HD Hindi ORG",
+  "info5_views": 0,
+  "info6_status": "Online",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "8.4/10",
+  "genre": "Crime, Drama, Thriller",
+  "resolution": "1080p | 720p | 480p",
+  "released": "31 Oct 2024 (India)",
+  "cast": "Dulquer Salmaan, Meenaakshi Chaudhary, Ramki",
+  "storyline": "A cash-strapped cashier working at a bank embarks on a risky investment scheme and soon gets drawn into the murky world of money laundering.",
+  "screenshotLinks": [
+    "https://ptpimg.me/c7ni25.png",
+    "https://ptpimg.me/4pdfr5.png",
+    "https://ptpimg.me/ol59cc.png"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "49558b764d409e7fde9cd2cfe041fa93/Lucky.Baskhar.2024.480p.WEB.DL.Hindi.ORG-Telugu.ESub.x264-MovieLinkBD.com.mkv",
+          "file_size": "537 MB"
+        },
+        {
+          "quality_text": "720P",
+          "path": "bfa3f343a776be8dc0a4fd0f095c944a/MovieLinkBD.com.Lucky.Baskhar.%282024%29.%28Hindi.%2B.Telugu%29.Dual.Audio.UnCut.South.Movie.720p.WEB-DL.ESub.x264.mkv",
+          "file_size": "1.3 GB"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "95c391adf86acaa8bb6c56c193ed4c80/Lucky.Baskhar.2024.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.H.265-MovieLinkBD.com.mkv",
+          "file_size": "3.2 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-11T06:20:15.577Z",
+  "lastUpdated": "2026-01-11T06:20:15.577Z"
+},
+  {
     "id": "movie14",
     "title": "Ek Deewane Ki Deewaniyat",
     "imageUrl": "https://image.tmdb.org/t/p/w300/y3TEsi9egFJxYgBYZKPJTCGLFu5.jpg",
