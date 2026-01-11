@@ -1,5 +1,63 @@
 [
   {
+  "id": "movie16",
+  "title": "Dhurandhar (2025)",
+  "imageUrl": "https://i.imgbd.org/poster_zwo71764932469.jpg",
+  "info1_custom": "",
+  "info2_quality": "HDTC",
+  "info3_language": "Hindi",
+  "info4_type": "Movie",
+  "language_info": "Hindi",
+  "info_subtitle": "HDTC [Best Quality Print]",
+  "info5_views": 0,
+  "info6_status": "Online",
+  "enablePosterBlur": false,
+  "blurPercentage": 10,
+  "imdb": "8.6/10",
+  "genre": "Action, Adventure, Crime, Drama, Thriller",
+  "resolution": "1080p | 720p | 480p",
+  "released": "December 5, 2025 (India)",
+  "cast": "Ranveer Singh, Sanjay Dutt, Madhavan",
+  "storyline": "Ajit Doval, India's top spy, goes undercover in enemy territory, risking everything to gather intelligence and prevent a major crisis, cementing his legacy as the \"James Bond of India.",
+  "screenshotLinks": [
+    "https://i.imgbd.org/poster_irp71764931113.jpg",
+    "https://i.imgbd.org/poster_szya1764931136.jpg",
+    "https://i.imgbd.org/poster_oo9j1764931158.jpg"
+  ],
+  "downloadOptions": [
+    {
+      "server": "MovieLinkBD",
+      "server_info": "",
+      "qualities": [
+        {
+          "quality_text": "480p",
+          "path": "076c5fdb55a2e8d1c4dffc4440bbe7da/MovieLinkBD.com%20-%20Dhurandhar.2025.480p.Hindi.AAC.HDTC.h264.mkv",
+          "file_size": "676 MB"
+        },
+        {
+          "quality_text": "720p",
+          "path": "287c523bc960ed72bca3040e753201d1/MovieLinkBD.com%20-%20Dhurandhar.2025.720p.Hindi.AAC.HDTC.h264.mkv",
+          "file_size": "1.6 GB"
+        },
+        {
+          "quality_text": "1080p",
+          "path": "9cbe01adb5036d07a3b9e3176aeaff47/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
+          "file_size": "3.3 GB"
+        },
+        {
+          "quality_text": "Best Quality",
+          "path": "7324283cd27cd1633091a0cf3b8fcdee/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
+          "file_size": "14.63 GB"
+        }
+      ]
+    }
+  ],
+  "visibility": "published",
+  "total_views": 0,
+  "createdAt": "2026-01-11T06:42:54.544Z",
+  "lastUpdated": "2026-01-11T06:42:54.544Z"
+},
+  {
   "id": "movie15",
   "title": "Lucky bhaskar (2024)",
   "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjEzN2ZjYjUtZTI3NC00MzMyLWJiNDAtMDBiZGEzNTBiY2RkXkEyXkFqcGc@._V1_.jpg",
