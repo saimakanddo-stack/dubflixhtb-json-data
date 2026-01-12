@@ -1,115 +1,115 @@
 [
   {
-  "id": "movie16",
-  "title": "Dhurandhar (2025)",
-  "imageUrl": "https://i.imgbd.org/poster_zwo71764932469.jpg",
-  "info1_custom": "",
-  "info2_quality": "HDTC",
-  "info3_language": "Hindi",
-  "info4_type": "Movie",
-  "language_info": "Hindi",
-  "info_subtitle": "HDTC [Best Quality Print]",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "8.6/10",
-  "genre": "Action, Adventure, Crime, Drama, Thriller",
-  "resolution": "1080p | 720p | 480p",
-  "released": "December 5, 2025 (India)",
-  "cast": "Ranveer Singh, Sanjay Dutt, Madhavan",
-  "storyline": "Ajit Doval, India's top spy, goes undercover in enemy territory, risking everything to gather intelligence and prevent a major crisis, cementing his legacy as the \"James Bond of India.",
-  "screenshotLinks": [
-    "https://i.imgbd.org/poster_irp71764931113.jpg",
-    "https://i.imgbd.org/poster_szya1764931136.jpg",
-    "https://i.imgbd.org/poster_oo9j1764931158.jpg"
-  ],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "480p",
-          "path": "076c5fdb55a2e8d1c4dffc4440bbe7da/MovieLinkBD.com%20-%20Dhurandhar.2025.480p.Hindi.AAC.HDTC.h264.mkv",
-          "file_size": "676 MB"
-        },
-        {
-          "quality_text": "720p",
-          "path": "287c523bc960ed72bca3040e753201d1/MovieLinkBD.com%20-%20Dhurandhar.2025.720p.Hindi.AAC.HDTC.h264.mkv",
-          "file_size": "1.6 GB"
-        },
-        {
-          "quality_text": "1080p",
-          "path": "9cbe01adb5036d07a3b9e3176aeaff47/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
-          "file_size": "3.3 GB"
-        },
-        {
-          "quality_text": "Best Quality",
-          "path": "7324283cd27cd1633091a0cf3b8fcdee/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
-          "file_size": "14.63 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-11T06:42:54.544Z",
-  "lastUpdated": "2026-01-11T06:42:54.544Z"
-},
+    "id": "movie16",
+    "title": "Dhurandhar (2025)",
+    "imageUrl": "https://i.imgbd.org/poster_zwo71764932469.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "HDTC",
+    "info3_language": "Hindi",
+    "info4_type": "Movie",
+    "language_info": "Hindi",
+    "info_subtitle": "HDTC [Best Quality Print]",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "8.6/10",
+    "genre": "Action, Adventure, Crime, Drama, Thriller",
+    "resolution": "1080p | 720p | 480p",
+    "released": "December 5, 2025 (India)",
+    "cast": "Ranveer Singh, Sanjay Dutt, Madhavan",
+    "storyline": "Ajit Doval, India's top spy, goes undercover in enemy territory, risking everything to gather intelligence and prevent a major crisis, cementing his legacy as the \"James Bond of India.",
+    "screenshotLinks": [
+      "https://i.imgbd.org/poster_irp71764931113.jpg",
+      "https://i.imgbd.org/poster_szya1764931136.jpg",
+      "https://i.imgbd.org/poster_oo9j1764931158.jpg"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "076c5fdb55a2e8d1c4dffc4440bbe7da/MovieLinkBD.com%20-%20Dhurandhar.2025.480p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "676 MB"
+          },
+          {
+            "quality_text": "720p",
+            "path": "287c523bc960ed72bca3040e753201d1/MovieLinkBD.com%20-%20Dhurandhar.2025.720p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "1.6 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "9cbe01adb5036d07a3b9e3176aeaff47/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "3.3 GB"
+          },
+          {
+            "quality_text": "Best Quality",
+            "path": "7324283cd27cd1633091a0cf3b8fcdee/MovieLinkBD.com%20-%20Dhurandhar.2025.1080p.Hindi.AAC.HDTC.h264.mkv",
+            "file_size": "14.63 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-11T06:42:54.544Z",
+    "lastUpdated": "2026-01-11T06:42:54.544Z"
+  },
   {
-  "id": "movie15",
-  "title": "Lucky bhaskar (2024)",
-  "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjEzN2ZjYjUtZTI3NC00MzMyLWJiNDAtMDBiZGEzNTBiY2RkXkEyXkFqcGc@._V1_.jpg",
-  "info1_custom": "",
-  "info2_quality": "WEB-DL",
-  "info3_language": "Dua Audio, [Hindi, Telugu",
-  "info4_type": "Movie",
-  "language_info": "Dual [Hindi–Telugu]",
-  "info_subtitle": "Full HD Hindi ORG",
-  "info5_views": 0,
-  "info6_status": "Online",
-  "enablePosterBlur": false,
-  "blurPercentage": 10,
-  "imdb": "8.4/10",
-  "genre": "Crime, Drama, Thriller",
-  "resolution": "1080p | 720p | 480p",
-  "released": "31 Oct 2024 (India)",
-  "cast": "Dulquer Salmaan, Meenaakshi Chaudhary, Ramki",
-  "storyline": "A cash-strapped cashier working at a bank embarks on a risky investment scheme and soon gets drawn into the murky world of money laundering.",
-  "screenshotLinks": [
-    "https://ptpimg.me/c7ni25.png",
-    "https://ptpimg.me/4pdfr5.png",
-    "https://ptpimg.me/ol59cc.png"
-  ],
-  "downloadOptions": [
-    {
-      "server": "MovieLinkBD",
-      "server_info": "",
-      "qualities": [
-        {
-          "quality_text": "480p",
-          "path": "49558b764d409e7fde9cd2cfe041fa93/Lucky.Baskhar.2024.480p.WEB.DL.Hindi.ORG-Telugu.ESub.x264-MovieLinkBD.com.mkv",
-          "file_size": "537 MB"
-        },
-        {
-          "quality_text": "720P",
-          "path": "bfa3f343a776be8dc0a4fd0f095c944a/MovieLinkBD.com.Lucky.Baskhar.%282024%29.%28Hindi.%2B.Telugu%29.Dual.Audio.UnCut.South.Movie.720p.WEB-DL.ESub.x264.mkv",
-          "file_size": "1.3 GB"
-        },
-        {
-          "quality_text": "1080p",
-          "path": "95c391adf86acaa8bb6c56c193ed4c80/Lucky.Baskhar.2024.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.H.265-MovieLinkBD.com.mkv",
-          "file_size": "3.2 GB"
-        }
-      ]
-    }
-  ],
-  "visibility": "published",
-  "total_views": 0,
-  "createdAt": "2026-01-11T06:20:15.577Z",
-  "lastUpdated": "2026-01-11T06:20:15.577Z"
-},
+    "id": "movie15",
+    "title": "Lucky bhaskar (2024)",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjEzN2ZjYjUtZTI3NC00MzMyLWJiNDAtMDBiZGEzNTBiY2RkXkEyXkFqcGc@._V1_.jpg",
+    "info1_custom": "NEW",
+    "info2_quality": "WEB-DL",
+    "info3_language": "Dua Audio, [Hindi, Telugu",
+    "info4_type": "Movie",
+    "language_info": "Dual [Hindi–Telugu]",
+    "info_subtitle": "Full HD Hindi ORG",
+    "info5_views": 0,
+    "info6_status": "Online",
+    "enablePosterBlur": false,
+    "blurPercentage": 10,
+    "imdb": "8.4/10",
+    "genre": "Crime, Drama, Thriller",
+    "resolution": "1080p | 720p | 480p",
+    "released": "31 Oct 2024 (India)",
+    "cast": "Dulquer Salmaan, Meenaakshi Chaudhary, Ramki",
+    "storyline": "A cash-strapped cashier working at a bank embarks on a risky investment scheme and soon gets drawn into the murky world of money laundering.",
+    "screenshotLinks": [
+      "https://ptpimg.me/c7ni25.png",
+      "https://ptpimg.me/4pdfr5.png",
+      "https://ptpimg.me/ol59cc.png"
+    ],
+    "downloadOptions": [
+      {
+        "server": "MovieLinkBD",
+        "server_info": "",
+        "qualities": [
+          {
+            "quality_text": "480p",
+            "path": "49558b764d409e7fde9cd2cfe041fa93/Lucky.Baskhar.2024.480p.WEB.DL.Hindi.ORG-Telugu.ESub.x264-MovieLinkBD.com.mkv",
+            "file_size": "537 MB"
+          },
+          {
+            "quality_text": "720P",
+            "path": "bfa3f343a776be8dc0a4fd0f095c944a/MovieLinkBD.com.Lucky.Baskhar.%282024%29.%28Hindi.%2B.Telugu%29.Dual.Audio.UnCut.South.Movie.720p.WEB-DL.ESub.x264.mkv",
+            "file_size": "1.3 GB"
+          },
+          {
+            "quality_text": "1080p",
+            "path": "95c391adf86acaa8bb6c56c193ed4c80/Lucky.Baskhar.2024.1080p.NF.WEB-DL.DUAL.DDP5.1.HDR.H.265-MovieLinkBD.com.mkv",
+            "file_size": "3.2 GB"
+          }
+        ]
+      }
+    ],
+    "visibility": "published",
+    "total_views": 0,
+    "createdAt": "2026-01-11T06:20:15.577Z",
+    "lastUpdated": "2026-01-11T06:20:15.577Z"
+  },
   {
     "id": "movie14",
     "title": "Ek Deewane Ki Deewaniyat",
@@ -473,7 +473,7 @@
     "id": "natok2",
     "title": "Baba Tumi Pocha | বাবা তুমি পঁচা | Eid Natok | Arosh Khan | Tasnuva Tisha | Bangla Natok 2024",
     "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767542998359_qp1b6476ub.jpg",
-    "info1_custom": "NEW",
+    "info1_custom": "",
     "info2_quality": "Auto",
     "info3_language": "Bangla, বাংলা",
     "info4_type": "Natok",
@@ -514,7 +514,7 @@
     "id": "movie7",
     "title": "Drive (2025)",
     "imageUrl": "https://i.imgbd.org/poster_9ulw1767346037.jpg",
-    "info1_custom": "NEW",
+    "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual Audio, Hindi, Telugu",
     "info4_type": "Movie",
