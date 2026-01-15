@@ -1,11 +1,11 @@
 [
   {
     "id": "movie17",
-    "title": "Khiladi (2022)",
-    "imageUrl": "https://image.tmdb.org/t/p/original/egPl7IcGBmt1GQGY2KoBgujMlT3.jpg",
+    "title": "Khiladi",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjBhZWZhYzItYmNkYi00ZjhiLTljMGItMjlmMTQ2ODZkOTQyXkEyXkFqcGc@._V1_SX300.jpg",
     "info1_custom": "",
     "info2_quality": "WEBRip",
-    "info3_language": "Test Language",
+    "info3_language": "Hindi",
     "info4_type": "Movie",
     "language_info": "Hindi",
     "info_subtitle": "",
@@ -13,17 +13,20 @@
     "info6_status": "Online",
     "enablePosterBlur": false,
     "blurPercentage": 10,
-    "imdb": "",
+    "imdb": "5.2",
     "genre": "Action, Crime, Thriller",
     "resolution": "720p",
-    "released": "",
-    "runtime": "",
-    "director": "",
-    "writer": "",
+    "released": "11 Feb 2022",
+    "runtime": "02:34",
+    "director": "Ramesh Varma",
+    "writer": "Ramesh Varma, Srikanth Vissa, Sagar",
     "rated": "",
-    "cast": "",
+    "cast": "Ravi Teja, Arjun Sarja, Unni Mukundan",
     "storyline": "A murder suspect escapes police custody due to criminologist Priya's misjudgment of her case for the thesis. Priya along with Arjun solves the mystery around the murder and money laundering which lead to the murder.",
-    "screenshotLinks": [],
+    "trailer": "",
+    "screenshotLinks": [
+      "https://image.tmdb.org/t/p/original/rqJRmGFuXJMMc1iMzUC6hWiJANO.jpg"
+    ],
     "downloadOptions": [
       {
         "server": "MovieLinkBD",
@@ -40,10 +43,10 @@
         ]
       }
     ],
-    "visibility": "unpublished",
+    "visibility": "published",
     "total_views": 0,
     "createdAt": "2026-01-15T05:52:38.650Z",
-    "lastUpdated": "2026-01-15T13:06:25.925Z"
+    "lastUpdated": "2026-01-15T14:09:32.181Z"
   },
   {
     "id": "movie16",
