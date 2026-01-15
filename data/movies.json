@@ -5,7 +5,7 @@
     "imageUrl": "https://image.tmdb.org/t/p/original/egPl7IcGBmt1GQGY2KoBgujMlT3.jpg",
     "info1_custom": "",
     "info2_quality": "WEBRip",
-    "info3_language": "Hindi",
+    "info3_language": "Test Language",
     "info4_type": "Movie",
     "language_info": "Hindi",
     "info_subtitle": "",
@@ -17,6 +17,10 @@
     "genre": "Action, Crime, Thriller",
     "resolution": "720p",
     "released": "",
+    "runtime": "",
+    "director": "",
+    "writer": "",
+    "rated": "",
     "cast": "",
     "storyline": "A murder suspect escapes police custody due to criminologist Priya's misjudgment of her case for the thesis. Priya along with Arjun solves the mystery around the murder and money laundering which lead to the murder.",
     "screenshotLinks": [],
@@ -39,7 +43,7 @@
     "visibility": "published",
     "total_views": 0,
     "createdAt": "2026-01-15T05:52:38.650Z",
-    "lastUpdated": "2026-01-15T10:46:49.232Z"
+    "lastUpdated": "2026-01-15T12:15:56.379Z"
   },
   {
     "id": "movie16",
