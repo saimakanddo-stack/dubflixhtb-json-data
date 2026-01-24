@@ -2,7 +2,7 @@
   {
     "id": "movie17",
     "title": "Khiladi",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjBhZWZhYzItYmNkYi00ZjhiLTljMGItMjlmMTQ2ODZkOTQyXkEyXkFqcGc@._V1_SX300.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/egPl7IcGBmt1GQGY2KoBgujMlT3.jpg",
     "info1_custom": "",
     "info2_quality": "WEBRip",
     "info3_language": "Hindi",
@@ -380,7 +380,7 @@
   {
     "id": "movie10",
     "title": "Eye for an Eye (2022)",
-    "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg",
+    "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg?v=1" ,
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Chinese",
@@ -621,7 +621,7 @@
   {
     "id": "series3",
     "title": "Stranger Things : Season 3 (2016)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual Audio",
@@ -670,7 +670,7 @@
   {
     "id": "series2",
     "title": "Stranger Things : Season 2 (2016)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual Audio",
@@ -719,7 +719,7 @@
   {
     "id": "series1",
     "title": "Stranger Things : Season 1 (2016)",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1767029164801_xqtkx8bvhg.webp",
+    "imageUrl": "https://image.tmdb.org/t/p/original/uKYUR8GPkKRCksczYDJb3pwZauo.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual Audio",
@@ -768,7 +768,7 @@
   {
     "id": "movie7",
     "title": "Predator: Badlands (2025)",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/saimakanddo-stack/dubflixhtb-json-data/data/images/1766993269861_stkp3rx4j6g.webp",
+    "imageUrl": "https://cdn.kinocheck.com/i/5kt5dagii0.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual, Hindi, English",
@@ -820,7 +820,7 @@
   {
     "id": "movie5",
     "title": "Avatar (2009)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/unbrtK8zEjPANvNkbwhjpSxYWzN.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/unbrtK8zEjPANvNkbwhjpSxYWzN.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual, Hindi, English",
@@ -873,7 +873,7 @@
   {
     "id": "movie4",
     "title": "Avatar: The Way of Water (2022)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual, Hindi, English",
@@ -927,7 +927,7 @@
   {
     "id": "movie3",
     "title": "Five Nights at Freddy's (2023)",
-    "imageUrl": "https://www.themoviedb.org/t/p/original/uiWMy1h0Xlto9aE3DbKhXf8lPzK.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/uiWMy1h0Xlto9aE3DbKhXf8lPzK.jpg",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Dual, Hindi, English",
@@ -1022,7 +1022,7 @@
   {
     "id": "movie1",
     "title": "Tu Meri Main Tera Main Tera Tu Meri",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Tu_Meri_Main_Tera_Main_Tera_Tu_Meri.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/original/tNDMdkJQ8BJnV7Uavyft141xgWb.jpg",
     "info1_custom": "",
     "info2_quality": "HDTC",
     "info3_language": "Hindi",
@@ -1076,7 +1076,7 @@
   {
     "id": "movie2",
     "title": "Avatar: Fire and Ash (2025)",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZy6HZ9rlPWdACyWMwiPCjLyKjA3WW-hmDkmVj3QL21AAJhLQQ2yPUNF35Cxegoum6NyjCL2JFZ1dBuw7BwOp1y2UhMBm-CzS6SRwoTQE1ABPpsE88xuyVPppLlYNnvcNFppMsJo2_0q5Wg-OF7g1zket0Imujp89jF8XIKDSMwtjJt0sIEGnh6DLiWEU/s450/1000300022.jpg",
+    "imageUrl": "https://image.tmdb.org/t/p/w300/gDVgC9jd917NdAcqBdRRDUYi4Tq.jpg",
     "info1_custom": "",
     "info2_quality": "HDTC",
     "info3_language": "Hindi",
