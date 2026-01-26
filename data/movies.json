@@ -52,7 +52,7 @@
     "id": "movie16",
     "title": "Dhurandhar (2025)",
     "imageUrl": "https://i.imgbd.org/poster_zwo71764932469.jpg",
-    "info1_custom": "UPDATED",
+    "info1_custom": "",
     "info2_quality": "HDTC",
     "info3_language": "Hindi",
     "info4_type": "Movie",
@@ -380,7 +380,7 @@
   {
     "id": "movie10",
     "title": "Eye for an Eye (2022)",
-    "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg?v=1" ,
+    "imageUrl": "https://i.mydramalist.com/4ekeyk_4c.jpg?v=1",
     "info1_custom": "",
     "info2_quality": "WEB-DL",
     "info3_language": "Chinese",
