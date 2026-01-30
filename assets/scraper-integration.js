@@ -188,12 +188,25 @@ class ScraperIntegration {
                 }
             } else if (result.success && !signal.aborted) {
                 if (this.config.debug) console.log('[ScraperIntegration] Fresh scraping completed');
+
+                // CRITICAL FIX: If successful but no options were found (and thus no 'option' events emitted),
+                // the spinner might still be showing. We must clear it or show "No options found".
+                const container = document.getElementById('downloadOptions');
+                if (container && container.querySelector('.loading')) {
+                    if (result.downloadOptions && result.downloadOptions.length === 0) {
+                        this.injectError("No download options found.");
+                    } else {
+                        // Should have been cleared by 'option' event, but safety check
+                        container.innerHTML = '';
+                    }
+                }
             }
 
         } catch (error) {
             this.isLoading = false;
             if (error.name !== 'AbortError') {
                 console.error('[ScraperIntegration] Scraping error:', error);
+                this.injectError("An unexpected error occurred: " + error.message);
             }
         }
     }
