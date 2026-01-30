@@ -109,11 +109,35 @@ class ScraperEngine {
             return this.htmlCache.get(url);
         }
 
-        const proxies = [
+        const isTelegram = (typeof window !== 'undefined' && window.Telegram && window.Telegram.WebApp) ||
+            (navigator.userAgent.toLowerCase().includes('telegram'));
+
+        // Optimized proxy list
+        // Prioritize speed. CorsProxy and CodeTabs are often faster.
+        let proxies = [
             { name: 'CorsProxy', url: 'https://corsproxy.io/?url=', type: 'raw' },
+            { name: 'CodeTabs', url: 'https://api.codetabs.com/v1/proxy?quest=', type: 'raw' },
             { name: 'AllOrigins (JSON)', url: 'https://api.allorigins.win/get?url=', type: 'json' },
             { name: 'AllOrigins (Raw)', url: 'https://api.allorigins.win/raw?url=', type: 'raw' }
         ];
+
+        // Reorder for Telegram to avoid blocks
+        if (isTelegram) {
+            proxies = [
+                { name: 'CodeTabs', url: 'https://api.codetabs.com/v1/proxy?quest=', type: 'raw' },
+                { name: 'AllOrigins (JSON)', url: 'https://api.allorigins.win/get?url=', type: 'json' },
+                { name: 'Hiproxy', url: 'https://api.hiproxy.org/v1/proxy/get?url=', type: 'raw' }
+            ];
+        }
+
+        // DYNAMIC OPTIMIZATION: Move last known good proxy to front to stick with what works
+        if (this.lastWorkingProxyName) {
+            const index = proxies.findIndex(p => p.name === this.lastWorkingProxyName);
+            if (index > 0) {
+                const [goodProxy] = proxies.splice(index, 1);
+                proxies.unshift(goodProxy);
+            }
+        }
 
         let lastError = null;
 
@@ -121,26 +145,42 @@ class ScraperEngine {
             try {
                 if (this.debug) console.log(`[ScraperEngine] Attempting ${proxy.name}: ${url}`);
 
+                // Aggressive 5s timeout to fail fast on hangs
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+                const fetchSignal = signal || controller.signal;
+
                 const fetchURL = proxy.url + encodeURIComponent(url);
-                const response = await fetch(fetchURL, {
-                    signal,
-                    credentials: 'omit'
-                });
+                try {
+                    const response = await fetch(fetchURL, {
+                        signal: fetchSignal,
+                        credentials: 'omit'
+                    });
+                    clearTimeout(timeoutId);
 
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-                let html = '';
-                if (proxy.type === 'json') {
-                    const json = await response.json();
-                    html = json.contents;
-                } else {
-                    html = await response.text();
-                }
+                    let html = '';
+                    if (proxy.type === 'json') {
+                        const json = await response.json();
+                        html = json.contents;
+                    } else {
+                        html = await response.text();
+                    }
 
-                if (html && html.length > 0) {
-                    if (this.debug) console.log(`[ScraperEngine] ${proxy.name} successful (${html.length} chars)`);
-                    this.htmlCache.set(url, html);
-                    return html;
+                    if (html && html.length > 0) {
+                        if (this.debug) console.log(`[ScraperEngine] ${proxy.name} successful (${html.length} chars)`);
+                        this.htmlCache.set(url, html);
+
+                        // Remember this proxy as working for future requests in this session
+                        this.lastWorkingProxyName = proxy.name;
+
+                        return html;
+                    }
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    throw err;
                 }
 
                 throw new Error('Empty response');
