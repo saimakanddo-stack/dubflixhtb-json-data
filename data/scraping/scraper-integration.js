@@ -3,607 +3,766 @@
  * SCRAPER INTEGRATION LAYER
  * ============================================
  * 
- * This script integrates the scraping engine with the existing website.
- * It handles user interactions, DOM injection, and UI updates.
- * 
- * Features:
- * - Click event handling for movie posters
- * - Dynamic content injection into modal
- * - Loading state management
- * - Download button flow handling
- * - Quality options mapping
- * 
- * @author Antigravity AI
- * @version 1.0.0
+ * This script integrates the scraping engine with the website.
+ * Handles interactions, caching, and UI updates.
  */
 
 class ScraperIntegration {
     constructor() {
-        this.scraperEngine = null;
-        this.currentMovie = null;
-        this.scrapedData = null;
-        this.isLoading = false;
-
-        // Configuration
         this.config = {
             baseScrapingURL: 'https://mlink627.movielinkbd.li',
-            useCORSProxy: true, // Enable by default to avoid CORS issues
-            // Switched to corsproxy.io as alternative to allorigins.win
-            corsProxyURL: 'https://corsproxy.io/?',
+            useCORSProxy: true,
             debug: true
         };
 
-        // Initialize
+        this.scraperEngine = new ScraperEngine(this.config);
+
+        // Abort controller for cancelling requests
+        this.abortController = null;
+        this.isLoading = false;
+
+        this.checkOrigin();
         this.init();
     }
 
-    /**
-     * Initialize the integration
-     */
+    checkOrigin() {
+        if (window.location.protocol === 'file:') {
+            console.warn('[ScraperIntegration] WARNING: You are running this site from the file system (file://). Browsers may block the scraper\'s fetch requests due to security policies. Please use a local server (e.g., Live Server) for testing.');
+        }
+    }
+
     async init() {
         try {
-            // Load configuration from movies.json
             await this.loadConfiguration();
-
-            // Initialize scraper engine
-            this.scraperEngine = new ScraperEngine(this.config);
-
-            // Setup event listeners
             this.setupEventListeners();
-
-            // Create loading indicator
-            this.createLoadingIndicator();
-
             console.log('[ScraperIntegration] Initialized successfully');
-
         } catch (error) {
             console.error('[ScraperIntegration] Initialization error:', error);
         }
     }
 
-    /**
-     * Load configuration from movies.json
-     */
     async loadConfiguration() {
         try {
-            // Try to get baseScrapingURL from movies.json
-            const moviesData = await this.fetchMoviesJSON();
+            const data = await this.fetchMoviesJSON();
+            if (!data) return;
 
-            if (moviesData && moviesData.baseScrapingURL) {
-                this.config.baseScrapingURL = moviesData.baseScrapingURL;
-                console.log('[ScraperIntegration] Loaded baseScrapingURL:', this.config.baseScrapingURL);
-            } else {
-                console.warn('[ScraperIntegration] baseScrapingURL not found in movies.json');
+            // Handle both object { movies: [], baseScrapingURL: '' } and plain array []
+            if (data.baseScrapingURL) {
+                this.config.baseScrapingURL = data.baseScrapingURL;
+                console.log('[ScraperIntegration] Config loaded from object:', this.config.baseScrapingURL);
+            } else if (Array.isArray(data)) {
+                // If it's an array, look for baseScrapingURL in a metadata object if it exists? 
+                // Mostly likely it's just an array, so we stick to default or look for a special item.
+                console.log('[ScraperIntegration] data is an array, using default baseScrapingURL');
             }
-
         } catch (error) {
-            console.error('[ScraperIntegration] Error loading configuration:', error);
+            console.error('[ScraperIntegration] Error loading config:', error);
         }
     }
 
-    /**
-     * Fetch movies.json data
-     */
     async fetchMoviesJSON() {
         try {
-            const response = await fetch(JSON_URLS.movies);
-            const data = await response.json();
-            return data;
+            const response = await fetch(typeof JSON_URLS !== 'undefined' ? JSON_URLS.movies : 'movies.json');
+            return await response.json();
         } catch (error) {
-            console.error('[ScraperIntegration] Error fetching movies.json:', error);
             return null;
         }
     }
 
-    /**
-     * Setup event listeners
-     */
     setupEventListeners() {
-        // Listen for clicks on movie posters
+        // Listen for clicks on movie cards (more reliable than just posters)
         document.addEventListener('click', (e) => {
-            const poster = e.target.closest('.movie-poster');
+            const card = e.target.closest('.movie-card');
 
-            if (poster && !this.isLoading) {
-                this.handleMoviePosterClick(poster);
+            // Only trigger if clicking the card AND not clicking a specific action button (like share)
+            if (card && !this.isLoading && !e.target.closest('.copy-link-btn')) {
+                const poster = card.querySelector('.movie-poster');
+                if (poster) {
+                    this.handleMoviePosterClick(poster);
+                }
             }
         });
 
-        console.log('[ScraperIntegration] Event listeners setup complete');
+        // Setup global event listener for closing modals (to stop scraping)
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.close-modal') ||
+                e.target === document.getElementById('movieModal') ||
+                e.target === document.getElementById('scraperDialogOverlay')) {
+                this.abortScraping();
+            }
+        });
+
+        // Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.abortScraping();
+        });
     }
 
-    /**
-     * Handle movie poster click
-     */
     async handleMoviePosterClick(posterElement) {
         try {
-            // Extract movie title from the card
             const movieCard = posterElement.closest('.movie-card');
-            if (!movieCard) {
-                console.warn('[ScraperIntegration] Movie card not found');
-                return;
-            }
+            if (!movieCard) return;
 
-            // Get title from movie-title class
             const titleElement = movieCard.querySelector('.movie-title');
-            if (!titleElement) {
-                console.warn('[ScraperIntegration] Movie title element not found');
-                return;
-            }
+            const movieId = movieCard.getAttribute('data-id');
+            if (!titleElement || !movieId) return;
 
             const movieTitle = titleElement.textContent.trim();
-
-            // Get movie ID to fetch complete data
-            // FIXED: Changed from data-movie-id to data-id to match index.html
-            const movieId = movieCard.getAttribute('data-id');
-            if (!movieId) {
-                console.warn('[ScraperIntegration] Movie ID not found');
-                return;
+            if (this.config.debug) {
+                console.log(`[ScraperIntegration] Clicked: "${movieTitle}" (ID: ${movieId})`);
             }
 
-            console.log('[ScraperIntegration] Movie poster clicked:', movieTitle, 'ID:', movieId);
-
-            // Fetch complete movie data from JSON
+            // 1. Fetch movie data to check if scraping is needed
             const movieData = await this.getMovieData(movieId);
-
             if (!movieData) {
-                console.error('[ScraperIntegration] Movie data not found for ID:', movieId);
+                console.warn(`[ScraperIntegration] Movie data not found for ID: ${movieId}`);
                 return;
             }
 
-            // Store current movie
-            this.currentMovie = movieData;
-
-            // Check if server field is true
-            // If server is false or undefined, skip scraping and let existing download options show
             if (movieData.server !== true) {
-                console.log('[ScraperIntegration] Server field is false/undefined - skipping scraping, using existing download options');
-                // Don't start scraping, let the existing modal system handle download options
+                if (this.config.debug) console.log('[ScraperIntegration] Scraper not required for this movie (server != true)');
                 return;
             }
 
-            console.log('[ScraperIntegration] Server field is true - starting scraping process');
-
-            // Start scraping process
-            await this.startScrapingProcess(movieTitle, movieData);
+            // 2. Start Scraping (Automatic)
+            this.startScraping(movieId);
 
         } catch (error) {
-            console.error('[ScraperIntegration] Error handling poster click:', error);
-            this.hideLoading();
+            console.error('[ScraperIntegration] Poster click error:', error);
         }
     }
 
-    /**
-     * Get movie data from allMovies array
-     */
+    async startScraping(movieId) {
+        if (!movieId) return;
+        if (this.isLoading) return;
+        try {
+            if (this.config.debug) {
+                console.log(`[ScraperIntegration] Scraping triggered for Movie ID: ${movieId}`);
+            }
+
+            // 1. Fetch movie data 
+            const movieData = await this.getMovieData(movieId);
+            if (!movieData) return;
+
+            if (movieData.server !== true) return;
+
+            const movieTitle = movieData.title || "Unknown Movie";
+
+            // 3. Start Scraping
+            this.resetModalScroll();
+            this.abortScraping();
+            this.abortController = new AbortController();
+            const signal = this.abortController.signal;
+            this.isLoading = true;
+
+            if (this.config.debug) console.log(`[ScraperIntegration] Starting fresh scrape for "${movieTitle}"...`);
+
+            // UI feedback in the downloadOptions container
+            this._isFirstCard = true;
+            this.showInlineLoading();
+
+            const result = await this.scraperEngine.scrapeMovie(movieTitle, movieData, signal, (progress) => {
+                if (signal.aborted) return;
+
+                if (progress.type === 'instruction') {
+                    this.injectInstructionSection(progress.data);
+                } else if (progress.type === 'guide') {
+                    this.injectGuideSection(progress.data);
+                } else if (progress.type === 'option') {
+                    // Remove loader if it's the first option
+                    const container = document.getElementById('downloadOptions');
+                    if (container && container.querySelector('.loading')) {
+                        container.innerHTML = '';
+                    }
+                    this.appendDownloadOption(progress.data);
+                }
+            });
+
+            this.isLoading = false;
+
+            if (!result.success && !signal.aborted) {
+                // Only show error if we got absolutely nothing
+                const container = document.getElementById('downloadOptions');
+                if (!container || !container.querySelector('.download-server')) {
+                    this.injectError(result.error || "Failed to load options");
+                }
+            } else if (result.success && !signal.aborted) {
+                if (this.config.debug) console.log('[ScraperIntegration] Fresh scraping completed');
+
+                // CRITICAL FIX: If successful but no options were found (and thus no 'option' events emitted),
+                // the spinner might still be showing. We must clear it or show "No options found".
+                const container = document.getElementById('downloadOptions');
+                if (container && container.querySelector('.loading')) {
+                    if (result.downloadOptions && result.downloadOptions.length === 0) {
+                        this.injectError("No download options found.");
+                    } else {
+                        // Should have been cleared by 'option' event, but safety check
+                        container.innerHTML = '';
+                    }
+                }
+            }
+
+        } catch (error) {
+            this.isLoading = false;
+            if (error.name !== 'AbortError') {
+                console.error('[ScraperIntegration] Scraping error:', error);
+                this.injectError("An unexpected error occurred: " + error.message);
+            }
+        }
+    }
+
     async getMovieData(movieId) {
-        try {
-            // Check if allMovies is available globally
-            if (typeof allMovies !== 'undefined' && Array.isArray(allMovies)) {
-                const movie = allMovies.find(m => m.id === movieId);
-                return movie || null;
-            }
-
-            // Fallback: fetch from movies.json
-            const moviesData = await this.fetchMoviesJSON();
-            if (moviesData && Array.isArray(moviesData)) {
-                const movie = moviesData.find(m => m.id === movieId);
-                return movie || null;
-            }
-
-            return null;
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error getting movie data:', error);
-            return null;
+        if (typeof allMovies !== 'undefined' && Array.isArray(allMovies)) {
+            // Use loose equality to handle string vs number IDs
+            return allMovies.find(m => m.id == movieId);
         }
+        const moviesData = await this.fetchMoviesJSON();
+        return moviesData?.find(m => m.id == movieId);
     }
 
-    /**
-     * Start scraping process
-     */
-    async startScrapingProcess(movieTitle, movieData) {
-        try {
-            // Show loading indicator
-            this.showLoading('Scraping movie data...');
+    injectScrapedData(data) {
+        // Since we disabled link caching, we normally wouldn't call this with full data anymore
+        // but keeping it for other potential metadata/instructions
+        if (data.instructionData) this.injectInstructionSection(data.instructionData);
+        if (data.guideData) this.injectGuideSection(data.guideData);
 
-            // Execute scraping workflow
-            const result = await this.scraperEngine.scrapeMovie(movieTitle, movieData);
-
-            // Hide loading
-            this.hideLoading();
-
-            if (result.success) {
-                console.log('[ScraperIntegration] Scraping successful:', result);
-
-                // Store scraped data
-                this.scrapedData = result;
-
-                // Inject scraped data into modal
-                this.injectScrapedData(result);
-
-            } else {
-                console.error('[ScraperIntegration] Scraping failed:', result.error);
-
-                if (result.validationErrors) {
-                    console.error('[ScraperIntegration] Validation errors:', result.validationErrors);
-                }
-
-                // Show error notification
-                this.showNotification('Failed to scrape movie data: ' + result.error, true);
-            }
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error in scraping process:', error);
-            this.hideLoading();
-            this.showNotification('Scraping error: ' + error.message, true);
-        }
-    }
-
-    /**
-     * Inject scraped data into modal
-     */
-    injectScrapedData(scrapedData) {
-        try {
-            console.log('[ScraperIntegration] Injecting scraped data into modal');
-
-            // Wait for modal to be open
-            const modal = document.getElementById('movieModal');
-            if (!modal || modal.style.display === 'none') {
-                console.warn('[ScraperIntegration] Modal not open, waiting...');
-                setTimeout(() => this.injectScrapedData(scrapedData), 500);
-                return;
-            }
-
-            // Inject instruction section
-            if (scrapedData.instructionData) {
-                this.injectInstructionSection(scrapedData.instructionData);
-            }
-
-            // Inject guide section
-            if (scrapedData.guideData) {
-                this.injectGuideSection(scrapedData.guideData);
-            }
-
-            // Inject download options
-            if (scrapedData.downloadOptions && scrapedData.downloadOptions.length > 0) {
-                this.injectDownloadOptions(scrapedData.downloadOptions);
-            }
-
-            console.log('[ScraperIntegration] Data injection complete');
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error injecting scraped data:', error);
-        }
-    }
-
-    /**
-     * Inject instruction section into modal
-     */
-    injectInstructionSection(instructionData) {
-        try {
-            // Find or create instruction container
-            let container = document.getElementById('scraped-instruction-section');
-
-            if (!container) {
-                container = document.createElement('div');
-                container.id = 'scraped-instruction-section';
-                container.className = 'scraped-section instruction-section';
-
-                // Insert before download section
-                const downloadSection = document.querySelector('.download-section');
-                if (downloadSection) {
-                    downloadSection.parentNode.insertBefore(container, downloadSection);
-                }
-            }
-
-            // Clear existing content
+        const container = document.getElementById('downloadOptions');
+        if (container && data.downloadOptions) {
             container.innerHTML = '';
-
-            // Build instruction HTML
-            let html = '<div class="text-md border-bottom-dark mb-2 text-center align-items-center text-warning fw-bold">';
-
-            // Header row
-            if (instructionData.header) {
-                if (instructionData.header.h3) {
-                    html += `<h3 class="text-success font-weight-bold">${instructionData.header.h3}</h3>`;
-                }
-                if (instructionData.header.h5) {
-                    html += `<h5 class="text-warning">${instructionData.header.h5}</h5>`;
-                }
-                if (instructionData.header.attention) {
-                    html += `<span class="mlbd-note-attn">${instructionData.header.attention}</span>`;
-                }
-                if (instructionData.header.redNotice) {
-                    html += `<div style="color:#ff5b6b">${instructionData.header.redNotice}</div>`;
-                }
-            }
-
-            // Notices
-            instructionData.notices.forEach(notice => {
-                html += `<div style="color:#ffc107">${notice.text}</div>`;
-            });
-
-            html += '</div>';
-
-            // Unzip guide
-            if (instructionData.unzipGuide) {
-                html += `
-                    <div class="text-center fw-bold text-info mb-3">
-                        <a href="${instructionData.unzipGuide.href}" target="_blank" rel="noopener noreferrer">
-                            ${instructionData.unzipGuide.text}
-                        </a>
-                    </div>
-                `;
-            }
-
-            container.innerHTML = html;
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error injecting instruction section:', error);
+            data.downloadOptions.forEach(option => this.appendDownloadOption(option));
         }
     }
 
-    /**
-     * Inject guide section into modal
-     */
-    injectGuideSection(guideData) {
-        try {
-            // Find or create guide container
-            let container = document.getElementById('scraped-guide-section');
+    injectInstructionSection(data) {
+        const container = document.getElementById('instructionSection');
+        if (!container) return;
 
-            if (!container) {
-                container = document.createElement('div');
-                container.id = 'scraped-guide-section';
-                container.className = 'scraped-section guide-section';
-
-                // Insert before download section
-                const downloadSection = document.querySelector('.download-section');
-                if (downloadSection) {
-                    downloadSection.parentNode.insertBefore(container, downloadSection);
-                }
-            }
-
-            // Clear existing content
-            container.innerHTML = '';
-
-            let html = '';
-
-            // Headers
-            guideData.headers.forEach(header => {
-                if (header.level === 3) {
-                    html += `<h3 class="text-md text-success">${header.text}</h3>`;
-                } else if (header.level === 4) {
-                    html += `<h4 class="text-sm text-warning">${header.text}</h4>`;
-                }
-            });
-
-            // Guide blocks
-            guideData.guides.forEach(guide => {
-                html += '<div class="mb-3">';
-                if (guide.warning) {
-                    html += `<span class="text-warning fw-bold">${guide.warning}</span> `;
-                }
-                if (guide.info) {
-                    html += `<span class="text-info fw-semibold">${guide.info}</span>`;
-                }
-                html += '</div>';
-            });
-
-            // VLC link
-            if (guideData.vlcLink) {
-                html += `
-                    <div class="text-center mt-3">
-                        <a href="${guideData.vlcLink.href}" target="_blank" rel="noopener noreferrer">
-                            ${guideData.vlcLink.text}
-                        </a>
-                    </div>
-                `;
-            }
-
-            container.innerHTML = html;
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error injecting guide section:', error);
-        }
-    }
-
-    /**
-     * Inject download options into modal
-     */
-    injectDownloadOptions(downloadOptions) {
-        try {
-            const downloadOptionsContainer = document.getElementById('downloadOptions');
-
-            if (!downloadOptionsContainer) {
-                console.warn('[ScraperIntegration] Download options container not found');
-                return;
-            }
-
-            // Clear existing content
-            downloadOptionsContainer.innerHTML = '';
-
-            // Build download options HTML
-            downloadOptions.forEach((card, cardIndex) => {
-                const cardHTML = this.buildDownloadCardHTML(card, cardIndex);
-                downloadOptionsContainer.innerHTML += cardHTML;
-            });
-
-            // Setup download button handlers
-            this.setupDownloadButtonHandlers();
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error injecting download options:', error);
-        }
-    }
-
-    /**
-     * Build download card HTML
-     */
-    buildDownloadCardHTML(cardData, cardIndex) {
-        let html = '<div class="quality-options">';
-
-        // Card header
-        if (cardData.header) {
-            html += `<h5 class="mb-3">${cardData.header}</h5>`;
-        }
-
-        // Download buttons
-        cardData.downloads.forEach((download, downloadIndex) => {
-            html += `
-                <button class="quality-btn scraped-download-btn" 
-                        data-card-index="${cardIndex}" 
-                        data-download-index="${downloadIndex}"
-                        data-download-url="${download.href}">
-                    <div class="quality-info">
-                        <span class="quality-text">${download.quality}</span>
-                        <span class="file-size">Size: ${download.size}</span>
-                    </div>
-                    ${cardData.icon ? '<i class="fas fa-cloud-download-alt"></i>' : ''}
-                </button>
-            `;
-        });
-
-        // Extra text
-        if (cardData.extraText.trim()) {
-            html += `<div class="mb-3">${cardData.extraText}</div>`;
-        }
-
-        html += '</div>';
-
-        return html;
-    }
-
-    /**
-     * Setup download button handlers
-     */
-    setupDownloadButtonHandlers() {
-        const downloadButtons = document.querySelectorAll('.scraped-download-btn');
-
-        downloadButtons.forEach(button => {
-            button.addEventListener('click', async (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-
-                const downloadURL = button.getAttribute('data-download-url');
-                await this.handleDownloadButtonClick(downloadURL, button);
-            });
-        });
-    }
-
-    /**
-     * Handle download button click
-     */
-    async handleDownloadButtonClick(downloadURL, buttonElement) {
-        try {
-            console.log('[ScraperIntegration] Download button clicked:', downloadURL);
-
-            // Disable button
-            buttonElement.disabled = true;
-            buttonElement.innerHTML += ' <i class="fas fa-spinner fa-spin"></i>';
-
-            // Execute one-click download flow
-            const result = await this.scraperEngine.handleOneClickDownload(downloadURL);
-
-            // Re-enable button
-            buttonElement.disabled = false;
-            const spinner = buttonElement.querySelector('.fa-spinner');
-            if (spinner) spinner.remove();
-
-            if (result.success) {
-                console.log('[ScraperIntegration] Download flow successful:', result);
-
-                // Open final download link in new tab (USER-TRIGGERED)
-                window.open(result.buttonHref, '_blank', 'noopener,noreferrer');
-
-                this.showNotification('Download link opened in new tab!');
-
-            } else {
-                console.error('[ScraperIntegration] Download flow failed:', result.error);
-                this.showNotification('Download failed: ' + result.error, true);
-            }
-
-        } catch (error) {
-            console.error('[ScraperIntegration] Error handling download button:', error);
-
-            // Re-enable button
-            buttonElement.disabled = false;
-            const spinner = buttonElement.querySelector('.fa-spinner');
-            if (spinner) spinner.remove();
-
-            this.showNotification('Download error: ' + error.message, true);
-        }
-    }
-
-    /**
-     * Create loading indicator
-     */
-    createLoadingIndicator() {
-        // Check if already exists
-        if (document.getElementById('scraper-loading-indicator')) {
+        if (!data || (!data.header && (data.notices?.length || 0) === 0 && !data.unzipGuide)) {
+            container.style.display = 'none';
             return;
         }
 
-        const loadingHTML = `
-            <div id="scraper-loading-indicator" class="scraper-loading-overlay" style="display: none;">
-                <div class="scraper-loading-content">
-                    <div class="loading-spinner"></div>
-                    <p id="scraper-loading-text">Loading...</p>
+        container.style.display = 'block';
+        let html = '';
+
+        if (data.header) {
+            html += '<div class="text-center mb-4">';
+            if (data.header.h3) html += `<h3 class="text-success fw-bold mb-1">${data.header.h3}</h3>`;
+            if (data.header.h5) html += `<h5 class="text-warning-light mb-2">${data.header.h5}</h5>`;
+            if (data.header.attention) html += `<div class="badge-warning guide-badge mb-2">${data.header.attention}</div>`;
+            if (data.header.redNotice) html += `<div class="text-danger fw-bold mb-2"><i class="fas fa-exclamation-circle"></i> ${data.header.redNotice}</div>`;
+            html += '</div>';
+        }
+
+        if (data.notices && data.notices.length > 0) {
+            data.notices.forEach(notice => {
+                html += `
+                <div class="notice-item">
+                    <div class="notice-icon text-warning"><i class="fas fa-bullhorn"></i></div>
+                    <div class="notice-text text-warning-light fw-semibold">${notice.text}</div>
+                </div>`;
+            });
+        }
+
+        if (data.unzipGuide) {
+            html += `
+            <div class="notice-item" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+                <div class="notice-icon text-info"><i class="fas fa-file-archive"></i></div>
+                <div class="notice-text">
+                    <span class="text-info fw-bold">${data.unzipGuide.text}</span>
+                    <a href="${data.unzipGuide.href}" class="text-light text-decoration-underline ms-2">Click Here</a>
                 </div>
+            </div>`;
+        }
+
+        container.innerHTML = html;
+    }
+
+    injectGuideSection(data) {
+        const container = document.getElementById('guideSection');
+        if (!container) return;
+
+        if (!data || (data.headers.length === 0 && data.guides.length === 0 && !data.vlcLink)) {
+            container.style.display = 'none';
+            return;
+        }
+
+        container.style.display = 'block';
+        let html = '';
+
+        data.headers.forEach(header => {
+            if (header.level === 3) html += `<h3 class="text-success fw-bold text-center mb-3">${header.text}</h3>`;
+            else if (header.level === 4) html += `<h4 class="text-warning-light fw-semibold text-center mb-3">${header.text}</h4>`;
+        });
+
+        data.guides.forEach(guide => {
+            if (guide.warning) {
+                html += `
+                <div class="notice-item">
+                    <div class="notice-icon text-warning"><i class="fas fa-volume-mute"></i></div>
+                    <div class="notice-text text-warning fw-bold">${guide.warning}</div>
+                </div>`;
+            }
+            if (guide.info) {
+                html += `
+                <div class="notice-item">
+                    <div class="notice-icon text-info"><i class="fas fa-hand-point-right"></i></div>
+                    <div class="notice-text text-info fw-semibold">${guide.info}</div>
+                </div>`;
+            }
+        });
+
+        if (data.vlcLink) {
+            html += `
+            <div class="text-center">
+                <a href="${data.vlcLink.href}" class="vlc-download-btn" target="_blank">
+                    <i class="fas fa-download"></i> ${data.vlcLink.text}
+                </a>
+            </div>`;
+        }
+
+        container.innerHTML = html;
+    }
+
+    appendDownloadOption(card) {
+        const container = document.getElementById('downloadOptions');
+        if (!container) return;
+
+        // Clear loading spinner if this is the first card being added
+        if (this._isFirstCard) {
+            container.innerHTML = '';
+            this._isFirstCard = false;
+        }
+
+        let cardHtml = `<div class="download-server animate-fade-in ${card.isNew ? 'is-new-added' : ''}">`;
+
+        cardHtml += `
+            <div class="server-title">
+                <div class="server-info">
+                    <i class="${card.icon?.class || 'fas fa-server'}"></i>
+                    <span>${card.header}</span>
+                </div>
+                ${card.isNew ? '<span class="new-badge">NEW ADDED</span>' : ''}
             </div>
         `;
 
-        document.body.insertAdjacentHTML('beforeend', loadingHTML);
-    }
+        cardHtml += '<div class="quality-options">';
+        card.downloads.forEach((dl) => {
+            cardHtml += `
+                <button class="quality-btn scraped-download-btn" onclick="scraperIntegration.handleDownloadClick('${dl.href}', this)">
+                    <div class="quality-info">
+                        <span class="quality-text">${dl.quality || 'Unknown'}</span>
+                        <span class="file-size">Size: ${dl.size || 'Unknown'}</span>
+                    </div>
+                    <i class="fas fa-download"></i>
+                </button>
+            `;
+        });
+        cardHtml += '</div>';
 
-    /**
-     * Show loading indicator
-     */
-    showLoading(message = 'Loading...') {
-        this.isLoading = true;
-
-        const indicator = document.getElementById('scraper-loading-indicator');
-        const text = document.getElementById('scraper-loading-text');
-
-        if (indicator) {
-            indicator.style.display = 'flex';
+        if (card.extraText) {
+            cardHtml += `<div class="text-center text-muted small mt-2">${card.extraText}</div>`;
         }
 
-        if (text) {
-            text.textContent = message;
-        }
+        cardHtml += '</div>';
+        container.innerHTML += cardHtml;
     }
 
-    /**
-     * Hide loading indicator
-     */
-    hideLoading() {
-        this.isLoading = false;
+    injectDownloadOptions(options) {
+        const container = document.getElementById('downloadOptions');
+        if (!container) return;
 
-        const indicator = document.getElementById('scraper-loading-indicator');
-        if (indicator) {
-            indicator.style.display = 'none';
-        }
+        container.innerHTML = '';
+        options.forEach((card) => {
+            this.appendDownloadOption(card);
+        });
     }
 
-    /**
-     * Show notification
-     */
-    showNotification(message, isError = false) {
-        // Use existing notification system if available
-        if (typeof showNotification === 'function') {
-            showNotification(message, isError);
+    async handleDownloadClick(url, btn) {
+        // PER-LINK UNLOCK SYSTEM
+        const currentMovie = typeof currentMovieId !== 'undefined' ? currentMovieId : 'global';
+        const serverName = 'DynamicLink'; // Tracking ID for these links
+        const serverKey = `${currentMovie}_${url}`; // Use URL as part of key to make it specific
+
+        // Check if already unlocked
+        const sessionUnlocked = JSON.parse(sessionStorage.getItem('unlockedServers') || '{}');
+        const localStorageUnlocked = JSON.parse(localStorage.getItem('unlockedServers') || '{}');
+        const allUnlockedServers = { ...localStorageUnlocked, ...sessionUnlocked };
+
+        const isUnlocked = allUnlockedServers[serverKey] &&
+            (typeof isServerUnlockExpired !== 'undefined' ? !isServerUnlockExpired(currentMovie, serverName) : true);
+
+        if (!isUnlocked) {
+            // Show unlock UI in the dialog
+            this.showScraperDialog("Link Locked", false);
+            const body = document.getElementById('scraperDialogBody');
+            const adCount = (typeof adCounts !== 'undefined' ? (adCounts[serverKey] || 0) : 0);
+            const reqAds = typeof requiredAds !== 'undefined' ? requiredAds : 3;
+            const t = typeof translations !== 'undefined' ? translations[currentLanguage || 'en'] : {
+                unlock_button: "Unlock Link ({adCount}/{requiredCount})",
+                loading_ad: "Loading ad...",
+                verifying_button: "Wait {countdown}s"
+            };
+
+            const unlockBtnText = t.unlock_button.replace('{adCount}', adCount).replace('{requiredCount}', reqAds);
+
+            body.innerHTML = `
+                <div class="scraped-buttons-container text-center p-3">
+                    <div class="lock-icon mb-3" style="font-size: 3rem; color: #ff5b6b;"><i class="fas fa-lock"></i></div>
+                    <h4>Verification Required</h4>
+                    <p class="text-muted small mb-4">Please watch ${reqAds} short ads to generate your high-speed download link.</p>
+                    
+                    <button id="scraperUnlockBtn" class="big-cta-btn unlock-btn mb-2" 
+                            data-movie-id="${currentMovie}" 
+                            data-server-name="${serverName}"
+                            onclick="scraperIntegration.processScraperUnlock('${currentMovie}', '${serverKey}', '${url}', this)">
+                        <i class="fas fa-play-circle"></i> <span class="unlock-text">${unlockBtnText}</span>
+                    </button>
+                    
+                    <div id="scraperTimerProgress" class="timer-progress mt-2" 
+                         data-movie-id="${currentMovie}" 
+                         data-server-name="${serverName}"
+                         style="${adCount > 0 ? '' : 'display:none'}">
+                        Ads Viewed: ${adCount} / ${reqAds}
+                    </div>
+                </div>
+            `;
+            return;
+        }
+
+        // If already unlocked, proceed with scraping
+        if (this.abortController) this.abortController.abort();
+        this.abortController = new AbortController();
+        const signal = this.abortController.signal;
+
+        // --- POPUP BLOCK FIX: "Safe-Tab" Pattern ---
+        const targetWindow = window.open('about:blank', '_blank');
+        if (targetWindow) {
+            targetWindow.document.write(`
+                <html>
+                <head>
+                    <title>Generating Download Link...</title>
+                    <style>
+                        body { background: #1a1d21; color: white; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; margin: 0; }
+                        .loader { text-align: center; }
+                        .spinner { border: 4px solid rgba(255,255,255,0.1); border-left-color: #ff5b6b; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+                        @keyframes spin { to { transform: rotate(360deg); } }
+                        h2 { color: #ff5b6b; margin-bottom: 10px; }
+                    </style>
+                </head>
+                <body>
+                    <div class="loader">
+                        <div class="spinner"></div>
+                        <h2 id="msg">Scraping Link...</h2>
+                        <p>One moment while we process your request.</p>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+
+        this.showScraperDialog("Analyzing link...", true);
+
+        const result = await this.scraperEngine.handleOneClickDownload(url, signal, (progress) => {
+            if (signal.aborted) return;
+
+            // Update loading tab if it exists
+            if (targetWindow && !targetWindow.closed) {
+                const msgEl = targetWindow.document.getElementById('msg');
+                if (msgEl) msgEl.textContent = progress.message;
+            }
+
+            // Update main dialog with progress
+            const body = document.getElementById('scraperDialogBody');
+            if (body) {
+                body.innerHTML = `
+                    <div class="scraper-loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>${progress.message}</p>
+                        <button class="btn-cancel mt-3" onclick="scraperIntegration.abortScraping()">Cancel</button>
+                    </div>
+                `;
+            }
+        });
+
+        if (!signal.aborted) {
+            if (result.success) {
+                // SUCCESS: Redirect the already-opened tab if there's only one link
+                if (result.buttons && result.buttons.length === 1 && targetWindow && !targetWindow.closed) {
+                    targetWindow.location.assign(result.buttons[0].href);
+                    this.closeScraperDialog();
+                } else if (result.buttons && result.buttons.length > 0) {
+                    if (targetWindow && !targetWindow.closed) targetWindow.close();
+                    this.updateScraperDialogSuccess(result);
+                } else {
+                    if (targetWindow && !targetWindow.closed) targetWindow.close();
+                    this.showScraperDialog("Success! Click below to download.", false);
+                    this.updateScraperDialogSuccess(result);
+                }
+            } else {
+                if (targetWindow && !targetWindow.closed) targetWindow.close();
+                this.showScraperDialog("Error: " + result.error, false);
+            }
         } else {
-            console.log('[ScraperIntegration] Notification:', message);
-            alert(message);
+            // Aborted
+            if (targetWindow && !targetWindow.closed) targetWindow.close();
         }
+    }
+
+    async processScraperUnlock(movieId, serverKey, originalUrl, button) {
+        console.log('[ScraperIntegration] processScraperUnlock called:', { movieId, serverKey, originalUrl });
+
+        if (typeof processAdUnlock !== 'function') {
+            console.error("[ScraperIntegration] Ad Unlock function not found");
+            return;
+        }
+
+        const reqAds = typeof requiredAds !== 'undefined' ? requiredAds : 3;
+        const serverName = 'DynamicLink';
+
+        try {
+            console.log('[ScraperIntegration] Starting ad unlock process...');
+
+            // Set flag to prevent modal reload during scraping
+            this.isProcessingScraping = true;
+
+            // Pass the custom key to processAdUnlock
+            await processAdUnlock(movieId, serverName, reqAds, button, serverKey);
+
+            console.log('[ScraperIntegration] Ad unlock completed, checking unlock status...');
+
+            // Check if fully unlocked
+            const sessionUnlocked = JSON.parse(sessionStorage.getItem('unlockedServers') || '{}');
+            const localStorageUnlocked = JSON.parse(localStorage.getItem('unlockedServers') || '{}');
+            const allUnlocked = { ...localStorageUnlocked, ...sessionUnlocked };
+
+            console.log('[ScraperIntegration] Unlock status:', { serverKey, isUnlocked: !!allUnlocked[serverKey] });
+
+            if (allUnlocked[serverKey]) {
+                console.log('[ScraperIntegration] Link unlocked! Starting deep scraping...');
+
+                // Success! Now trigger the deep scraping directly (avoid recursive call)
+                if (this.abortController) this.abortController.abort();
+                this.abortController = new AbortController();
+                const signal = this.abortController.signal;
+
+                // Open safe tab immediately
+                let targetWindow = null;
+                if (typeof detectTelegramMiniApp === 'undefined' || !detectTelegramMiniApp()) {
+                    targetWindow = window.open('about:blank', '_blank');
+                    if (targetWindow) {
+                        targetWindow.document.write(`
+                            <!DOCTYPE html>
+                            <html>
+                                <head>
+                                    <title>Generating Download Link...</title>
+                                    <style>
+                                        body { background: #1a1d21; color: white; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; margin: 0; }
+                                        .loader { text-align: center; }
+                                        .spinner { border: 4px solid rgba(255,255,255,0.1); border-left-color: #ff5b6b; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+                                        @keyframes spin { to { transform: rotate(360deg); } }
+                                        h2 { color: #ff5b6b; margin-bottom: 10px; }
+                                    </style>
+                                </head>
+                                <body>
+                                    <div class="loader">
+                                        <div class="spinner"></div>
+                                        <h2 id="msg">Scraping Link...</h2>
+                                        <p>One moment while we process your request.</p>
+                                    </div>
+                                </body>
+                            </html>
+                        `);
+                    }
+                }
+
+                // Ensure dialog exists and update it with scraping progress
+                const dialog = document.getElementById('scraperDialogOverlay');
+                if (!dialog || dialog.style.display === 'none') {
+                    console.log('[ScraperIntegration] Dialog not visible, showing it...');
+                    this.showScraperDialog("Analyzing link...", true);
+                } else {
+                    // Dialog is already visible, just update the body
+                    const dialogBody = document.getElementById('scraperDialogBody');
+                    if (dialogBody) {
+                        console.log('[ScraperIntegration] Updating dialog body with scraping progress...');
+                        dialogBody.innerHTML = `
+                            <div class="scraper-loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Analyzing link...</p>
+                                <button class="btn-cancel mt-3" onclick="scraperIntegration.abortScraping()">Cancel</button>
+                            </div>
+                        `;
+                    }
+                }
+
+                const result = await this.scraperEngine.handleOneClickDownload(originalUrl, signal, (progress) => {
+                    if (signal.aborted) return;
+
+                    // Update loading tab if it exists
+                    if (targetWindow && !targetWindow.closed) {
+                        const msgEl = targetWindow.document.getElementById('msg');
+                        if (msgEl) msgEl.textContent = progress.message;
+                    }
+
+                    // Update main dialog with progress
+                    const body = document.getElementById('scraperDialogBody');
+                    if (body) {
+                        body.innerHTML = `
+                            <div class="scraper-loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>${progress.message}</p>
+                                <button class="btn-cancel mt-3" onclick="scraperIntegration.abortScraping()">Cancel</button>
+                            </div>
+                        `;
+                    }
+                });
+
+                console.log('[ScraperIntegration] Scraping completed:', result);
+
+                if (!signal.aborted) {
+                    if (result.success) {
+                        // SUCCESS: Redirect the already-opened tab if there's only one link
+                        if (result.buttons && result.buttons.length === 1 && targetWindow && !targetWindow.closed) {
+                            targetWindow.location.assign(result.buttons[0].href);
+                            this.closeScraperDialog();
+                        } else if (result.buttons && result.buttons.length > 1) {
+                            // Multiple links: Show them in dialog
+                            if (targetWindow && !targetWindow.closed) targetWindow.close();
+                            this.updateScraperDialogSuccess(result);
+                        } else {
+                            // No buttons found
+                            if (targetWindow && !targetWindow.closed) targetWindow.close();
+                            this.showScraperDialog("No download links found", false);
+                        }
+                    } else {
+                        // ERROR
+                        if (targetWindow && !targetWindow.closed) targetWindow.close();
+                        this.showScraperDialog("Error: " + result.error, false);
+                    }
+                } else {
+                    // Aborted
+                    if (targetWindow && !targetWindow.closed) targetWindow.close();
+                }
+            } else {
+                console.log('[ScraperIntegration] Still locked, updating progress...');
+
+                // Update specific progress element text if still locked
+                const count = typeof adCounts !== 'undefined' ? (adCounts[serverKey] || 0) : 0;
+                const progressEl = document.getElementById('scraperTimerProgress');
+                if (progressEl) {
+                    progressEl.style.display = 'block';
+                    progressEl.textContent = `Ads Viewed: ${count} / ${reqAds}`;
+                }
+            }
+        } catch (error) {
+            console.error("[ScraperIntegration] Scraper ad unlock error:", error);
+        } finally {
+            // Reset flag
+            this.isProcessingScraping = false;
+        }
+    }
+
+    showInlineLoading() {
+        const container = document.getElementById('downloadOptions');
+        if (container) {
+            container.innerHTML = `
+                <div class="loading text-center p-4">
+                    <div class="loading-spinner mb-2"></div>
+                    <p>Fetching download options...</p>
+                </div>
+            `;
+        }
+    }
+
+    injectError(msg) {
+        const container = document.getElementById('downloadOptions');
+        if (container) container.innerHTML = `<div class="text-center text-danger p-4"><i class="fas fa-exclamation-circle"></i> ${msg}</div>`;
+    }
+
+    abortScraping() {
+        if (this.abortController) {
+            this.abortController.abort();
+            this.abortController = null;
+        }
+        this.closeScraperDialog();
+    }
+
+    showScraperDialog(message, isLoading = false) {
+        let dialog = document.getElementById('scraperDialogOverlay');
+        if (!dialog) {
+            document.body.insertAdjacentHTML('beforeend', `
+                <div id="scraperDialogOverlay" class="scraper-dialog-overlay" style="display: none;">
+                    <div class="scraper-dialog-content">
+                        <div class="scraper-dialog-header">
+                            <h3>Download Option</h3>
+                            <button class="scraper-dialog-close" onclick="scraperIntegration.abortScraping()">&times;</button>
+                        </div>
+                        <div class="scraper-dialog-body" id="scraperDialogBody"></div>
+                    </div>
+                </div>
+            `);
+            dialog = document.getElementById('scraperDialogOverlay');
+        }
+
+        const body = document.getElementById('scraperDialogBody');
+        body.innerHTML = isLoading ? `
+            <div class="scraper-loading-state">
+                <div class="loading-spinner"></div>
+                <p>${message}</p>
+                <button class="btn-cancel mt-3" onclick="scraperIntegration.abortScraping()">Cancel</button>
+            </div>
+        ` : `<p>${message}</p>`;
+
+        dialog.style.display = 'flex';
+    }
+
+    updateScraperDialogSuccess(result) {
+        const body = document.getElementById('scraperDialogBody');
+        if (body) {
+            let buttonsHTML = '';
+
+            if (result.buttons && result.buttons.length > 0) {
+                result.buttons.forEach(btn => {
+                    buttonsHTML += `
+                        <a href="${btn.href}" class="big-cta-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="${btn.iconClass || 'fas fa-cloud-download-alt'}"></i> ${btn.text || 'Download'}
+                        </a>
+                    `;
+                });
+            }
+
+            body.innerHTML = `
+                <div class="scraper-success-state">
+                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                    <h4>Links Generated!</h4>
+                    <div class="scraped-buttons-container">
+                        ${buttonsHTML}
+                    </div>
+                    <p class="text-muted small mt-2">Click to start your download</p>
+                </div>
+            `;
+        }
+    }
+
+    resetModalScroll() {
+        const modal = document.getElementById('movieModal');
+        if (modal) {
+            // Reset modal body or the modal element itself depending on structure
+            const modalBody = modal.querySelector('.modal-body');
+            if (modalBody) modalBody.scrollTop = 0;
+            modal.scrollTop = 0;
+        }
+
+        const optionsContainer = document.getElementById('downloadOptions');
+        if (optionsContainer) optionsContainer.scrollTop = 0;
+    }
+
+    closeScraperDialog() {
+        const dialog = document.getElementById('scraperDialogOverlay');
+        if (dialog) dialog.style.display = 'none';
     }
 }
 
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.scraperIntegration = new ScraperIntegration();
-    });
-} else {
-    window.scraperIntegration = new ScraperIntegration();
-}
+// Global instance
+window.scraperIntegration = new ScraperIntegration();
