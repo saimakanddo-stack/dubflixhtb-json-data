@@ -1,11 +1,12 @@
 {
   "single": {
-    "timerDuration": 10,
+    "timerDuration": 16,
     "requiredAds": 1
   },
   "multiple": {
-    "timerDuration": 15,
+    "timerDuration": 16,
     "requiredAds": 2
   }
 }
+
 
