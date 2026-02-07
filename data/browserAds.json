@@ -1,0 +1,19 @@
+{
+    "browserAds": [
+        {
+            "url": "https://prowithme.com/sh/2006",
+            "name": "Ad Link 1",
+            "enabled": true
+        },
+        {
+            "url": "https://prowithme.com/sh/2007",
+            "name": "Ad Link 2",
+            "enabled": true
+        },
+        {
+            "url": "https://prowithme.com/sh/2008",
+            "name": "Ad Link 3",
+            "enabled": true
+        }
+    ]
+}
