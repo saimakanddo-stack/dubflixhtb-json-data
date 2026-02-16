@@ -5,5 +5,5 @@
   "enablePosterBlur": false,
   "blurPercentage": 3,
   "showInfo5Views": false,
-  "monetag_sdk": true
+  "monetag_sdk": false
 }
