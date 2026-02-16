@@ -3,6 +3,6 @@
   "siteLogoUrl": "",
   "placeholderImage": "https://placeholder.co/300x450/1a1a2e/ffffff?text=No+Image",
   "enablePosterBlur": false,
-  "blurPercentage": 5,
+  "blurPercentage": 50,
   "showInfo5Views": false
 }
