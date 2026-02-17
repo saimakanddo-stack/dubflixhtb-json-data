@@ -1,0 +1,20 @@
+{
+    "browserAds": [
+        {
+            "url": "https://otieu.com/4/10254507",
+            "name": "Ad Link 1",
+            "enabled": true
+        },
+        {
+            "url": "https://behavepassword.com/c72zcv4sx3?key=cd81b8cfcc067ffe3da46e5e7f4461b0",
+            "name": "Ad Link 2",
+            "enabled": true
+        },
+        {
+            "url": "https://otieu.com/4/10431766",
+            "name": "Ad Link 3",
+            "enabled": true
+        }
+    ]
+
+}
