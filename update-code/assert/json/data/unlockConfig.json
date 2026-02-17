@@ -1,0 +1,11 @@
+{
+  "single": {
+    "timerDuration": 6,
+    "requiredAds": 1
+  },
+  "multiple": {
+    "timerDuration": 6,
+    "requiredAds": 2
+  }
+}
+
