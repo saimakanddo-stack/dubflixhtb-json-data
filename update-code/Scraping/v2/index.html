@@ -2185,8 +2185,8 @@
             const cleanUrl = window.location.origin + window.location.pathname;
             window.history.replaceState({}, document.title, cleanUrl);
 
-            // Check if it's a YouTube link
-            const isYouTube = /yt|youtube/i.test(shareParam);
+            // Check if it's a YouTube link — parameter must START with 'yt' or 'youtube'
+            const isYouTube = /^(yt|youtube)/i.test(shareParam);
 
             if (isYouTube) {
                 // Handle YouTube deep link
@@ -7106,5 +7106,6 @@
     <script src="./download-search.js"></script>
 
 </body>
+
 
 </html>
