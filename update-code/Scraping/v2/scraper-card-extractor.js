@@ -12,7 +12,7 @@
 
 class ScraperCardExtractor {
     constructor(config = {}) {
-        this.baseScrapingURL = config.baseScrapingURL || '';
+        this.baseScrapingURL = config.baseScrapingURL || 'https://nnjd32.movielinkbd.tv';
         this.debug = config.debug || false;
     }
 
@@ -295,3 +295,4 @@ class ScraperCardExtractor {
 if (typeof window !== 'undefined') {
     window.ScraperCardExtractor = ScraperCardExtractor;
 }
+
