@@ -10,7 +10,7 @@
 class ScraperIntegration {
     constructor() {
         this.config = {
-            baseScrapingURL: 'https://mlink627.movielinkbd.li',
+            baseScrapingURL: 'https://nnjd32.movielinkbd.tv',
             useCORSProxy: true,
             debug: true
         };
@@ -2070,4 +2070,5 @@ class ScraperIntegration {
 }
 
 // Global instance
+
 window.scraperIntegration = new ScraperIntegration();
