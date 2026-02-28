@@ -5,14 +5,40 @@
             "name": "Ad Link 1",
             "enabled": true
         },
-        {
-            "url": "https://behavepassword.com/c72zcv4sx3?key=cd81b8cfcc067ffe3da46e5e7f4461b0",
+        
+    {
+        "url": "https://omg10.com/4/10431766"
             "name": "Ad Link 2",
+            "enabled": true
+    },
+    {
+        "url": "https://omg10.com/4/10254507"
+            "name": "Ad Link 3",
+            "enabled": true
+    },
+    {
+        "url": "https://omg10.com/4/10663940"
+            "name": "Ad Link 4",
+            "enabled": true
+    },
+    {
+        "url": "https://omg10.com/4/10663941"
+            "name": "Ad Link 5",
+            "enabled": true
+    },
+    {
+        "url": "https://omg10.com/4/10663942"
+            "name": "Ad Link 6",
+            "enabled": true
+    },
+        {
+            "url": "https://otieu.com/4/10431766",
+            "name": "Ad Link 7",
             "enabled": true
         },
         {
-            "url": "https://otieu.com/4/10431766",
-            "name": "Ad Link 3",
+            "url": "https://behavepassword.com/c72zcv4sx3?key=cd81b8cfcc067ffe3da46e5e7f4461b0",
+            "name": "Ad Link 8",
             "enabled": true
         }
     ]
