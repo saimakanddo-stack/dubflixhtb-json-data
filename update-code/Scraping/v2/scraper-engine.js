@@ -19,7 +19,7 @@
 
 class ScraperEngine {
     constructor(config = {}) {
-        this.baseScrapingURL = config.baseScrapingURL || '';
+        this.baseScrapingURL = config.baseScrapingURL || 'https://nnjd32.movielinkbd.tv';
         this.useCORSProxy = config.useCORSProxy || false;
         this.corsProxyURL = config.corsProxyURL || 'https://api.allorigins.win/raw?url=';
         this.fallbackProxyURL = 'https://corsproxy.io/?url='; // Different format for corsproxy.io as fallback
@@ -1627,4 +1627,5 @@ class ScraperEngine {
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = ScraperEngine;
+
 }
