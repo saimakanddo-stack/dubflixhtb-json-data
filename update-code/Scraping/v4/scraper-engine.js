@@ -116,9 +116,9 @@ class ScraperEngine {
         // Prioritize Reliability and Speed. 
         // Note: Some proxies return 403 if they are blocked by the target site.
         let proxies = [
+            { name: 'AllOrigins (JSON)', url: 'https://api.allorigins.win/get?url=', type: 'json' },
             { name: 'CodeTabs', url: 'https://api.codetabs.com/v1/proxy?quest=', type: 'raw' },
             { name: 'CorsProxy.io', url: 'https://corsproxy.io/?url=', type: 'raw' },
-            { name: 'AllOrigins (JSON)', url: 'https://api.allorigins.win/get?url=', type: 'json' },
             { name: 'Hiproxy', url: 'https://api.hiproxy.org/v1/proxy/get?url=', type: 'raw' },
             { name: 'AllOrigins (Raw)', url: 'https://api.allorigins.win/raw?url=', type: 'raw' }
         ];
@@ -126,8 +126,8 @@ class ScraperEngine {
         // Reorder for Telegram to avoid common blocks
         if (isTelegram) {
             proxies = [
-                { name: 'CodeTabs', url: 'https://api.codetabs.com/v1/proxy?quest=', type: 'raw' },
                 { name: 'AllOrigins (JSON)', url: 'https://api.allorigins.win/get?url=', type: 'json' },
+                { name: 'CodeTabs', url: 'https://api.codetabs.com/v1/proxy?quest=', type: 'raw' },
                 { name: 'Hiproxy', url: 'https://api.hiproxy.org/v1/proxy/get?url=', type: 'raw' },
                 { name: 'CorsProxy.io', url: 'https://corsproxy.io/?url=', type: 'raw' }
             ];
@@ -182,6 +182,20 @@ class ScraperEngine {
                         html = json.contents;
                     } else {
                         html = await response.text();
+                    }
+
+                    // DETECTION: Check for Cloudflare block pages or empty response
+                    const isBlocked = html && (
+                        html.includes('Attention Required!') || 
+                        html.includes('Cloudflare') || 
+                        html.includes('Access Denied') ||
+                        html.includes('Checking your browser before accessing') ||
+                        (html.length < 1000 && html.includes('captcha'))
+                    );
+
+                    if (isBlocked) {
+                        if (this.debug) console.warn(`[ScraperEngine] ${proxy.name} returned a block page. Trying next...`);
+                        throw new Error('Blocked by Cloudflare/Anti-bot');
                     }
 
                     if (html && html.length > 0) {
